@@ -1,9 +1,8 @@
 */.idea
 */.vscode
+*/.metadata
 desktop.ini
 
 COSE222/riscv32i
-COSE222/riscv-gnu-toolchain
-COSE222/rv32i/
 
 COSE156/venv/

@@ -1,0 +1,66 @@
+
+compare.o:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000000000 <compare>:
+   0:	55                   	push   rbp
+   1:	48 89 e5             	mov    rbp,rsp
+   4:	89 7d ec             	mov    DWORD PTR [rbp-0x14],edi
+   7:	89 75 e8             	mov    DWORD PTR [rbp-0x18],esi
+   a:	8b 45 ec             	mov    eax,DWORD PTR [rbp-0x14]
+   d:	39 45 e8             	cmp    DWORD PTR [rbp-0x18],eax
+  10:	0f 4e 45 e8          	cmovle eax,DWORD PTR [rbp-0x18]
+  14:	89 45 fc             	mov    DWORD PTR [rbp-0x4],eax
+  17:	8b 45 fc             	mov    eax,DWORD PTR [rbp-0x4]
+  1a:	5d                   	pop    rbp
+  1b:	c3                   	ret    
+
+Disassembly of section .comment:
+
+0000000000000000 <.comment>:
+   0:	00 47 43             	add    BYTE PTR [rdi+0x43],al
+   3:	43 3a 20             	rex.XB cmp spl,BYTE PTR [r8]
+   6:	28 55 62             	sub    BYTE PTR [rbp+0x62],dl
+   9:	75 6e                	jne    79 <compare+0x79>
+   b:	74 75                	je     82 <compare+0x82>
+   d:	20 37                	and    BYTE PTR [rdi],dh
+   f:	2e 35 2e 30 2d 33    	cs xor eax,0x332d302e
+  15:	75 62                	jne    79 <compare+0x79>
+  17:	75 6e                	jne    87 <compare+0x87>
+  19:	74 75                	je     90 <compare+0x90>
+  1b:	31 7e 31             	xor    DWORD PTR [rsi+0x31],edi
+  1e:	38 2e                	cmp    BYTE PTR [rsi],ch
+  20:	30 34 29             	xor    BYTE PTR [rcx+rbp*1],dh
+  23:	20 37                	and    BYTE PTR [rdi],dh
+  25:	2e                   	cs
+  26:	35                   	.byte 0x35
+  27:	2e 30 00             	xor    BYTE PTR cs:[rax],al
+
+Disassembly of section .eh_frame:
+
+0000000000000000 <.eh_frame>:
+   0:	14 00                	adc    al,0x0
+   2:	00 00                	add    BYTE PTR [rax],al
+   4:	00 00                	add    BYTE PTR [rax],al
+   6:	00 00                	add    BYTE PTR [rax],al
+   8:	01 7a 52             	add    DWORD PTR [rdx+0x52],edi
+   b:	00 01                	add    BYTE PTR [rcx],al
+   d:	78 10                	js     1f <.eh_frame+0x1f>
+   f:	01 1b                	add    DWORD PTR [rbx],ebx
+  11:	0c 07                	or     al,0x7
+  13:	08 90 01 00 00 1c    	or     BYTE PTR [rax+0x1c000001],dl
+  19:	00 00                	add    BYTE PTR [rax],al
+  1b:	00 1c 00             	add    BYTE PTR [rax+rax*1],bl
+  1e:	00 00                	add    BYTE PTR [rax],al
+  20:	00 00                	add    BYTE PTR [rax],al
+  22:	00 00                	add    BYTE PTR [rax],al
+  24:	1c 00                	sbb    al,0x0
+  26:	00 00                	add    BYTE PTR [rax],al
+  28:	00 41 0e             	add    BYTE PTR [rcx+0xe],al
+  2b:	10 86 02 43 0d 06    	adc    BYTE PTR [rsi+0x60d4302],al
+  31:	57                   	push   rdi
+  32:	0c 07                	or     al,0x7
+  34:	08 00                	or     BYTE PTR [rax],al
+	...

@@ -1,0 +1,109 @@
+
+compare.o:     file format elf32-littleriscv
+compare.o
+architecture: riscv:rv32, flags 0x00000011:
+HAS_RELOC, HAS_SYMS
+start address 0x00000000
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         0000003c  00000000  00000000  00000034  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  1 .data         00000000  00000000  00000000  00000070  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          00000000  00000000  00000000  00000070  2**0
+                  ALLOC
+  3 .comment      00000012  00000000  00000000  00000070  2**0
+                  CONTENTS, READONLY
+  4 .debug_line   0000008e  00000000  00000000  00000082  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING, OCTETS
+  5 .debug_info   00000026  00000000  00000000  00000110  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING, OCTETS
+  6 .debug_abbrev 00000014  00000000  00000000  00000136  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+  7 .debug_aranges 00000020  00000000  00000000  00000150  2**3
+                  CONTENTS, RELOC, READONLY, DEBUGGING, OCTETS
+  8 .debug_str    0000005f  00000000  00000000  00000170  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+  9 .riscv.attributes 0000001c  00000000  00000000  000001cf  2**0
+                  CONTENTS, READONLY
+SYMBOL TABLE:
+00000000 l    df *ABS*	00000000 compare.c
+00000000 l    d  .text	00000000 .text
+00000000 l    d  .data	00000000 .data
+00000000 l    d  .bss	00000000 .bss
+00000000 l       .text	00000000 .L0 
+00000004 l       .text	00000000 .L0 
+00000008 l       .text	00000000 .L0 
+0000000c l       .text	00000000 .L0 
+00000010 l       .text	00000000 .L0 
+00000014 l       .text	00000000 .L0 
+00000018 l       .text	00000000 .L0 
+0000001c l       .text	00000000 .L0 
+00000020 l       .text	00000000 .L0 
+00000024 l       .text	00000000 .L0 
+00000028 l       .text	00000000 .L0 
+0000002c l       .text	00000000 .L0 
+00000030 l       .text	00000000 .L0 
+00000034 l       .text	00000000 .L0 
+00000038 l       .text	00000000 .L0 
+0000003c l       .text	00000000 .L0 
+00000000 l    d  .debug_info	00000000 .debug_info
+00000000 l       .text	00000000 .L0 
+0000003c l       .text	00000000 .L0 
+00000000 l       .debug_str	00000000 .L0 
+0000000a l       .debug_str	00000000 .L0 
+00000053 l       .debug_str	00000000 .L0 
+00000000 l    d  .debug_abbrev	00000000 .debug_abbrev
+00000000 l    d  .debug_line	00000000 .debug_line
+00000024 l       .text	00000000 .L2
+00000000 l    d  .comment	00000000 .comment
+00000000 l    d  .debug_aranges	00000000 .debug_aranges
+00000000 l    d  .debug_str	00000000 .debug_str
+00000000 l    d  .riscv.attributes	00000000 .riscv.attributes
+00000000 g     F .text	0000003c compare
+
+
+
+Disassembly of section .text:
+
+00000000 <compare>:
+	.text
+	.align	2
+	.globl	compare
+	.type	compare, @function
+compare:
+	addi	sp,sp,-48
+   0:	fd010113          	addi	sp,sp,-48
+	sw	s0,44(sp)
+   4:	02812623          	sw	s0,44(sp)
+	addi	s0,sp,48
+   8:	03010413          	addi	s0,sp,48
+	sw	a0,-36(s0)
+   c:	fca42e23          	sw	a0,-36(s0)
+	sw	a1,-40(s0)
+  10:	fcb42c23          	sw	a1,-40(s0)
+	lw	a4,-36(s0)
+  14:	fdc42703          	lw	a4,-36(s0)
+	lw	a5,-40(s0)
+  18:	fd842783          	lw	a5,-40(s0)
+	ble	a5,a4,.L2
+  1c:	00f75463          	bge	a4,a5,24 <.L2>
+			1c: R_RISCV_BRANCH	.L2
+	mv	a5,a4
+  20:	00070793          	mv	a5,a4
+
+00000024 <.L2>:
+.L2:
+	sw	a5,-20(s0)
+  24:	fef42623          	sw	a5,-20(s0)
+	lw	a5,-20(s0)
+  28:	fec42783          	lw	a5,-20(s0)
+	mv	a0,a5
+  2c:	00078513          	mv	a0,a5
+	lw	s0,44(sp)
+  30:	02c12403          	lw	s0,44(sp)
+	addi	sp,sp,48
+  34:	03010113          	addi	sp,sp,48
+	jr	ra
+  38:	00008067          	ret

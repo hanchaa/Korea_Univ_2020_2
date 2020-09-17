@@ -2,7 +2,7 @@
 .align 4
 
 	la sp, stack
-	j	SevenSeg
+	j	compare
 
 
 .data

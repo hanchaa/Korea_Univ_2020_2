@@ -12,8 +12,22 @@ __start:
     
     la t0, Input_data
     la t1, Output_data
-    sub a0, t1, t0 
-    srai a0, a0, 2      # Input_data 메모리 주소와 Output_data 메모리 주소의 차이를 이용해 Input_data 속에 있는 데이터의 개수를 구함
+    
+    sub a0, t1, t0      # Input_data 메모리 주소와 Output_data 메모리 주소의 차이를 이용해 Input_data 속에 있는 데이터의 개수를 구함
+    srai a0, a0, 2      
+    
+    mv a1, a0           # 데이터를 옮길 때 사용할 카운터 a1에 저장
+    
+move_data:
+    
+    lw s0, 0(t0)        # s0에 Input_data[i] load
+    sw s0, 0(t1)        # Output_data[i]에 s0 store
+    
+    addi t0, t0, 4      # Input_data 메모리 주소 데이터 하나만큼 이동
+    addi t1, t1, 4      # Output_data 메모리 주소 데이터 하나만큼 이동
+    addi a1, a1, -1     # loop 카운터 감소
+    
+    bne a1, zero, move_data    # 데이터의 개수만큼 loop 반복
 
 
 # 버블 소트 알고리즘을 이용
@@ -22,7 +36,7 @@ __start:
 L0:
     
     beq a0, zero, L4    # 데이터의 개수 만큼 outer loop를 돌면 loop 종료
-    mv t2, t0           # inner loop에서 사용할 메모리 주소 Input_data[0]의 주소로 초기화
+    la t2, Output_data  # inner loop에서 사용할 메모리 주소 Input_data[0]의 주소로 초기화
     addi a1, a0, -1     # inner loop 실행 횟수를 데이터 개수 - outer loop 수행 횟수 - 1로 설정
     
 L1:
@@ -47,20 +61,8 @@ L3:
     j L0                # outer loop 반복
     
 L4: 
-    
-    sub a0, t1, t0
-    srai a0, a0, 2      # Input_data의 데이터를 Output_data로 이동시키기 위해서 a0에 데이터의 개수 저장
-    
-L5:
-    
-    lw s0, 0(t0)        # s0에 Input_data[i] load
-    sw s0, 0(t1)        # Output_data[i]에 s0 store
-    
-    addi t0, t0, 4      # Input_data 메모리 주소 데이터 하나만큼 이동
-    addi t1, t1, 4      # Output_data 메모리 주소 데이터 하나만큼 이동
-    addi a0, a0, -1     # loop 카운터 감소
-    
-    bne a0, zero, L5    # 데이터의 개수만큼 loop 반복
+
+    nop
 
 .data
 .align 4

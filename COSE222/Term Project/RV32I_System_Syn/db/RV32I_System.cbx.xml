@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="RV32I_System">
+		<CBX_INST_ENTRY INSTANCE_NAME="|RV32I_System|ALTPLL_clkgen:pll0|altpll:altpll_component" CBX_FILE_NAME="ALTPLL_clkgen_altpll.v"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|RV32I_System|ram2port_inst_data:iMem|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_5ul2.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

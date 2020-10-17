@@ -1,0 +1,107 @@
+
+labcode:     file format elf32-littleriscv
+labcode
+architecture: riscv:rv32, flags 0x00000012:
+EXEC_P, HAS_SYMS
+start address 0x00000000
+
+Program Header:
+    LOAD off    0x00000060 vaddr 0x00000000 paddr 0x00000000 align 2**4
+         filesz 0x00000800 memsz 0x00000800 flags rwx
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000080  00000000  00000000  00000060  2**4
+                  CONTENTS, ALLOC, LOAD, CODE
+  1 .data         00000400  00000400  00000400  00000460  2**4
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .riscv.attributes 0000001c  00000000  00000000  00000860  2**0
+                  CONTENTS, READONLY
+  3 .comment      00000011  00000000  00000000  0000087c  2**0
+                  CONTENTS, READONLY
+  4 .debug_line   000000b6  00000000  00000000  0000088d  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+  5 .debug_info   000000b7  00000000  00000000  00000943  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+  6 .debug_abbrev 00000074  00000000  00000000  000009fa  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+  7 .debug_aranges 00000040  00000000  00000000  00000a70  2**3
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+  8 .debug_str    000000ea  00000000  00000000  00000ab0  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+  9 .debug_frame  0000002c  00000000  00000000  00000b9c  2**2
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+SYMBOL TABLE:
+00000000 l    d  .text	00000000 .text
+00000400 l    d  .data	00000000 .data
+00000000 l    d  .riscv.attributes	00000000 .riscv.attributes
+00000000 l    d  .comment	00000000 .comment
+00000000 l    d  .debug_line	00000000 .debug_line
+00000000 l    d  .debug_info	00000000 .debug_info
+00000000 l    d  .debug_abbrev	00000000 .debug_abbrev
+00000000 l    d  .debug_aranges	00000000 .debug_aranges
+00000000 l    d  .debug_str	00000000 .debug_str
+00000000 l    d  .debug_frame	00000000 .debug_frame
+00000000 l    df *ABS*	00000000 lab0.o
+00000400 l       .data	00000000 stack
+00000000 l    df *ABS*	00000000 SevenSeg.c
+00000010 g     F .text	00000070 SevenSeg
+
+
+
+Disassembly of section .text:
+
+00000000 <SevenSeg-0x10>:
+.text
+.align 4
+
+	la sp, stack
+   0:	40000113          	li	sp,1024
+	j	SevenSeg
+   4:	00c0006f          	j	10 <SevenSeg>
+	...
+
+00000010 <SevenSeg>:
+#include "SevenSeg.h"
+
+int SevenSeg()
+{
+  10:	fe010113          	addi	sp,sp,-32
+  14:	00812e23          	sw	s0,28(sp)
+  18:	02010413          	addi	s0,sp,32
+	unsigned int * seg0_addr = (unsigned int *) SevenSeg0;
+  1c:	ffff27b7          	lui	a5,0xffff2
+  20:	00c78793          	addi	a5,a5,12 # ffff200c <stack+0xffff1c0c>
+  24:	fef42623          	sw	a5,-20(s0)
+	unsigned int * seg1_addr = (unsigned int *) SevenSeg1;
+  28:	ffff27b7          	lui	a5,0xffff2
+  2c:	01078793          	addi	a5,a5,16 # ffff2010 <stack+0xffff1c10>
+  30:	fef42423          	sw	a5,-24(s0)
+	unsigned int * seg2_addr = (unsigned int *) SevenSeg2;
+  34:	ffff27b7          	lui	a5,0xffff2
+  38:	01478793          	addi	a5,a5,20 # ffff2014 <stack+0xffff1c14>
+  3c:	fef42223          	sw	a5,-28(s0)
+	unsigned int * seg3_addr = (unsigned int *) SevenSeg3;
+  40:	ffff27b7          	lui	a5,0xffff2
+  44:	01878793          	addi	a5,a5,24 # ffff2018 <stack+0xffff1c18>
+  48:	fef42023          	sw	a5,-32(s0)
+
+	*seg0_addr = SEG_6;
+  4c:	fec42783          	lw	a5,-20(s0)
+  50:	00200713          	li	a4,2
+  54:	00e7a023          	sw	a4,0(a5)
+	*seg1_addr = SEG_1;
+  58:	fe842783          	lw	a5,-24(s0)
+  5c:	07900713          	li	a4,121
+  60:	00e7a023          	sw	a4,0(a5)
+	*seg2_addr = SEG_0;
+  64:	fe442783          	lw	a5,-28(s0)
+  68:	04000713          	li	a4,64
+  6c:	00e7a023          	sw	a4,0(a5)
+	*seg3_addr = SEG_0;
+  70:	fe042783          	lw	a5,-32(s0)
+  74:	04000713          	li	a4,64
+  78:	00e7a023          	sw	a4,0(a5)
+
+	while(1);
+  7c:	0000006f          	j	7c <SevenSeg+0x6c>

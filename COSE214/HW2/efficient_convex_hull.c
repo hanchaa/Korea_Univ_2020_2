@@ -26,7 +26,7 @@ int distance(t_point from, t_point to, t_point p) {
 
     int dist = (p.x - from.x) * dy - (p.y - from.y) * dx;
 
-    return dist > 0 ? dist : -dist;
+    return dist >= 0 ? dist : -dist;
 }
 
 
@@ -40,9 +40,6 @@ void separate_points(t_point* points, int num_point, t_point from, t_point to, t
     *n1 = *n2 = 0;
 
     for (int i = 0; i < num_point; i++) {
-        if ((points[i].x == from.x && points[i].y == from.y) || (points[i].x == to.x && points[i].y))
-            continue;
-
         if ((points[i].x - from.x) * dy - (points[i].y - from.y) * dx < 0)
             s1[(*n1)++] = points[i];
 
@@ -75,9 +72,9 @@ t_line* upper_hull(t_point* points, int num_point, t_point p1, t_point pn, t_lin
     }
 
     int max = 0;
-    t_point p_max = points[0];
+    t_point p_max;
 
-    for (int i = 1; i < num_point; i++) {
+    for (int i = 0; i < num_point; i++) {
         int dist = distance(p1, pn, points[i]);
         if (dist > max) {
             p_max = points[i];

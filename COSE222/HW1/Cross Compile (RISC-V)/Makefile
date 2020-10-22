@@ -38,11 +38,11 @@
 	$(AS) $(ASFLAGS) lab0.s -o lab0.o
 	
     compare.o:	compare.c
-	$(CPP) compare.c > compare.i
-	$(CC) -Wall -S compare.i
-	$(AS) $(ASFLAGS) compare.s -o compare.o
-	$(OBJDUMP) -xS compare.o > compare.dump
-#	$(CC) $(CCFLAGS) compare.c
+	# $(CPP) compare.c > compare.i
+	# $(CC) -Wall -S compare.i
+	# $(AS) $(ASFLAGS) compare.s -o compare.o
+	# $(OBJDUMP) -xS compare.o > compare.dump
+	$(CC) $(CCFLAGS) compare.c
 	
     clean:
 	rm -rf *.o *.mif *.dump *.hex *.bin *.mif labcode

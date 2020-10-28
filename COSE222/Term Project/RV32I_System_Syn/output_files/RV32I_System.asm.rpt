@@ -1,6 +1,6 @@
 Assembler report for RV32I_System
-Sat Oct 17 14:40:01 2020
-Quartus II 32-bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+Mon Oct 26 15:15:48 2020
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
 ---------------------
@@ -37,7 +37,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Sat Oct 17 14:40:01 2020 ;
+; Assembler Status      ; Successful - Mon Oct 26 15:15:48 2020 ;
 ; Revision Name         ; RV32I_System                          ;
 ; Top-level Entity Name ; RV32I_System                          ;
 ; Family                ; Cyclone III                           ;
@@ -92,8 +92,8 @@ applicable agreement for further details.
 ; Option         ; Setting                                                                                                               ;
 +----------------+-----------------------------------------------------------------------------------------------------------------------+
 ; Device         ; EP3C16F484C6                                                                                                          ;
-; JTAG usercode  ; 0x002957E1                                                                                                            ;
-; Checksum       ; 0x002957E1                                                                                                            ;
+; JTAG usercode  ; 0x002A2381                                                                                                            ;
+; Checksum       ; 0x002A2381                                                                                                            ;
 +----------------+-----------------------------------------------------------------------------------------------------------------------+
 
 
@@ -101,28 +101,15 @@ applicable agreement for further details.
 ; Assembler Messages ;
 +--------------------+
 Info: *******************************************************************
-Info: Running Quartus II 32-bit Assembler
+Info: Running Quartus II 64-Bit Assembler
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Copyright (C) 1991-2013 Altera Corporation. All rights reserved.
-    Info: Your use of Altera Corporation's design tools, logic functions 
-    Info: and other software and tools, and its AMPP partner logic 
-    Info: functions, and any output files from any of the foregoing 
-    Info: (including device programming or simulation files), and any 
-    Info: associated documentation or information are expressly subject 
-    Info: to the terms and conditions of the Altera Program License 
-    Info: Subscription Agreement, Altera MegaCore Function License 
-    Info: Agreement, or other applicable license agreement, including, 
-    Info: without limitation, that your use is for the sole purpose of 
-    Info: programming logic devices manufactured by Altera and sold by 
-    Info: Altera or its authorized distributors.  Please refer to the 
-    Info: applicable agreement for further details.
-    Info: Processing started: Sat Oct 17 14:39:59 2020
-Info: Command: quartus_asm RV32I_System.qpf
+    Info: Processing started: Mon Oct 26 15:15:46 2020
+Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off RV32I_System -c RV32I_System
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
-Info: Quartus II 32-bit Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 414 megabytes
-    Info: Processing ended: Sat Oct 17 14:40:01 2020
+Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 4605 megabytes
+    Info: Processing ended: Mon Oct 26 15:15:48 2020
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 

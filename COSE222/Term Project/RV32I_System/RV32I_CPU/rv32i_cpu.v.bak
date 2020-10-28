@@ -180,8 +180,8 @@ module aludec(input      [6:0] opcode,
 		begin
 			case(funct3)
 			 3'b000:  alucontrol <= #`simdelay 5'b00000; // addition (addi)
-			 3'b111:  alucontrol <= #`simdelay 5'b00001; // and (andi)
-			 3'b110:  alucontrol <= #`simdelay 5'b00010; // or (ori)
+			 3'b110:  alucontrol <= #`simdelay 5'b00001; // and (andi)
+			 3'b111:  alucontrol <= #`simdelay 5'b00010; // or (ori)
           default: alucontrol <= #`simdelay 5'bxxxxx; // ???
         endcase
 		end

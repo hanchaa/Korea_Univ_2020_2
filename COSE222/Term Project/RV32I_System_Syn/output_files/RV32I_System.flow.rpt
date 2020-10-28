@@ -1,6 +1,6 @@
 Flow report for RV32I_System
-Sat Oct 17 14:40:01 2020
-Quartus II 32-bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+Mon Oct 26 15:16:01 2020
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
 ---------------------
@@ -40,15 +40,15 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Flow Summary                                                                    ;
 +------------------------------------+--------------------------------------------+
-; Flow Status                        ; Successful - Sat Oct 17 14:40:01 2020      ;
+; Flow Status                        ; Successful - Mon Oct 26 15:16:01 2020      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; RV32I_System                               ;
 ; Top-level Entity Name              ; RV32I_System                               ;
 ; Family                             ; Cyclone III                                ;
 ; Device                             ; EP3C16F484C6                               ;
 ; Timing Models                      ; Final                                      ;
-; Total logic elements               ; 2,244 / 15,408 ( 15 % )                    ;
-;     Total combinational functions  ; 2,192 / 15,408 ( 14 % )                    ;
+; Total logic elements               ; 2,600 / 15,408 ( 17 % )                    ;
+;     Total combinational functions  ; 2,207 / 15,408 ( 14 % )                    ;
 ;     Dedicated logic registers      ; 1,319 / 15,408 ( 9 % )                     ;
 ; Total registers                    ; 1319                                       ;
 ; Total pins                         ; 52 / 347 ( 15 % )                          ;
@@ -56,7 +56,6 @@ applicable agreement for further details.
 ; Total memory bits                  ; 65,536 / 516,096 ( 13 % )                  ;
 ; Embedded Multiplier 9-bit elements ; 0 / 112 ( 0 % )                            ;
 ; Total PLLs                         ; 1 / 4 ( 25 % )                             ;
-; Quartus II 32-bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 +------------------------------------+--------------------------------------------+
 
 
@@ -65,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/17/2020 13:42:19 ;
+; Start date & time ; 10/26/2020 15:15:10 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; RV32I_System        ;
 +-------------------+---------------------+
@@ -76,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+---------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 70975882874910.160290973911276        ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 70975882874910.160369291034876        ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                  ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                ; <None>        ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --            ; --          ; --             ;
@@ -95,20 +94,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:11     ; 1.0                     ; 4679 MB             ; 00:00:11                           ;
-; Fitter                    ; 00:00:13     ; 1.4                     ; 5373 MB             ; 00:00:16                           ;
-; Assembler                 ; 00:00:02     ; 1.0                     ; 4601 MB             ; 00:00:01                           ;
-; TimeQuest Timing Analyzer ; 00:00:04     ; 1.3                     ; 4717 MB             ; 00:00:04                           ;
-; EDA Netlist Writer        ; 00:00:04     ; 1.0                     ; 4584 MB             ; 00:00:03                           ;
-; MIF/HEX Update            ; 00:00:01     ; 1.0                     ; 412 MB              ; 00:00:01                           ;
-; Assembler                 ; 00:00:02     ; 1.0                     ; 414 MB              ; 00:00:02                           ;
-; MIF/HEX Update            ; 00:00:01     ; 1.0                     ; 411 MB              ; 00:00:01                           ;
-; Assembler                 ; 00:00:02     ; 1.0                     ; 409 MB              ; 00:00:02                           ;
-; MIF/HEX Update            ; 00:00:01     ; 1.0                     ; 411 MB              ; 00:00:01                           ;
-; Assembler                 ; 00:00:02     ; 1.0                     ; 409 MB              ; 00:00:02                           ;
-; MIF/HEX Update            ; 00:00:01     ; 1.0                     ; 411 MB              ; 00:00:01                           ;
-; Assembler                 ; 00:00:02     ; 1.0                     ; 413 MB              ; 00:00:02                           ;
-; Total                     ; 00:00:46     ; --                      ; --                  ; 00:00:47                           ;
+; Analysis & Synthesis      ; 00:00:13     ; 1.0                     ; 4678 MB             ; 00:00:11                           ;
+; Fitter                    ; 00:00:19     ; 2.2                     ; 5398 MB             ; 00:00:23                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 4596 MB             ; 00:00:02                           ;
+; TimeQuest Timing Analyzer ; 00:00:04     ; 1.5                     ; 4715 MB             ; 00:00:04                           ;
+; EDA Netlist Writer        ; 00:00:05     ; 1.0                     ; 4589 MB             ; 00:00:03                           ;
+; Total                     ; 00:00:43     ; --                      ; --                  ; 00:00:43                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -122,14 +113,6 @@ applicable agreement for further details.
 ; Assembler                 ; JuHan            ; Windows 7 ; 6.2        ; x86_64         ;
 ; TimeQuest Timing Analyzer ; JuHan            ; Windows 7 ; 6.2        ; x86_64         ;
 ; EDA Netlist Writer        ; JuHan            ; Windows 7 ; 6.2        ; x86_64         ;
-; MIF/HEX Update            ; JuHan            ; Windows 7 ; 6.2        ; x86_64         ;
-; Assembler                 ; JuHan            ; Windows 7 ; 6.2        ; x86_64         ;
-; MIF/HEX Update            ; JuHan            ; Windows 7 ; 6.2        ; x86_64         ;
-; Assembler                 ; JuHan            ; Windows 7 ; 6.2        ; x86_64         ;
-; MIF/HEX Update            ; JuHan            ; Windows 7 ; 6.2        ; x86_64         ;
-; Assembler                 ; JuHan            ; Windows 7 ; 6.2        ; x86_64         ;
-; MIF/HEX Update            ; JuHan            ; Windows 7 ; 6.2        ; x86_64         ;
-; Assembler                 ; JuHan            ; Windows 7 ; 6.2        ; x86_64         ;
 +---------------------------+------------------+-----------+------------+----------------+
 
 
@@ -141,14 +124,6 @@ quartus_fit --read_settings_files=off --write_settings_files=off RV32I_System -c
 quartus_asm --read_settings_files=off --write_settings_files=off RV32I_System -c RV32I_System
 quartus_sta RV32I_System -c RV32I_System
 quartus_eda --read_settings_files=off --write_settings_files=off RV32I_System -c RV32I_System
-quartus_cdb --update_mif RV32I_System.qpf
-quartus_asm RV32I_System.qpf
-quartus_cdb --update_mif RV32I_System.qpf
-quartus_asm RV32I_System.qpf
-quartus_cdb --update_mif RV32I_System.qpf
-quartus_asm RV32I_System.qpf
-quartus_cdb --update_mif RV32I_System.qpf
-quartus_asm RV32I_System.qpf
 
 
 

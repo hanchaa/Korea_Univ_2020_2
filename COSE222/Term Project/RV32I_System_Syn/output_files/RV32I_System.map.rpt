@@ -1,5 +1,5 @@
 Analysis & Synthesis report for RV32I_System
-Sat Oct 17 13:42:31 2020
+Mon Oct 26 15:15:23 2020
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -82,13 +82,13 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Oct 17 13:42:31 2020      ;
+; Analysis & Synthesis Status        ; Successful - Mon Oct 26 15:15:23 2020      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; RV32I_System                               ;
 ; Top-level Entity Name              ; RV32I_System                               ;
 ; Family                             ; Cyclone III                                ;
-; Total logic elements               ; 3,190                                      ;
-;     Total combinational functions  ; 2,192                                      ;
+; Total logic elements               ; 3,205                                      ;
+;     Total combinational functions  ; 2,207                                      ;
 ;     Dedicated logic registers      ; 1,319                                      ;
 ; Total registers                    ; 1319                                       ;
 ; Total pins                         ; 52                                         ;
@@ -203,36 +203,36 @@ applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                             ;
-+-----------------------------------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path                          ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                                      ; Library ;
-+-----------------------------------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------------------------------+---------+
-; ../RV32I_System/Decoder/Addr_Decoder.v                    ; yes             ; User Verilog HDL File                  ; C:/Users/JuHan/Desktop/RV32I_Class_Project/RV32I_System/Decoder/Addr_Decoder.v                    ;         ;
-; ../RV32I_System/Altera_Mem_Dual_Port/ram2port_inst_data.v ; yes             ; User Wizard-Generated File             ; C:/Users/JuHan/Desktop/RV32I_Class_Project/RV32I_System/Altera_Mem_Dual_Port/ram2port_inst_data.v ;         ;
-; ../RV32I_System/Altera_PLL/ALTPLL_clkgen.v                ; yes             ; User Wizard-Generated File             ; C:/Users/JuHan/Desktop/RV32I_Class_Project/RV32I_System/Altera_PLL/ALTPLL_clkgen.v                ;         ;
-; ../RV32I_System/RV32I_System.v                            ; yes             ; User Verilog HDL File                  ; C:/Users/JuHan/Desktop/RV32I_Class_Project/RV32I_System/RV32I_System.v                            ;         ;
-; ../RV32I_System/GPIO/GPIO.v                               ; yes             ; User Verilog HDL File                  ; C:/Users/JuHan/Desktop/RV32I_Class_Project/RV32I_System/GPIO/GPIO.v                               ;         ;
-; ../RV32I_System/RV32I_CPU/rv32i_cpu.v                     ; yes             ; User Verilog HDL File                  ; C:/Users/JuHan/Desktop/RV32I_Class_Project/RV32I_System/RV32I_CPU/rv32i_cpu.v                     ;         ;
-; ../RV32I_System/RV32I_CPU/basic_modules.v                 ; yes             ; User Verilog HDL File                  ; C:/Users/JuHan/Desktop/RV32I_Class_Project/RV32I_System/RV32I_CPU/basic_modules.v                 ;         ;
-; ../RV32I_System/Timer/TimerCounter.v                      ; yes             ; User Verilog HDL File                  ; C:/Users/JuHan/Desktop/RV32I_Class_Project/RV32I_System/Timer/TimerCounter.v                      ;         ;
-; altpll.tdf                                                ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/altpll.tdf                                         ;         ;
-; aglobal131.inc                                            ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/aglobal131.inc                                     ;         ;
-; stratix_pll.inc                                           ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/stratix_pll.inc                                    ;         ;
-; stratixii_pll.inc                                         ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/stratixii_pll.inc                                  ;         ;
-; cycloneii_pll.inc                                         ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/cycloneii_pll.inc                                  ;         ;
-; db/altpll_clkgen_altpll.v                                 ; yes             ; Auto-Generated Megafunction            ; C:/Users/JuHan/Desktop/RV32I_Class_Project/RV32I_System_Syn/db/altpll_clkgen_altpll.v             ;         ;
-; altsyncram.tdf                                            ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/altsyncram.tdf                                     ;         ;
-; stratix_ram_block.inc                                     ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/stratix_ram_block.inc                              ;         ;
-; lpm_mux.inc                                               ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_mux.inc                                        ;         ;
-; lpm_decode.inc                                            ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_decode.inc                                     ;         ;
-; a_rdenreg.inc                                             ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/a_rdenreg.inc                                      ;         ;
-; altrom.inc                                                ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/altrom.inc                                         ;         ;
-; altram.inc                                                ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/altram.inc                                         ;         ;
-; altdpram.inc                                              ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/altdpram.inc                                       ;         ;
-; db/altsyncram_5ul2.tdf                                    ; yes             ; Auto-Generated Megafunction            ; C:/Users/JuHan/Desktop/RV32I_Class_Project/RV32I_System_Syn/db/altsyncram_5ul2.tdf                ;         ;
-; insts_data.mif                                            ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/JuHan/Desktop/RV32I_Class_Project/RV32I_System_Syn/insts_data.mif                        ;         ;
-+-----------------------------------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                ;
++-----------------------------------------------------------+-----------------+----------------------------------------+----------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path                          ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                                                         ; Library ;
++-----------------------------------------------------------+-----------------+----------------------------------------+----------------------------------------------------------------------------------------------------------------------+---------+
+; ../RV32I_System/Decoder/Addr_Decoder.v                    ; yes             ; User Verilog HDL File                  ; C:/Users/JuHan/Desktop/Korea_Univ_2020_2/COSE222/Term Project/RV32I_System/Decoder/Addr_Decoder.v                    ;         ;
+; ../RV32I_System/Altera_Mem_Dual_Port/ram2port_inst_data.v ; yes             ; User Wizard-Generated File             ; C:/Users/JuHan/Desktop/Korea_Univ_2020_2/COSE222/Term Project/RV32I_System/Altera_Mem_Dual_Port/ram2port_inst_data.v ;         ;
+; ../RV32I_System/Altera_PLL/ALTPLL_clkgen.v                ; yes             ; User Wizard-Generated File             ; C:/Users/JuHan/Desktop/Korea_Univ_2020_2/COSE222/Term Project/RV32I_System/Altera_PLL/ALTPLL_clkgen.v                ;         ;
+; ../RV32I_System/RV32I_System.v                            ; yes             ; User Verilog HDL File                  ; C:/Users/JuHan/Desktop/Korea_Univ_2020_2/COSE222/Term Project/RV32I_System/RV32I_System.v                            ;         ;
+; ../RV32I_System/GPIO/GPIO.v                               ; yes             ; User Verilog HDL File                  ; C:/Users/JuHan/Desktop/Korea_Univ_2020_2/COSE222/Term Project/RV32I_System/GPIO/GPIO.v                               ;         ;
+; ../RV32I_System/RV32I_CPU/rv32i_cpu.v                     ; yes             ; User Verilog HDL File                  ; C:/Users/JuHan/Desktop/Korea_Univ_2020_2/COSE222/Term Project/RV32I_System/RV32I_CPU/rv32i_cpu.v                     ;         ;
+; ../RV32I_System/RV32I_CPU/basic_modules.v                 ; yes             ; User Verilog HDL File                  ; C:/Users/JuHan/Desktop/Korea_Univ_2020_2/COSE222/Term Project/RV32I_System/RV32I_CPU/basic_modules.v                 ;         ;
+; ../RV32I_System/Timer/TimerCounter.v                      ; yes             ; User Verilog HDL File                  ; C:/Users/JuHan/Desktop/Korea_Univ_2020_2/COSE222/Term Project/RV32I_System/Timer/TimerCounter.v                      ;         ;
+; altpll.tdf                                                ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/altpll.tdf                                                            ;         ;
+; aglobal131.inc                                            ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/aglobal131.inc                                                        ;         ;
+; stratix_pll.inc                                           ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/stratix_pll.inc                                                       ;         ;
+; stratixii_pll.inc                                         ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/stratixii_pll.inc                                                     ;         ;
+; cycloneii_pll.inc                                         ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/cycloneii_pll.inc                                                     ;         ;
+; db/altpll_clkgen_altpll.v                                 ; yes             ; Auto-Generated Megafunction            ; C:/Users/JuHan/Desktop/Korea_Univ_2020_2/COSE222/Term Project/RV32I_System_Syn/db/altpll_clkgen_altpll.v             ;         ;
+; altsyncram.tdf                                            ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/altsyncram.tdf                                                        ;         ;
+; stratix_ram_block.inc                                     ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                                 ;         ;
+; lpm_mux.inc                                               ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_mux.inc                                                           ;         ;
+; lpm_decode.inc                                            ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_decode.inc                                                        ;         ;
+; a_rdenreg.inc                                             ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/a_rdenreg.inc                                                         ;         ;
+; altrom.inc                                                ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/altrom.inc                                                            ;         ;
+; altram.inc                                                ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/altram.inc                                                            ;         ;
+; altdpram.inc                                              ; yes             ; Megafunction                           ; c:/altera/13.1/quartus/libraries/megafunctions/altdpram.inc                                                          ;         ;
+; db/altsyncram_5ul2.tdf                                    ; yes             ; Auto-Generated Megafunction            ; C:/Users/JuHan/Desktop/Korea_Univ_2020_2/COSE222/Term Project/RV32I_System_Syn/db/altsyncram_5ul2.tdf                ;         ;
+; insts_data.mif                                            ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/JuHan/Desktop/Korea_Univ_2020_2/COSE222/Term Project/RV32I_System_Syn/insts_data.mif                        ;         ;
++-----------------------------------------------------------+-----------------+----------------------------------------+----------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------+
@@ -240,16 +240,16 @@ applicable agreement for further details.
 +---------------------------------------------+-------------------------------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                                           ;
 +---------------------------------------------+-------------------------------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 3,190                                                                                           ;
+; Estimated Total logic elements              ; 3,205                                                                                           ;
 ;                                             ;                                                                                                 ;
-; Total combinational functions               ; 2192                                                                                            ;
+; Total combinational functions               ; 2207                                                                                            ;
 ; Logic element usage by number of LUT inputs ;                                                                                                 ;
-;     -- 4 input functions                    ; 1629                                                                                            ;
-;     -- 3 input functions                    ; 389                                                                                             ;
-;     -- <=2 input functions                  ; 174                                                                                             ;
+;     -- 4 input functions                    ; 1636                                                                                            ;
+;     -- 3 input functions                    ; 409                                                                                             ;
+;     -- <=2 input functions                  ; 162                                                                                             ;
 ;                                             ;                                                                                                 ;
 ; Logic elements by mode                      ;                                                                                                 ;
-;     -- normal mode                          ; 2072                                                                                            ;
+;     -- normal mode                          ; 2087                                                                                            ;
 ;     -- arithmetic mode                      ; 120                                                                                             ;
 ;                                             ;                                                                                                 ;
 ; Total registers                             ; 1319                                                                                            ;
@@ -264,8 +264,8 @@ applicable agreement for further details.
 ;                                             ;                                                                                                 ;
 ; Maximum fan-out node                        ; ALTPLL_clkgen:pll0|altpll:altpll_component|ALTPLL_clkgen_altpll:auto_generated|wire_pll1_clk[0] ;
 ; Maximum fan-out                             ; 1353                                                                                            ;
-; Total fan-out                               ; 12821                                                                                           ;
-; Average fan-out                             ; 3.51                                                                                            ;
+; Total fan-out                               ; 12885                                                                                           ;
+; Average fan-out                             ; 3.52                                                                                            ;
 +---------------------------------------------+-------------------------------------------------------------------------------------------------+
 
 
@@ -274,12 +274,12 @@ applicable agreement for further details.
 +------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                     ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                  ; Library Name ;
 +------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------+--------------+
-; |RV32I_System                                  ; 2192 (2)          ; 1319 (1)     ; 65536       ; 0            ; 0       ; 0         ; 52   ; 0            ; |RV32I_System                                                                                        ; work         ;
+; |RV32I_System                                  ; 2207 (2)          ; 1319 (1)     ; 65536       ; 0            ; 0       ; 0         ; 52   ; 0            ; |RV32I_System                                                                                        ; work         ;
 ;    |ALTPLL_clkgen:pll0|                        ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RV32I_System|ALTPLL_clkgen:pll0                                                                     ; work         ;
 ;       |altpll:altpll_component|                ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RV32I_System|ALTPLL_clkgen:pll0|altpll:altpll_component                                             ; work         ;
 ;          |ALTPLL_clkgen_altpll:auto_generated| ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RV32I_System|ALTPLL_clkgen:pll0|altpll:altpll_component|ALTPLL_clkgen_altpll:auto_generated         ; work         ;
 ;    |Addr_Decoder:iDecoder|                     ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RV32I_System|Addr_Decoder:iDecoder                                                                  ; work         ;
-;    |GPIO:iGPIO|                                ; 215 (35)          ; 230 (50)     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RV32I_System|GPIO:iGPIO                                                                             ; work         ;
+;    |GPIO:iGPIO|                                ; 217 (37)          ; 230 (50)     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RV32I_System|GPIO:iGPIO                                                                             ; work         ;
 ;       |pulse_gen:button1|                      ; 15 (15)           ; 15 (15)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RV32I_System|GPIO:iGPIO|pulse_gen:button1                                                           ; work         ;
 ;       |pulse_gen:button2|                      ; 15 (15)           ; 15 (15)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RV32I_System|GPIO:iGPIO|pulse_gen:button2                                                           ; work         ;
 ;       |pulse_gen:sw0|                          ; 15 (15)           ; 15 (15)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RV32I_System|GPIO:iGPIO|pulse_gen:sw0                                                               ; work         ;
@@ -296,12 +296,12 @@ applicable agreement for further details.
 ;    |ram2port_inst_data:iMem|                   ; 0 (0)             ; 0 (0)        ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |RV32I_System|ram2port_inst_data:iMem                                                                ; work         ;
 ;       |altsyncram:altsyncram_component|        ; 0 (0)             ; 0 (0)        ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |RV32I_System|ram2port_inst_data:iMem|altsyncram:altsyncram_component                                ; work         ;
 ;          |altsyncram_5ul2:auto_generated|      ; 0 (0)             ; 0 (0)        ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |RV32I_System|ram2port_inst_data:iMem|altsyncram:altsyncram_component|altsyncram_5ul2:auto_generated ; work         ;
-;    |rv32i_cpu:icpu|                            ; 1878 (0)          ; 1023 (0)     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RV32I_System|rv32i_cpu:icpu                                                                         ; work         ;
+;    |rv32i_cpu:icpu|                            ; 1891 (0)          ; 1023 (0)     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RV32I_System|rv32i_cpu:icpu                                                                         ; work         ;
 ;       |controller:i_controller|                ; 22 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RV32I_System|rv32i_cpu:icpu|controller:i_controller                                                 ; work         ;
 ;          |aludec:i_aludec|                     ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RV32I_System|rv32i_cpu:icpu|controller:i_controller|aludec:i_aludec                                 ; work         ;
 ;          |maindec:i_maindec|                   ; 12 (12)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RV32I_System|rv32i_cpu:icpu|controller:i_controller|maindec:i_maindec                               ; work         ;
-;       |datapath:i_datapath|                    ; 1856 (1035)       ; 1023 (31)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath                                                     ; work         ;
-;          |alu:i_alu|                           ; 137 (71)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu                                           ; work         ;
+;       |datapath:i_datapath|                    ; 1869 (1035)       ; 1023 (31)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath                                                     ; work         ;
+;          |alu:i_alu|                           ; 150 (84)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu                                           ; work         ;
 ;             |adder_32bit:iadder32|             ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|adder_32bit:iadder32                      ; work         ;
 ;                |adder_1bit:bit0|               ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|adder_32bit:iadder32|adder_1bit:bit0      ; work         ;
 ;                |adder_1bit:bit10|              ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|adder_32bit:iadder32|adder_1bit:bit10     ; work         ;
@@ -320,11 +320,11 @@ applicable agreement for further details.
 ;                |adder_1bit:bit22|              ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|adder_32bit:iadder32|adder_1bit:bit22     ; work         ;
 ;                |adder_1bit:bit23|              ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|adder_32bit:iadder32|adder_1bit:bit23     ; work         ;
 ;                |adder_1bit:bit24|              ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|adder_32bit:iadder32|adder_1bit:bit24     ; work         ;
-;                |adder_1bit:bit25|              ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|adder_32bit:iadder32|adder_1bit:bit25     ; work         ;
+;                |adder_1bit:bit25|              ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|adder_32bit:iadder32|adder_1bit:bit25     ; work         ;
 ;                |adder_1bit:bit26|              ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|adder_32bit:iadder32|adder_1bit:bit26     ; work         ;
 ;                |adder_1bit:bit27|              ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|adder_32bit:iadder32|adder_1bit:bit27     ; work         ;
-;                |adder_1bit:bit28|              ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|adder_32bit:iadder32|adder_1bit:bit28     ; work         ;
-;                |adder_1bit:bit29|              ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|adder_32bit:iadder32|adder_1bit:bit29     ; work         ;
+;                |adder_1bit:bit28|              ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|adder_32bit:iadder32|adder_1bit:bit28     ; work         ;
+;                |adder_1bit:bit29|              ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|adder_32bit:iadder32|adder_1bit:bit29     ; work         ;
 ;                |adder_1bit:bit2|               ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|adder_32bit:iadder32|adder_1bit:bit2      ; work         ;
 ;                |adder_1bit:bit30|              ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|adder_32bit:iadder32|adder_1bit:bit30     ; work         ;
 ;                |adder_1bit:bit31|              ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|adder_32bit:iadder32|adder_1bit:bit31     ; work         ;
@@ -349,14 +349,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+-------+----------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis IP Cores Summary                                                                                                                                                                     ;
-+--------+--------------+---------+--------------+--------------+---------------------------------------+---------------------------------------------------------------------------------------------------+
-; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                       ; IP Include File                                                                                   ;
-+--------+--------------+---------+--------------+--------------+---------------------------------------+---------------------------------------------------------------------------------------------------+
-; Altera ; RAM: 2-PORT  ; N/A     ; N/A          ; N/A          ; |RV32I_System|ram2port_inst_data:iMem ; C:/Users/JuHan/Desktop/RV32I_Class_Project/RV32I_System/Altera_Mem_Dual_Port/ram2port_inst_data.v ;
-; Altera ; ALTPLL       ; N/A     ; N/A          ; N/A          ; |RV32I_System|ALTPLL_clkgen:pll0      ; C:/Users/JuHan/Desktop/RV32I_Class_Project/RV32I_System/Altera_PLL/ALTPLL_clkgen.v                ;
-+--------+--------------+---------+--------------+--------------+---------------------------------------+---------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                                                                                                        ;
++--------+--------------+---------+--------------+--------------+---------------------------------------+----------------------------------------------------------------------------------------------------------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                       ; IP Include File                                                                                                      ;
++--------+--------------+---------+--------------+--------------+---------------------------------------+----------------------------------------------------------------------------------------------------------------------+
+; Altera ; RAM: 2-PORT  ; N/A     ; N/A          ; N/A          ; |RV32I_System|ram2port_inst_data:iMem ; C:/Users/JuHan/Desktop/Korea_Univ_2020_2/COSE222/Term Project/RV32I_System/Altera_Mem_Dual_Port/ram2port_inst_data.v ;
+; Altera ; ALTPLL       ; N/A     ; N/A          ; N/A          ; |RV32I_System|ALTPLL_clkgen:pll0      ; C:/Users/JuHan/Desktop/Korea_Univ_2020_2/COSE222/Term Project/RV32I_System/Altera_PLL/ALTPLL_clkgen.v                ;
++--------+--------------+---------+--------------+--------------+---------------------------------------+----------------------------------------------------------------------------------------------------------------------+
 
 
 Encoding Type:  One-Hot
@@ -1641,7 +1641,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:09     ;
+; Top            ; 00:00:10     ;
 +----------------+--------------+
 
 
@@ -1651,33 +1651,33 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Sat Oct 17 13:42:19 2020
+    Info: Processing started: Mon Oct 26 15:15:09 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off RV32I_System -c RV32I_System
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file /users/juhan/desktop/rv32i_class_project/rv32i_system/decoder/addr_decoder.v
+Info (12021): Found 1 design units, including 1 entities, in source file /users/juhan/desktop/korea_univ_2020_2/cose222/term project/rv32i_system/decoder/addr_decoder.v
     Info (12023): Found entity 1: Addr_Decoder
-Info (12021): Found 1 design units, including 1 entities, in source file /users/juhan/desktop/rv32i_class_project/rv32i_system/altera_mem_dual_port/ram2port_inst_data.v
+Info (12021): Found 1 design units, including 1 entities, in source file /users/juhan/desktop/korea_univ_2020_2/cose222/term project/rv32i_system/altera_mem_dual_port/ram2port_inst_data.v
     Info (12023): Found entity 1: ram2port_inst_data
-Info (12021): Found 1 design units, including 1 entities, in source file /users/juhan/desktop/rv32i_class_project/rv32i_system/altera_pll/altpll_clkgen.v
+Info (12021): Found 1 design units, including 1 entities, in source file /users/juhan/desktop/korea_univ_2020_2/cose222/term project/rv32i_system/altera_pll/altpll_clkgen.v
     Info (12023): Found entity 1: ALTPLL_clkgen
-Info (12021): Found 1 design units, including 1 entities, in source file /users/juhan/desktop/rv32i_class_project/rv32i_system/rv32i_system.v
+Info (12021): Found 1 design units, including 1 entities, in source file /users/juhan/desktop/korea_univ_2020_2/cose222/term project/rv32i_system/rv32i_system.v
     Info (12023): Found entity 1: RV32I_System
-Info (12021): Found 2 design units, including 2 entities, in source file /users/juhan/desktop/rv32i_class_project/rv32i_system/gpio/gpio.v
+Info (12021): Found 2 design units, including 2 entities, in source file /users/juhan/desktop/korea_univ_2020_2/cose222/term project/rv32i_system/gpio/gpio.v
     Info (12023): Found entity 1: GPIO
     Info (12023): Found entity 2: pulse_gen
-Info (12021): Found 5 design units, including 5 entities, in source file /users/juhan/desktop/rv32i_class_project/rv32i_system/rv32i_cpu/rv32i_cpu.v
+Info (12021): Found 5 design units, including 5 entities, in source file /users/juhan/desktop/korea_univ_2020_2/cose222/term project/rv32i_system/rv32i_cpu/rv32i_cpu.v
     Info (12023): Found entity 1: rv32i_cpu
     Info (12023): Found entity 2: controller
     Info (12023): Found entity 3: maindec
     Info (12023): Found entity 4: aludec
     Info (12023): Found entity 5: datapath
-Info (12021): Found 5 design units, including 5 entities, in source file /users/juhan/desktop/rv32i_class_project/rv32i_system/rv32i_cpu/basic_modules.v
+Info (12021): Found 5 design units, including 5 entities, in source file /users/juhan/desktop/korea_univ_2020_2/cose222/term project/rv32i_system/rv32i_cpu/basic_modules.v
     Info (12023): Found entity 1: regfile
     Info (12023): Found entity 2: alu
     Info (12023): Found entity 3: adder_32bit
     Info (12023): Found entity 4: adder_1bit
     Info (12023): Found entity 5: mux2
-Info (12021): Found 1 design units, including 1 entities, in source file /users/juhan/desktop/rv32i_class_project/rv32i_system/timer/timercounter.v
+Info (12021): Found 1 design units, including 1 entities, in source file /users/juhan/desktop/korea_univ_2020_2/cose222/term project/rv32i_system/timer/timercounter.v
     Info (12023): Found entity 1: TimerCounter
 Info (12127): Elaborating entity "RV32I_System" for the top level hierarchy
 Info (12128): Elaborating entity "ALTPLL_clkgen" for hierarchy "ALTPLL_clkgen:pll0"
@@ -1801,25 +1801,25 @@ Info (12128): Elaborating entity "GPIO" for hierarchy "GPIO:iGPIO"
 Info (12128): Elaborating entity "pulse_gen" for hierarchy "GPIO:iGPIO|pulse_gen:button1"
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 60 registers lost all their fanouts during netlist optimizations.
-Info (144001): Generated suppressed messages file C:/Users/JuHan/Desktop/RV32I_Class_Project/RV32I_System_Syn/output_files/RV32I_System.map.smsg
+Info (144001): Generated suppressed messages file C:/Users/JuHan/Desktop/Korea_Univ_2020_2/COSE222/Term Project/RV32I_System_Syn/output_files/RV32I_System.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 3317 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 3332 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 14 input pins
     Info (21059): Implemented 38 output pins
-    Info (21061): Implemented 3232 logic cells
+    Info (21061): Implemented 3247 logic cells
     Info (21064): Implemented 32 RAM segments
     Info (21065): Implemented 1 PLLs
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4679 megabytes
-    Info: Processing ended: Sat Oct 17 13:42:31 2020
-    Info: Elapsed time: 00:00:12
+    Info: Peak virtual memory: 4678 megabytes
+    Info: Processing ended: Mon Oct 26 15:15:23 2020
+    Info: Elapsed time: 00:00:14
     Info: Total CPU time (on all processors): 00:00:12
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/Users/JuHan/Desktop/RV32I_Class_Project/RV32I_System_Syn/output_files/RV32I_System.map.smsg.
+The suppressed messages can be found in C:/Users/JuHan/Desktop/Korea_Univ_2020_2/COSE222/Term Project/RV32I_System_Syn/output_files/RV32I_System.map.smsg.
 
 

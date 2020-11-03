@@ -11,7 +11,7 @@ Program Header:
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
-  0 .text         000000f0  00000000  00000000  00000060  2**4
+  0 .text         000000f8  00000000  00000000  00000060  2**4
                   CONTENTS, ALLOC, LOAD, CODE
   1 .data         00000400  00000400  00000400  00000460  2**4
                   CONTENTS, ALLOC, LOAD, DATA
@@ -45,8 +45,8 @@ SYMBOL TABLE:
 00000000 l    df *ABS*	00000000 lab0.o
 00000400 l       .data	00000000 stack
 00000000 l    df *ABS*	00000000 SevenSeg.c
-000000b8 g     F .text	00000038 display
-00000010 g     F .text	000000a8 SevenSeg
+000000c0 g     F .text	00000038 display
+00000010 g     F .text	000000b0 SevenSeg
 
 
 
@@ -88,7 +88,7 @@ void SevenSeg()
 
 		display(SEG_1);
   34:	07900513          	li	a0,121
-  38:	080000ef          	jal	ra,b8 <display>
+  38:	088000ef          	jal	ra,c0 <display>
 		*led_addr  = data;
   3c:	fe442783          	lw	a5,-28(s0)
   40:	fe842703          	lw	a4,-24(s0)
@@ -98,66 +98,67 @@ void SevenSeg()
   4c:	3ff7c793          	xori	a5,a5,1023
   50:	fef42423          	sw	a5,-24(s0)
 
-		//for (i=0; i<0xFFFFF; i++) ;
-		for (i=0; i<0x2; i++) ;
+		for (i=0; i<0xFFFFF; i++) ;
   54:	fe042623          	sw	zero,-20(s0)
   58:	0100006f          	j	68 <SevenSeg+0x58>
   5c:	fec42783          	lw	a5,-20(s0)
   60:	00178793          	addi	a5,a5,1
   64:	fef42623          	sw	a5,-20(s0)
   68:	fec42703          	lw	a4,-20(s0)
-  6c:	00100793          	li	a5,1
-  70:	fee7f6e3          	bgeu	a5,a4,5c <SevenSeg+0x4c>
+  6c:	001007b7          	lui	a5,0x100
+  70:	ffe78793          	addi	a5,a5,-2 # ffffe <stack+0xffbfe>
+  74:	fee7f4e3          	bgeu	a5,a4,5c <SevenSeg+0x4c>
+		// for (i=0; i<0x2; i++) ;
 
 		display(SEG_2);
-  74:	02400513          	li	a0,36
-  78:	040000ef          	jal	ra,b8 <display>
+  78:	02400513          	li	a0,36
+  7c:	044000ef          	jal	ra,c0 <display>
 		*led_addr  = data;
-  7c:	fe442783          	lw	a5,-28(s0)
-  80:	fe842703          	lw	a4,-24(s0)
-  84:	00e7a023          	sw	a4,0(a5)
+  80:	fe442783          	lw	a5,-28(s0)
+  84:	fe842703          	lw	a4,-24(s0)
+  88:	00e7a023          	sw	a4,0(a5)
 	    data = data ^ 0x3FF;
-  88:	fe842783          	lw	a5,-24(s0)
-  8c:	3ff7c793          	xori	a5,a5,1023
-  90:	fef42423          	sw	a5,-24(s0)
+  8c:	fe842783          	lw	a5,-24(s0)
+  90:	3ff7c793          	xori	a5,a5,1023
+  94:	fef42423          	sw	a5,-24(s0)
 
-		//for (i=0; i<0xFFFFF; i++) ;
-		for (i=0; i<0x2; i++) ;
-  94:	fe042623          	sw	zero,-20(s0)
-  98:	0100006f          	j	a8 <SevenSeg+0x98>
-  9c:	fec42783          	lw	a5,-20(s0)
-  a0:	00178793          	addi	a5,a5,1
-  a4:	fef42623          	sw	a5,-20(s0)
-  a8:	fec42703          	lw	a4,-20(s0)
-  ac:	00100793          	li	a5,1
-  b0:	fee7f6e3          	bgeu	a5,a4,9c <SevenSeg+0x8c>
+		for (i=0; i<0xFFFFF; i++) ;
+  98:	fe042623          	sw	zero,-20(s0)
+  9c:	0100006f          	j	ac <SevenSeg+0x9c>
+  a0:	fec42783          	lw	a5,-20(s0)
+  a4:	00178793          	addi	a5,a5,1
+  a8:	fef42623          	sw	a5,-20(s0)
+  ac:	fec42703          	lw	a4,-20(s0)
+  b0:	001007b7          	lui	a5,0x100
+  b4:	ffe78793          	addi	a5,a5,-2 # ffffe <stack+0xffbfe>
+  b8:	fee7f4e3          	bgeu	a5,a4,a0 <SevenSeg+0x90>
 		display(SEG_1);
-  b4:	f81ff06f          	j	34 <SevenSeg+0x24>
+  bc:	f79ff06f          	j	34 <SevenSeg+0x24>
 
-000000b8 <display>:
+000000c0 <display>:
 
 }
 
 
 void display (int num)
 {
-  b8:	fd010113          	addi	sp,sp,-48
-  bc:	02812623          	sw	s0,44(sp)
-  c0:	03010413          	addi	s0,sp,48
-  c4:	fca42e23          	sw	a0,-36(s0)
+  c0:	fd010113          	addi	sp,sp,-48
+  c4:	02812623          	sw	s0,44(sp)
+  c8:	03010413          	addi	s0,sp,48
+  cc:	fca42e23          	sw	a0,-36(s0)
 	unsigned int * seg0_addr = (unsigned int *) SevenSeg0;
-  c8:	ffff27b7          	lui	a5,0xffff2
-  cc:	00c78793          	addi	a5,a5,12 # ffff200c <stack+0xffff1c0c>
-  d0:	fef42623          	sw	a5,-20(s0)
+  d0:	ffff27b7          	lui	a5,0xffff2
+  d4:	00c78793          	addi	a5,a5,12 # ffff200c <stack+0xffff1c0c>
+  d8:	fef42623          	sw	a5,-20(s0)
 
 	*seg0_addr = num;
-  d4:	fdc42703          	lw	a4,-36(s0)
-  d8:	fec42783          	lw	a5,-20(s0)
-  dc:	00e7a023          	sw	a4,0(a5)
+  dc:	fdc42703          	lw	a4,-36(s0)
+  e0:	fec42783          	lw	a5,-20(s0)
+  e4:	00e7a023          	sw	a4,0(a5)
 
 	return;
-  e0:	00000013          	nop
+  e8:	00000013          	nop
 }
-  e4:	02c12403          	lw	s0,44(sp)
-  e8:	03010113          	addi	sp,sp,48
-  ec:	00008067          	ret
+  ec:	02c12403          	lw	s0,44(sp)
+  f0:	03010113          	addi	sp,sp,48
+  f4:	00008067          	ret

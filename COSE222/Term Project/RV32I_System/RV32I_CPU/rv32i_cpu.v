@@ -11,12 +11,12 @@
 
 module rv32i_cpu (
 		      input         clk, reset,
-            output [31:0] pc,		  		// program counter for instruction fetch
-            input  [31:0] inst, 			// incoming instruction
-            output        Memwrite, 	// 'memory write' control signal
-            output [31:0] Memaddr,  	// memory address 
-            output [31:0] MemWdata, 	// data to write to memory
-            input  [31:0] MemRdata); 	// data read from memory
+          output [31:0] pc,		  		// program counter for instruction fetch
+          input  [31:0] inst, 			// incoming instruction
+          output        Memwrite, 	// 'memory write' control signal
+          output [31:0] Memaddr,  	// memory address 
+          output [31:0] MemWdata, 	// data to write to memory
+          input  [31:0] MemRdata); 	// data read from memory
 
   wire        auipc, lui;
   wire        alusrc, regwrite;
@@ -143,6 +143,7 @@ module maindec(input  [6:0] opcode,
       `OP_R: 			controls <= #`simdelay 9'b0010_0000_0; // R-type
       `OP_I_Arith: 	controls <= #`simdelay 9'b0011_0000_0; // I-type Arithmetic
       `OP_I_Load: 	controls <= #`simdelay 9'b0011_1000_0; // I-type Load
+      `OP_I_JALR:   controls <= #`simdelay 9'b0011_0000_1; // JALR
       `OP_S: 			controls <= #`simdelay 9'b0001_0100_0; // S-type Store
       `OP_B: 			controls <= #`simdelay 9'b0000_0010_0; // B-type Branch
       `OP_U_LUI: 		controls <= #`simdelay 9'b0111_0000_0; // LUI
@@ -168,26 +169,30 @@ module aludec(input      [6:0] opcode,
       `OP_R:   		// R-type
 		begin
 			case({funct7,funct3})
-			 10'b0000000_000: alucontrol <= #`simdelay 5'b00000; // addition (add)
-			 10'b0100000_000: alucontrol <= #`simdelay 5'b10000; // subtraction (sub)
-			 10'b0000000_111: alucontrol <= #`simdelay 5'b00001; // and (and)
-			 10'b0000000_110: alucontrol <= #`simdelay 5'b00010; // or (or)
-          default:         alucontrol <= #`simdelay 5'bxxxxx; // ???
-        endcase
+        10'b0000000_000: alucontrol <= #`simdelay 5'b00000; // addition (add)
+        10'b0100000_000: alucontrol <= #`simdelay 5'b10000; // subtraction (sub)
+        10'b0000000_111: alucontrol <= #`simdelay 5'b00001; // and (and)
+        10'b0000000_110: alucontrol <= #`simdelay 5'b00010; // or (or)
+        default:         alucontrol <= #`simdelay 5'bxxxxx; // ???
+      endcase
 		end
 
       `OP_I_Arith:   // I-type Arithmetic
 		begin
 			case(funct3)
-			 3'b000:  alucontrol <= #`simdelay 5'b00000; // addition (addi)
-			 3'b111:  alucontrol <= #`simdelay 5'b00001; // and (andi)
-			 3'b110:  alucontrol <= #`simdelay 5'b00010; // or (ori)
-          default: alucontrol <= #`simdelay 5'bxxxxx; // ???
-        endcase
+        3'b000:  alucontrol <= #`simdelay 5'b00000; // addition (addi)
+        3'b111:  alucontrol <= #`simdelay 5'b00001; // and (andi)
+        3'b110:  alucontrol <= #`simdelay 5'b00010; // or (ori)
+        3'b100:  alucontrol <= #`simdelay 5'b00011; // xor (xori)
+        default: alucontrol <= #`simdelay 5'bxxxxx; // ???
+      endcase
 		end
 
       `OP_I_Load: 	// I-type Load (LW, LH, LB...)
       	alucontrol <= #`simdelay 5'b00000;  // addition 
+
+      `OP_I_JALR:   // JALR
+        alucontrol <= #`simdelay 5'b00000;  // addition
 
       `OP_B:   		// B-type Branch (BEQ, BNE, ...)
       	alucontrol <= #`simdelay 5'b10000;  // subtraction 
@@ -242,9 +247,10 @@ module datapath(input         clk, reset,
   reg  [31:0] alusrc2;
   wire [31:0] branch_dest, jal_dest;
   wire		  Nflag, Zflag, Cflag, Vflag;
-  wire		  f3beq, f3blt;
+  wire		  f3beq, f3blt, f3bgeu;
   wire		  beq_taken;
   wire		  blt_taken;
+  wire      bgeu_taken;
 
   assign rs1 = inst[19:15];
   assign rs2 = inst[24:20];
@@ -256,23 +262,27 @@ module datapath(input         clk, reset,
   //
   assign f3beq  = (funct3 == 3'b000);
   assign f3blt  = (funct3 == 3'b100);
+  assign f3bgeu = (funct3 == 3'b111);
 
   assign beq_taken  =  branch & f3beq & Zflag;
   assign blt_taken  =  branch & f3blt & (Nflag != Vflag);
+  assign bgeu_taken =  branch & f3bgeu & Cflag;
 
   assign branch_dest = (pc + se_br_imm);
   assign jal_dest 	= (pc + se_jal_imm);
 
   always @(posedge clk, posedge reset)
   begin
-     if (reset)  pc <= 32'b0;
+    if (reset)  pc <= 32'b0;
 	  else 
 	  begin
-	      if (beq_taken | blt_taken) // branch_taken
+	    if (beq_taken | blt_taken | bgeu_taken) // branch_taken
 				pc <= #`simdelay branch_dest;
-		   else if (jal) // jal
+		  else if (jal) // jal
 				pc <= #`simdelay jal_dest;
-		   else 
+      else if (jalr)
+        pc <= #`simdelay aluout;
+		  else 
 				pc <= #`simdelay (pc + 4);
 	  end
   end
@@ -343,7 +353,7 @@ module datapath(input         clk, reset,
 	// Data selection for writing to RF
 	always@(*)
 	begin
-		if	     (jal)			rd_data[31:0] = pc + 4;
+		if	     (jal | jalr)			rd_data[31:0] = pc + 4;
 		else if (memtoreg)	rd_data[31:0] = MemRdata;
 		else						rd_data[31:0] = aluout;
 	end

@@ -16,15 +16,15 @@ void SevenSeg()
 		*led_addr  = data;
 	    data = data ^ 0x3FF;
 
-		//for (i=0; i<0xFFFFF; i++) ;
-		for (i=0; i<0x2; i++) ;
+		for (i=0; i<0xFFFFF; i++) ;
+		// for (i=0; i<0x2; i++) ;
 
 		display(SEG_2);
 		*led_addr  = data;
 	    data = data ^ 0x3FF;
 
-		//for (i=0; i<0xFFFFF; i++) ;
-		for (i=0; i<0x2; i++) ;
+		for (i=0; i<0xFFFFF; i++) ;
+		// for (i=0; i<0x2; i++) ;
 
 	}
 

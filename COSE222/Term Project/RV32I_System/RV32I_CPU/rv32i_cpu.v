@@ -25,20 +25,20 @@ module rv32i_cpu (
   wire        branch, jal, jalr;
 
   // **** Juhan Cha: Start ****
-  reg [31:0] inst_if_id;
+  reg [31:0] if_id_inst;
   wire       if_id_write;
 
   always @(posedge clk, posedge reset)
   begin
-    if (reset) inst_if_id <= 32'b0;
-    else if (if_id_write) inst_if_id <= #`simdelay inst;
+    if (reset) if_id_inst <= 32'b0;
+    else if (if_id_write) if_id_inst <= #`simdelay inst;
   end
 
   // Instantiate Controller
   controller i_controller(
-    .opcode		(inst_if_id[6:0]), 
-		.funct7		(inst_if_id[31:25]), 
-		.funct3		(inst_if_id[14:12]), 
+    .opcode		(if_id_inst[6:0]), 
+		.funct7		(if_id_inst[31:25]), 
+		.funct3		(if_id_inst[14:12]), 
   // **** Juhan Cha: Finish ****
 		.auipc		(auipc),
 		.lui			(lui),
@@ -66,7 +66,7 @@ module rv32i_cpu (
 		.jalr				(jalr),
 		.alucontrol		(alucontrol),
 		.pc				(pc),
-		.inst				(inst_if_id), // **** Juhan Cha ****
+		.inst				(if_id_inst), // **** Juhan Cha ****
 		.ex_mem_aluout			(Memaddr), // **** Juhan Cha ****
 		.ex_mem_MemWdata		(MemWdata), // **** Juhan Cha ****
 		.MemRdata		(MemRdata),
@@ -306,6 +306,7 @@ module datapath(input         clk, reset,
 
   // wires for forwarding unit
   wire ex_mem_to_alu_src1, ex_mem_to_alu_src2, mem_wb_to_alu_src1, mem_wb_to_alu_src2;
+  reg [31:0] after_forward_rs1, after_forward_rs2;
   wire rd_to_rs1, rd_to_rs2;
   wire pcwrite, control_src;
 
@@ -368,7 +369,7 @@ module datapath(input         clk, reset,
       ex_mem_branch_dest <= #`simdelay branch_dest;
       ex_mem_jal_dest <= #`simdelay jal_dest;
       ex_mem_rd <= #`simdelay id_ex_rd;
-      ex_mem_MemWdata <= #`simdelay MemWdata;
+      ex_mem_MemWdata <= #`simdelay after_forward_rs2;
       ex_mem_aluout <= #`simdelay aluout;
       ex_mem_NZCV <= #`simdelay {Nflag, Zflag, Cflag, Vflag};
 
@@ -378,8 +379,8 @@ module datapath(input         clk, reset,
       mem_wb_MemRdata <= #`simdelay MemRdata;
       
       id_ex_alucontrol <= #`simdelay alucontrol;
-      if (control_src) id_ex_controls <= #`simdelay {auipc, lui, alusrc, memwrite, branch, f3beq, f3blt, f3bgeu, jal, jalr, memtoreg, regwrite};
-      else id_ex_controls <= #`simdelay 12'b0;
+      if (control_src) id_ex_controls <= 12'b0;
+      else id_ex_controls <= #`simdelay {auipc, lui, alusrc, memwrite, branch, f3beq, f3blt, f3bgeu, jal, jalr, memtoreg, regwrite};
       ex_mem_controls <= #`simdelay id_ex_controls[8:0];
       mem_wb_controls <= #`simdelay ex_mem_controls[3:0];
     end
@@ -450,9 +451,6 @@ module datapath(input         clk, reset,
     .rs2_data	(rs2_data));
 
 
-	assign MemWdata = id_ex_rs2_data; // **** Juhan Cha ****
-
-
 	//
 	// ALU 
 	//
@@ -496,14 +494,26 @@ module datapath(input         clk, reset,
     .mem_wb_to_alu_src1 (mem_wb_to_alu_src1),
     .mem_wb_to_alu_src2 (mem_wb_to_alu_src2));
   
+  always @(*)
+  begin
+    if (ex_mem_to_alu_src1) after_forward_rs1[31:0] = ex_mem_aluout[31:0];
+    else if (mem_wb_to_alu_src1) after_forward_rs1[31:0] = rd_data[31:0];
+    else after_forward_rs1[31:0] = id_ex_rs1_data[31:0];
+  end
+
+  always @(*)
+  begin
+    if (ex_mem_to_alu_src2) after_forward_rs2[31:0] = ex_mem_aluout[31:0];
+    else if (mem_wb_to_alu_src2) after_forward_rs2[31:0] = rd_data[31:0];
+    else after_forward_rs2[31:0] = id_ex_rs2_data[31:0];
+  end
+
 	// 1st source to ALU (alusrc1)
 	always@(*)
 	begin
 		if      (id_ex_controls[11])	alusrc1[31:0] = id_ex_pc[31:0];
 		else if (id_ex_controls[10]) 	alusrc1[31:0] = 32'b0;
-    else if (ex_mem_to_alu_src1)  alusrc1[31:0] = ex_mem_aluout[31:0];
-    else if (mem_wb_to_alu_src1)  alusrc1[31:0] = rd_data[31:0];
-		else          	              alusrc1[31:0] = id_ex_rs1_data[31:0];
+		else          	              alusrc1[31:0] = after_forward_rs1[31:0];
 	end
 	
 	// 2nd source to ALU (alusrc2)
@@ -512,9 +522,7 @@ module datapath(input         clk, reset,
 		if	    (id_ex_controls[11] | id_ex_controls[10])   alusrc2[31:0] = id_ex_auipc_lui_imm[31:0];
 		else if (id_ex_controls[9] & id_ex_controls[8])     alusrc2[31:0] = id_ex_se_imm_stype[31:0];
 		else if (id_ex_controls[9])                         alusrc2[31:0] = id_ex_se_imm_itype[31:0];
-    else if (ex_mem_to_alu_src2)                        alusrc2[31:0] = ex_mem_aluout[31:0];
-    else if (mem_wb_to_alu_src2)                        alusrc2[31:0] = rd_data[31:0];
-		else                                                alusrc2[31:0] = id_ex_rs2_data[31:0];
+		else                                                alusrc2[31:0] = after_forward_rs2[31:0];
 	end
   // **** Juhan Cha: Finish ****
 	

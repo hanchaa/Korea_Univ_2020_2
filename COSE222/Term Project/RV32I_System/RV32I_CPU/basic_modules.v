@@ -339,12 +339,12 @@ endmodule
 module hazard_detection (input [4:0] rs1,
 						 input [4:0] rs2,
 						 input [4:0] id_ex_rd,
-						 input [4:0] id_ex_memtoreg,
+						 input id_ex_memtoreg,
 						 output pcwrite,
 						 output if_id_write,
 						 output control_src);
 	
-	assign pcwirte = (id_ex_memtoreg & (id_ex_rd == rs1 | id_ex_rd == rs2)) ? 0 : 1;
+	assign pcwrite = (id_ex_memtoreg & (id_ex_rd == rs1 | id_ex_rd == rs2)) ? 0 : 1;
 	assign if_id_write = (id_ex_memtoreg & (id_ex_rd == rs1 | id_ex_rd == rs2)) ? 0 : 1;
 	assign control_src = (id_ex_memtoreg & (id_ex_rd == rs1 | id_ex_rd == rs2)) ? 1 : 0;
 

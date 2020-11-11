@@ -9,7 +9,7 @@
 #  Date:   2020-06-11
 #
 
-    HOME=/home/suhtw/riscv32i
+    HOME=../../riscv32i
     MIPSBIN=$(HOME)/bin
     AS=$(MIPSBIN)/riscv32-unknown-elf-as
     LD=$(MIPSBIN)/riscv32-unknown-elf-ld

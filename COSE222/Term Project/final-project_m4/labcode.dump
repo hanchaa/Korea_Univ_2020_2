@@ -1,0 +1,186 @@
+
+labcode:     file format elf32-littleriscv
+labcode
+architecture: riscv:rv32, flags 0x00000012:
+EXEC_P, HAS_SYMS
+start address 0x00000000
+
+Program Header:
+    LOAD off    0x00000060 vaddr 0x00000000 paddr 0x00000000 align 2**4
+         filesz 0x00000824 memsz 0x00000824 flags rwx
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         000000c8  00000000  00000000  00000060  2**4
+                  CONTENTS, ALLOC, LOAD, CODE
+  1 .data         00000424  00000400  00000400  00000460  2**4
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .riscv.attributes 0000001c  00000000  00000000  00000884  2**0
+                  CONTENTS, READONLY
+  3 .comment      00000011  00000000  00000000  000008a0  2**0
+                  CONTENTS, READONLY
+  4 .debug_line   00000168  00000000  00000000  000008b1  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+  5 .debug_info   0000005e  00000000  00000000  00000a19  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+  6 .debug_abbrev 00000040  00000000  00000000  00000a77  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+  7 .debug_aranges 00000040  00000000  00000000  00000ab8  2**3
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+  8 .debug_str    000000b5  00000000  00000000  00000af8  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+  9 .debug_frame  00000034  00000000  00000000  00000bb0  2**2
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+SYMBOL TABLE:
+00000000 l    d  .text	00000000 .text
+00000400 l    d  .data	00000000 .data
+00000000 l    d  .riscv.attributes	00000000 .riscv.attributes
+00000000 l    d  .comment	00000000 .comment
+00000000 l    d  .debug_line	00000000 .debug_line
+00000000 l    d  .debug_info	00000000 .debug_info
+00000000 l    d  .debug_abbrev	00000000 .debug_abbrev
+00000000 l    d  .debug_aranges	00000000 .debug_aranges
+00000000 l    d  .debug_str	00000000 .debug_str
+00000000 l    d  .debug_frame	00000000 .debug_frame
+00000000 l    df *ABS*	00000000 m4.o
+00000000 l       .text	00000000 main
+00000424 l       .data	00000000 my_stack
+00000420 l       .data	00000000 SEG8
+0000009c l       .text	00000000 forever
+00000400 l       .data	00000000 SEG0
+00000404 l       .data	00000000 SEG1
+00000408 l       .data	00000000 SEG2
+0000040c l       .data	00000000 SEG3
+00000410 l       .data	00000000 SEG4
+00000414 l       .data	00000000 SEG5
+00000418 l       .data	00000000 SEG6
+0000041c l       .data	00000000 SEG7
+00000000 l    df *ABS*	00000000 SevenSeg.c
+000000ac g     F .text	0000001c SevenSeg
+
+
+
+Disassembly of section .text:
+
+00000000 <main>:
+.text
+.align 4
+main:
+
+	addi x3, x0, 0x400
+   0:	40000193          	li	gp,1024
+	slli x3, x3, 1
+   4:	00119193          	slli	gp,gp,0x1
+	add x3, x3, x3
+   8:	003181b3          	add	gp,gp,gp
+	add x3, x3, x3
+   c:	003181b3          	add	gp,gp,gp
+	lui x4, 0xFFFF0
+  10:	ffff0237          	lui	tp,0xffff0
+	or  x4, x3, x4     /* x4 contains 0xFFFF_2000, which is GPIO base address */
+  14:	0041e233          	or	tp,gp,tp
+	
+	la  sp, my_stack
+  18:	42400113          	li	sp,1060
+	sw  x4, 0(sp)     /* store 0xFFFF_2000 to stack */
+  1c:	00412023          	sw	tp,0(sp)
+	
+	/* display 8 on HEX0 */
+	la  x9, SEG8
+  20:	42000493          	li	s1,1056
+	lw  x10, (x9)
+  24:	0004a503          	lw	a0,0(s1)
+	lw  x3, (sp)
+  28:	00012183          	lw	gp,0(sp)
+	sw  x10, 0xC(x3)
+  2c:	00a1a623          	sw	a0,12(gp)
+	
+	/* display 7 on HEX1 */
+	lw  x10, -4(x9)
+  30:	ffc4a503          	lw	a0,-4(s1)
+	lw  x3, (sp)
+  34:	00012183          	lw	gp,0(sp)
+	add x3, x3, 0x10   /* x3 contains 0xFFFF_2010 */
+  38:	01018193          	addi	gp,gp,16
+	sw  x10, (x3)
+  3c:	00a1a023          	sw	a0,0(gp)
+	
+	/* display 6 on HEX2 */
+	lw  x3, (sp)
+  40:	00012183          	lw	gp,0(sp)
+	add x3, x3, 0x14   /* x3 contains 0xFFFF_2014 */
+  44:	01418193          	addi	gp,gp,20
+	lw  x10, -8(x9)
+  48:	ff84a503          	lw	a0,-8(s1)
+	sw  x10, (x3)
+  4c:	00a1a023          	sw	a0,0(gp)
+	
+	/* display 5 on HEX3 */
+	lw  x10, -12(x9)
+  50:	ff44a503          	lw	a0,-12(s1)
+	addi x3, x3, 4     /* x3 contains 0xFFFF_2018 */
+  54:	00418193          	addi	gp,gp,4
+	sw  x10, (x3)
+  58:	00a1a023          	sw	a0,0(gp)
+	
+	/* display 4 on HEX0 */
+	lw  x10, -16(x9)
+  5c:	ff04a503          	lw	a0,-16(s1)
+	lw  x3, (sp)
+  60:	00012183          	lw	gp,0(sp)
+	add x3, x3, 0xC   	/* x3 contains 0xFFFF_200C */
+  64:	00c18193          	addi	gp,gp,12
+	sw  x10, (x3)
+  68:	00a1a023          	sw	a0,0(gp)
+	
+	/* display 3 on HEX1 */
+	lw  x10, -20(x9)
+  6c:	fec4a503          	lw	a0,-20(s1)
+	addi x3, x3, 4     /* x3 contains 0xFFFF_2010 */
+  70:	00418193          	addi	gp,gp,4
+	sw  x10, (x3)
+  74:	00a1a023          	sw	a0,0(gp)
+	
+	/* display 2 on HEX2 */
+	lw  x10, -24(x9)
+  78:	fe84a503          	lw	a0,-24(s1)
+	addi x4, x0, 4
+  7c:	00400213          	li	tp,4
+	add  x3, x3, x4    /* x3 contains 0xFFFF_2014 */
+  80:	004181b3          	add	gp,gp,tp
+	sw  x10, (x3)
+  84:	00a1a023          	sw	a0,0(gp)
+	
+	/* display 1 on HEX3 */
+	lw  x10, -28(x9)
+  88:	fe44a503          	lw	a0,-28(s1)
+	lw  x3, (sp)
+  8c:	00012183          	lw	gp,0(sp)
+	addi x3, x3, 0x8
+  90:	00818193          	addi	gp,gp,8
+	addi x3, x3, 0x10   /* x3 contains 0xFFFF_2018 */
+  94:	01018193          	addi	gp,gp,16
+	sw  x10, (x3)
+  98:	00a1a023          	sw	a0,0(gp)
+
+0000009c <forever>:
+
+forever:
+	j forever
+  9c:	0000006f          	j	9c <forever>
+	...
+
+000000ac <SevenSeg>:
+#include "SevenSeg.h"
+
+void SevenSeg()
+{
+  ac:	ff010113          	addi	sp,sp,-16
+  b0:	00812623          	sw	s0,12(sp)
+  b4:	01010413          	addi	s0,sp,16
+	return;
+  b8:	00000013          	nop
+}
+  bc:	00c12403          	lw	s0,12(sp)
+  c0:	01010113          	addi	sp,sp,16
+  c4:	00008067          	ret

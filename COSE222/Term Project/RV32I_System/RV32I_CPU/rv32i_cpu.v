@@ -173,6 +173,8 @@ module aludec(input      [6:0] opcode,
         10'b0100000_000: alucontrol <= #`simdelay 5'b10000; // subtraction (sub)
         10'b0000000_111: alucontrol <= #`simdelay 5'b00001; // and (and)
         10'b0000000_110: alucontrol <= #`simdelay 5'b00010; // or (or)
+        10'b0000000_100: alucontrol <= #`simdelay 5'b00011; // xor (xor)
+        10'b0000000_001: alucontrol <= #`simdelay 5'b00100; // shift left logical (sll)
         default:         alucontrol <= #`simdelay 5'bxxxxx; // ???
       endcase
 		end
@@ -180,10 +182,11 @@ module aludec(input      [6:0] opcode,
       `OP_I_Arith:   // I-type Arithmetic
 		begin
 			case(funct3)
-        3'b000:  alucontrol <= #`simdelay 5'b00000; // addition (addi)
-        3'b111:  alucontrol <= #`simdelay 5'b00001; // and (andi)
-        3'b110:  alucontrol <= #`simdelay 5'b00010; // or (ori)
-        3'b100:  alucontrol <= #`simdelay 5'b00011; // xor (xori)
+        3'b000: alucontrol <= #`simdelay 5'b00000; // addition (addi)
+        3'b111: alucontrol <= #`simdelay 5'b00001; // and (andi)
+        3'b110: alucontrol <= #`simdelay 5'b00010; // or (ori)
+        3'b100: alucontrol <= #`simdelay 5'b00011; // xor (xori)
+        3'b001: alucontrol <= #`simdleay 5'b00100; // shift left logical (slli)
         default: alucontrol <= #`simdelay 5'bxxxxx; // ???
       endcase
 		end

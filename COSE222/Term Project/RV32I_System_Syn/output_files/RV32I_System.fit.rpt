@@ -1,5 +1,5 @@
 Fitter report for RV32I_System
-Wed Nov 11 22:25:21 2020
+Thu Nov 12 00:56:47 2020
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -59,7 +59,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Fitter Summary                                                                  ;
 +------------------------------------+--------------------------------------------+
-; Fitter Status                      ; Successful - Wed Nov 11 22:25:20 2020      ;
+; Fitter Status                      ; Successful - Thu Nov 12 00:56:47 2020      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; RV32I_System                               ;
 ; Top-level Entity Name              ; RV32I_System                               ;
@@ -1443,10 +1443,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; SW[4]     ; Input    ; --            ; --            ; --                    ; --  ; --   ;
 ; SW[3]     ; Input    ; --            ; --            ; --                    ; --  ; --   ;
 ; SW[2]     ; Input    ; --            ; --            ; --                    ; --  ; --   ;
-; SW[1]     ; Input    ; --            ; --            ; --                    ; --  ; --   ;
-; SW[0]     ; Input    ; --            ; --            ; --                    ; --  ; --   ;
 ; BUTTON[2] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; SW[1]     ; Input    ; --            ; --            ; --                    ; --  ; --   ;
 ; BUTTON[1] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; SW[0]     ; Input    ; --            ; --            ; --                    ; --  ; --   ;
 ; BUTTON[0] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
 ; CLOCK_50  ; Input    ; --            ; --            ; --                    ; --  ; --   ;
 +-----------+----------+---------------+---------------+-----------------------+-----+------+
@@ -1465,10 +1465,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; SW[4]               ;                   ;         ;
 ; SW[3]               ;                   ;         ;
 ; SW[2]               ;                   ;         ;
-; SW[1]               ;                   ;         ;
-; SW[0]               ;                   ;         ;
 ; BUTTON[2]           ;                   ;         ;
+; SW[1]               ;                   ;         ;
 ; BUTTON[1]           ;                   ;         ;
+; SW[0]               ;                   ;         ;
 ; BUTTON[0]           ;                   ;         ;
 ; CLOCK_50            ;                   ;         ;
 +---------------------+-------------------+---------+
@@ -1596,10 +1596,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; SW[4]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; SW[3]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; SW[2]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; SW[1]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; SW[0]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; BUTTON[2]          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; SW[1]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; BUTTON[1]          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; SW[0]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; BUTTON[0]          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; CLOCK_50           ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 +--------------------+-----------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
@@ -1886,7 +1886,7 @@ Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.03 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.02 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -1902,16 +1902,16 @@ Warning (169177): 14 pins must meet Altera requirements for 3.3-, 3.0-, and 2.5-
     Info (169178): Pin SW[4] uses I/O standard 3.3-V LVTTL at G5
     Info (169178): Pin SW[3] uses I/O standard 3.3-V LVTTL at G4
     Info (169178): Pin SW[2] uses I/O standard 3.3-V LVTTL at H6
-    Info (169178): Pin SW[1] uses I/O standard 3.3-V LVTTL at H5
-    Info (169178): Pin SW[0] uses I/O standard 3.3-V LVTTL at J6
     Info (169178): Pin BUTTON[2] uses I/O standard 3.3-V LVTTL at F1
+    Info (169178): Pin SW[1] uses I/O standard 3.3-V LVTTL at H5
     Info (169178): Pin BUTTON[1] uses I/O standard 3.3-V LVTTL at G3
+    Info (169178): Pin SW[0] uses I/O standard 3.3-V LVTTL at J6
     Info (169178): Pin BUTTON[0] uses I/O standard 3.3-V LVTTL at H2
     Info (169178): Pin CLOCK_50 uses I/O standard 3.3-V LVTTL at G21
 Info (144001): Generated suppressed messages file C:/Users/JuHan/Desktop/Korea_Univ_2020_2/COSE222/Term Project/RV32I_System_Syn/output_files/RV32I_System.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 207 warnings
-    Info: Peak virtual memory: 5298 megabytes
-    Info: Processing ended: Wed Nov 11 22:25:21 2020
+    Info: Peak virtual memory: 5297 megabytes
+    Info: Processing ended: Thu Nov 12 00:56:48 2020
     Info: Elapsed time: 00:00:06
     Info: Total CPU time (on all processors): 00:00:06
 

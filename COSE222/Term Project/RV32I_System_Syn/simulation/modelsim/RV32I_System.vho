@@ -16,7 +16,7 @@
 -- PROGRAM "Quartus II 64-Bit"
 -- VERSION "Version 13.1.0 Build 162 10/23/2013 SJ Web Edition"
 
--- DATE "11/11/2020 22:25:29"
+-- DATE "11/12/2020 00:56:56"
 
 -- 
 -- Device: Altera EP3C16F484C6 Package FBGA484
@@ -91,10 +91,10 @@ END RV32I_System;
 -- SW[4]	=>  Location: PIN_G5,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 -- SW[3]	=>  Location: PIN_G4,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 -- SW[2]	=>  Location: PIN_H6,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
--- SW[1]	=>  Location: PIN_H5,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
--- SW[0]	=>  Location: PIN_J6,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 -- BUTTON[2]	=>  Location: PIN_F1,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+-- SW[1]	=>  Location: PIN_H5,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 -- BUTTON[1]	=>  Location: PIN_G3,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+-- SW[0]	=>  Location: PIN_J6,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 -- BUTTON[0]	=>  Location: PIN_H2,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 -- CLOCK_50	=>  Location: PIN_G21,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 
@@ -125,10 +125,10 @@ SIGNAL \SW[5]~input_o\ : std_logic;
 SIGNAL \SW[4]~input_o\ : std_logic;
 SIGNAL \SW[3]~input_o\ : std_logic;
 SIGNAL \SW[2]~input_o\ : std_logic;
-SIGNAL \SW[1]~input_o\ : std_logic;
-SIGNAL \SW[0]~input_o\ : std_logic;
 SIGNAL \BUTTON[2]~input_o\ : std_logic;
+SIGNAL \SW[1]~input_o\ : std_logic;
 SIGNAL \BUTTON[1]~input_o\ : std_logic;
+SIGNAL \SW[0]~input_o\ : std_logic;
 SIGNAL \BUTTON[0]~input_o\ : std_logic;
 SIGNAL \CLOCK_50~input_o\ : std_logic;
 SIGNAL \HEX3_D[0]~output_o\ : std_logic;
@@ -728,28 +728,6 @@ PORT MAP (
 	i => ww_SW(2),
 	o => \SW[2]~input_o\);
 
--- Location: IOIBUF_X0_Y27_N1
-\SW[1]~input\ : cycloneiii_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_SW(1),
-	o => \SW[1]~input_o\);
-
--- Location: IOIBUF_X0_Y24_N1
-\SW[0]~input\ : cycloneiii_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_SW(0),
-	o => \SW[0]~input_o\);
-
 -- Location: IOIBUF_X0_Y23_N1
 \BUTTON[2]~input\ : cycloneiii_io_ibuf
 -- pragma translate_off
@@ -761,6 +739,17 @@ PORT MAP (
 	i => ww_BUTTON(2),
 	o => \BUTTON[2]~input_o\);
 
+-- Location: IOIBUF_X0_Y27_N1
+\SW[1]~input\ : cycloneiii_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_SW(1),
+	o => \SW[1]~input_o\);
+
 -- Location: IOIBUF_X0_Y23_N15
 \BUTTON[1]~input\ : cycloneiii_io_ibuf
 -- pragma translate_off
@@ -771,6 +760,17 @@ GENERIC MAP (
 PORT MAP (
 	i => ww_BUTTON(1),
 	o => \BUTTON[1]~input_o\);
+
+-- Location: IOIBUF_X0_Y24_N1
+\SW[0]~input\ : cycloneiii_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_SW(0),
+	o => \SW[0]~input_o\);
 
 -- Location: IOIBUF_X0_Y21_N8
 \BUTTON[0]~input\ : cycloneiii_io_ibuf

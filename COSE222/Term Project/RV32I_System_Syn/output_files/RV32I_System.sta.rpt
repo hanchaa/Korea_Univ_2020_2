@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for RV32I_System
-Wed Nov 11 22:25:27 2020
+Thu Nov 12 00:56:54 2020
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -317,10 +317,10 @@ No synchronizer chains to report.
 ; SW[4]                   ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; SW[3]                   ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; SW[2]                   ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
-; SW[1]                   ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
-; SW[0]                   ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; BUTTON[2]               ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; SW[1]                   ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; BUTTON[1]               ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; SW[0]                   ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; BUTTON[0]               ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; CLOCK_50                ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; ~ALTERA_ASDO_DATA1~     ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
@@ -463,7 +463,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Wed Nov 11 22:25:25 2020
+    Info: Processing started: Thu Nov 12 00:56:52 2020
 Info: Command: quartus_sta RV32I_System -c RV32I_System
 Info: qsta_default_script.tcl version: #1
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -510,8 +510,8 @@ Info (332140): No Minimum Pulse Width paths to report
 Info (332101): Design is fully constrained for setup requirements
 Info (332101): Design is fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 4679 megabytes
-    Info: Processing ended: Wed Nov 11 22:25:27 2020
+    Info: Peak virtual memory: 4670 megabytes
+    Info: Processing ended: Thu Nov 12 00:56:54 2020
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 

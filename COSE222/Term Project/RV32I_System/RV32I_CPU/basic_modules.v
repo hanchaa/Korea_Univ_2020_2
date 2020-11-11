@@ -304,3 +304,49 @@ module mux2 #(parameter WIDTH = 8)
   assign #`simdelay y = s ? d1 : d0; 
 
 endmodule
+
+// **** Juhan Cha: Start ****
+module forwarding (input [4:0] id_ex_rs1,
+				  input [4:0] id_ex_rs2,
+				  input [4:0] ex_mem_rd,
+				  input ex_mem_regwrite,
+				  input [4:0] mem_wb_rd,
+				  input mem_wb_regwrite,
+				  output ex_mem_to_alu_src1,
+				  output ex_mem_to_alu_src2,
+				  output mem_wb_to_alu_src1,
+				  output mem_wb_to_alu_src2);
+
+	assign ex_mem_to_alu_src1 = (ex_mem_regwrite & ex_mem_rd != 0 & ex_mem_rd == id_ex_rs1) ? 1 : 0;
+	assign ex_mem_to_alu_src2 = (ex_mem_regwrite & ex_mem_rd != 0 & ex_mem_rd == id_ex_rs2) ? 1 : 0;
+	assign mem_wb_to_alu_src1 = (mem_wb_regwrite & mem_wb_rd != 0 & mem_wb_rd == id_ex_rs1) ? 1 : 0;
+	assign mem_wb_to_alu_src2 = (mem_wb_regwrite & mem_wb_rd != 0 & mem_wb_rd == id_ex_rs2) ? 1 : 0;
+
+endmodule
+
+module forwardingWBtoD (input [4:0] rs1,
+					   input [4:0] rs2,
+					   input [4:0] mem_wb_rd,
+					   input mem_wb_regwrite,
+					   output rd_to_rs1,
+					   output rd_to_rs2);
+	
+	assign rd_to_rs1 = (mem_wb_regwrite & mem_wb_rd != 0 & mem_wb_rd == rs1) ? 1 : 0;
+	assign rd_to_rs2 = (mem_wb_regwrite & mem_wb_rd != 0 & mem_wb_rd == rs2) ? 1 : 0;
+
+endmodule
+
+module hazard_detection (input [4:0] rs1,
+						 input [4:0] rs2,
+						 input [4:0] id_ex_rd,
+						 input [4:0] id_ex_memtoreg,
+						 output pcwrite,
+						 output if_id_write,
+						 output control_src);
+	
+	assign pcwirte = (id_ex_memtoreg & (id_ex_rd == rs1 | id_ex_rd == rs2)) ? 0 : 1;
+	assign if_id_write = (id_ex_memtoreg & (id_ex_rd == rs1 | id_ex_rd == rs2)) ? 0 : 1;
+	assign control_src = (id_ex_memtoreg & (id_ex_rd == rs1 | id_ex_rd == rs2)) ? 1 : 0;
+
+endmodule
+// **** Juhan Cha: Finish ****

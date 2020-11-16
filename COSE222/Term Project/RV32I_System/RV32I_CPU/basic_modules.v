@@ -229,7 +229,7 @@ module alu(input      [31:0] a, b,
       4'b0001: result <= #`simdelay a & b;
       4'b0010: result <= #`simdelay a | b;
 	  4'b0011: result <= #`simdelay a ^ b;
-	  4'b0100: result <= #`simdelay a << b[4:0];
+	  4'b0100: result <= #`simdelay a << b[4:0]; // **** Juhan Cha ****
       4'b1000: result <= #`simdelay {31'b0,sltu};
       default: result <= #`simdelay 32'b0;
     endcase

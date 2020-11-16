@@ -186,7 +186,7 @@ module aludec(input      [6:0] opcode,
         10'b0000000_111: alucontrol <= #`simdelay 5'b00001; // and (and)
         10'b0000000_110: alucontrol <= #`simdelay 5'b00010; // or (or)
         10'b0000000_100: alucontrol <= #`simdelay 5'b00011; // xor (xor)
-        10'b0000000_001: alucontrol <= #`simdelay 5'b00100; // shift left logical (sll)
+        10'b0000000_001: alucontrol <= #`simdelay 5'b00100; // shift left logical (sll) **** Juhan Cha ****
         default:         alucontrol <= #`simdelay 5'bxxxxx; // ???
       endcase
 		end
@@ -198,7 +198,7 @@ module aludec(input      [6:0] opcode,
         3'b111: alucontrol <= #`simdelay 5'b00001; // and (andi)
         3'b110: alucontrol <= #`simdelay 5'b00010; // or (ori)
         3'b100: alucontrol <= #`simdelay 5'b00011; // xor (xori)
-        3'b001: alucontrol <= #`simdelay 5'b00100; // shift left logical (slli)
+        3'b001: alucontrol <= #`simdelay 5'b00100; // shift left logical (slli) **** Juhan Cha ****
         default: alucontrol <= #`simdelay 5'bxxxxx; // ???
       endcase
 		end

@@ -28,7 +28,7 @@ module rv32i_cpu (
   reg [31:0] if_id_inst;
   wire       if_id_write;
 
-  always @(posedge clk, posedge reset)
+  always @(posedge clk)
   begin
     if (reset) if_id_inst <= 32'b0;
     else if (if_id_write) if_id_inst <= #`simdelay inst;
@@ -310,7 +310,7 @@ module datapath(input         clk, reset,
   wire rd_to_rs1, rd_to_rs2;
   wire pcwrite, control_src;
 
-  always @(posedge clk, posedge reset)
+  always @(posedge clk)
   begin
     if (reset) 
     begin

@@ -169,7 +169,7 @@ static int changePC(int state) {
 // return value : 1 visited, 0 not visited
 static int is_visited(int visited[], int level, int state) {
     for (int i = 0; i <= level; i++) {
-        if (visited[i] == state) {
+        if (visited[state] != 0) {
             printf("\tnext state ");
             print_statename(stdout, state);
             printf(" has been visited\n");
@@ -182,8 +182,11 @@ static int is_visited(int visited[], int level, int state) {
 
 // 방문한 상태들을 차례로 화면에 출력
 static void print_states(int visited[], int count) {
+    int state = 0;
+    
     for (int i = 0; i <= count; i++) {
-        print_statename(stdout, visited[i]);
+        print_statename(stdout, state);
+        state = visited[state];
         printf("\n");
     }
     printf("\n");
@@ -191,8 +194,6 @@ static void print_states(int visited[], int count) {
 
 // recursive function
 static void dfs_main(int state, int goal_state, int level, int visited[]) {
-    visited[level] = state;
-
     printf("cur state is ");
     print_statename(stdout, state);
     printf(" (level %d)\n", level);
@@ -203,22 +204,19 @@ static void dfs_main(int state, int goal_state, int level, int visited[]) {
         return;
     }
 
-    int (*next_state_functions[4])(int);
-
-    next_state_functions[0] = changeP;
-    next_state_functions[1] = changePW;
-    next_state_functions[2] = changePG;
-    next_state_functions[3] = changePC;
+    int (*changes[4])(int) = {changeP, changePW, changePG,changePC};
 
     for (int i = 0; i < 4; i++) {
-        int next_state = next_state_functions[i](state);
+        int next_state = changes[i](state);
 
         if (next_state != -1) {
             if (is_visited(visited, level, next_state) == 0) {
+                visited[state] = next_state;
                 dfs_main(next_state, goal_state, level + 1, visited);
                 printf("back to ");
                 print_statename(stdout, state);
                 printf(" (level %d)\n", level);
+                visited[state] = 0;
             }
         }
     }

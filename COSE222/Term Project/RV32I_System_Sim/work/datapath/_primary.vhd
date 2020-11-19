@@ -20,6 +20,7 @@ entity datapath is
         ex_mem_MemWdata : out    vl_logic_vector(31 downto 0);
         MemRdata        : in     vl_logic_vector(31 downto 0);
         ex_mem_Memwrite : out    vl_logic;
-        if_id_write     : out    vl_logic
+        if_id_write     : out    vl_logic;
+        flush           : out    vl_logic
     );
 end datapath;

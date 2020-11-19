@@ -27,10 +27,11 @@ module rv32i_cpu (
   // **** Juhan Cha: Start ****
   reg [31:0] if_id_inst;
   wire       if_id_write;
+  wire       flush;
 
   always @(posedge clk)
   begin
-    if (reset) if_id_inst <= 32'b0;
+    if (reset | flush) if_id_inst <= 32'b0;
     else if (if_id_write) if_id_inst <= #`simdelay inst;
   end
 
@@ -71,7 +72,8 @@ module rv32i_cpu (
 		.ex_mem_MemWdata		(MemWdata), // **** Juhan Cha ****
 		.MemRdata		(MemRdata),
     .ex_mem_Memwrite (Memwrite), // **** Juhan Cha ****
-    .if_id_write (if_id_write)); // **** Juhan Cha ****
+    .if_id_write (if_id_write), // **** Juhan Cha ****
+    .flush (flush)); // **** Juhan Cha ****
 
 
 endmodule
@@ -246,7 +248,8 @@ module datapath(input         clk, reset,
                 output reg [31:0] ex_mem_MemWdata, // **** Juhan Cha ****
                 input  [31:0] MemRdata,
                 output ex_mem_Memwrite, // **** Juhan Cha ****
-                output if_id_write); // **** Juhan Cha ****
+                output if_id_write, // **** Juhan Cha ****
+                output flush); // **** Juhan Cha ****
 
   wire [4:0]  rs1, rs2, rd;
   wire [2:0]  funct3;
@@ -271,6 +274,7 @@ module datapath(input         clk, reset,
   // **** Juhan Cha: Start ****
   wire [31:0] MemWdata;
   wire [31:0] aluout;
+  wire branch_taken;
   
   // pipelines for datapath
   reg [31:0] if_id_pc;
@@ -288,10 +292,7 @@ module datapath(input         clk, reset,
   reg [31:0] id_ex_auipc_lui_imm;
 
   reg [31:0] ex_mem_pc;
-  reg [31:0] ex_mem_branch_dest;
-  reg [31:0] ex_mem_jal_dest;
   reg [4:0]  ex_mem_rd;
-  reg [3:0]  ex_mem_NZCV;
 
   reg [31:0] mem_wb_pc;
   reg [4:0]  mem_wb_rd;
@@ -329,12 +330,9 @@ module datapath(input         clk, reset,
       id_ex_auipc_lui_imm <= 32'b0;
       
       ex_mem_pc <= 32'b0;
-      ex_mem_branch_dest <= 32'b0;
-      ex_mem_jal_dest <= 32'b0;
       ex_mem_rd <= 5'b0;
       ex_mem_MemWdata <= 32'b0;
       ex_mem_aluout <= 32'b0;
-      ex_mem_NZCV <= 4'b0;
       
       mem_wb_pc <= 32'b0;
       mem_wb_rd <= 5'b0;
@@ -366,12 +364,9 @@ module datapath(input         clk, reset,
       id_ex_auipc_lui_imm <= #`simdelay auipc_lui_imm;
 
       ex_mem_pc <= #`simdelay id_ex_pc;
-      ex_mem_branch_dest <= #`simdelay branch_dest;
-      ex_mem_jal_dest <= #`simdelay jal_dest;
       ex_mem_rd <= #`simdelay id_ex_rd;
       ex_mem_MemWdata <= #`simdelay after_forward_rs2;
       ex_mem_aluout <= #`simdelay aluout;
-      ex_mem_NZCV <= #`simdelay {Nflag, Zflag, Cflag, Vflag};
 
       mem_wb_pc <= #`simdelay ex_mem_pc;
       mem_wb_rd <= #`simdelay ex_mem_rd;
@@ -380,13 +375,13 @@ module datapath(input         clk, reset,
       
       id_ex_alucontrol <= #`simdelay alucontrol;
       if (control_src) id_ex_controls <= 12'b0;
-      else id_ex_controls <= #`simdelay {auipc, lui, alusrc, memwrite, branch, f3beq, f3blt, f3bgeu, jal, jalr, memtoreg, regwrite};
-      ex_mem_controls <= #`simdelay id_ex_controls[8:0];
+      else id_ex_controls <= #`simdelay {auipc, lui, alusrc, branch, f3beq, f3blt, f3bgeu, memwrite, jal, jalr, memtoreg, regwrite};
+      ex_mem_controls <= #`simdelay id_ex_controls[4:0];
       mem_wb_controls <= #`simdelay ex_mem_controls[3:0];
     end
   end
 
-  assign ex_mem_Memwrite = ex_mem_controls[8];
+  assign ex_mem_Memwrite = ex_mem_controls[4];
   // **** Juhan Cha: Finish ****
 
   assign rs1 = inst[19:15];
@@ -401,9 +396,10 @@ module datapath(input         clk, reset,
   assign f3blt  = (funct3 == 3'b100);
   assign f3bgeu = (funct3 == 3'b111);
 
-  assign beq_taken  =  ex_mem_controls[7] & ex_mem_controls[6] & ex_mem_NZCV[2];
-  assign blt_taken  =  ex_mem_controls[7] & ex_mem_controls[5] & (ex_mem_NZCV[3] != ex_mem_NZCV[2]);
-  assign bgeu_taken =  ex_mem_controls[7] & ex_mem_controls[4] & ex_mem_NZCV[1];
+  assign beq_taken  =  id_ex_controls[8] & id_ex_controls[7] & Zflag;
+  assign blt_taken  =  id_ex_controls[8] & id_ex_controls[6] & (Nflag != Zflag);
+  assign bgeu_taken =  id_ex_controls[8] & id_ex_controls[5] & Cflag;
+  assign branch_taken = beq_taken | blt_taken | bgeu_taken;
 
   // **** Juhan Cha: Start ****
   assign branch_dest = (id_ex_pc + id_ex_se_br_imm);
@@ -414,12 +410,12 @@ module datapath(input         clk, reset,
     if (reset)  pc <= 32'b0;
 	  else if (pcwrite)
 	  begin
-	    if (beq_taken | blt_taken | bgeu_taken) // branch_taken
-				pc <= #`simdelay ex_mem_branch_dest;
-		  else if (ex_mem_controls[3]) // jal
-				pc <= #`simdelay ex_mem_jal_dest;
-      else if (ex_mem_controls[2])
-        pc <= #`simdelay ex_mem_aluout;
+	    if (branch_taken) // branch_taken
+				pc <= #`simdelay branch_dest;
+		  else if (id_ex_controls[3]) // jal
+				pc <= #`simdelay jal_dest;
+      else if (id_ex_controls[2]) // jalr
+        pc <= #`simdelay aluout;
   // **** Juhan Cha: Finish ****
 		  else 
 				pc <= #`simdelay (pc + 4);
@@ -470,9 +466,13 @@ module datapath(input         clk, reset,
     .rs2 (rs2),
     .id_ex_rd (id_ex_rd),
     .id_ex_memtoreg (id_ex_controls[1]),
+    .branch_taken(branch_taken),
+    .jal(id_ex_controls[3]),
+    .jalr(id_ex_controls[2]),
     .pcwrite (pcwrite),
     .if_id_write (if_id_write),
-    .control_src (control_src));
+    .control_src (control_src),
+    .flush (flush));
 
   forwardingWBtoD i_forwardingWBtoD(
     .rs1 (rs1),
@@ -520,7 +520,7 @@ module datapath(input         clk, reset,
 	always@(*)
 	begin
 		if	    (id_ex_controls[11] | id_ex_controls[10])   alusrc2[31:0] = id_ex_auipc_lui_imm[31:0];
-		else if (id_ex_controls[9] & id_ex_controls[8])     alusrc2[31:0] = id_ex_se_imm_stype[31:0];
+		else if (id_ex_controls[9] & id_ex_controls[4])     alusrc2[31:0] = id_ex_se_imm_stype[31:0];
 		else if (id_ex_controls[9])                         alusrc2[31:0] = id_ex_se_imm_itype[31:0];
 		else                                                alusrc2[31:0] = after_forward_rs2[31:0];
 	end
@@ -535,7 +535,7 @@ module datapath(input         clk, reset,
 	// Data selection for writing to RF
 	always@(*)
 	begin
-		if	    (mem_wb_controls[3] | mem_wb_controls[2])			rd_data[31:0] = mem_wb_pc[31:0] + 32'b0100;
+		if	    (mem_wb_controls[3] | mem_wb_controls[2])			rd_data[31:0] = mem_wb_pc[31:0] + 4;
 		else if (mem_wb_controls[1])	                        rd_data[31:0] = mem_wb_MemRdata[31:0];
 		else                                      						rd_data[31:0] = mem_wb_aluout[31:0];
 	end

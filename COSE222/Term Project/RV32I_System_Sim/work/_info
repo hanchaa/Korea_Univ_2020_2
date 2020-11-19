@@ -27,14 +27,14 @@ Z14 !s100 kmUf9[j`aB5M76ZCP<@JY1
 Z15 I4;DoH16RM;:<BZJ3LhlgE0
 Z16 V]J[nU[1hnP5TbJMP^fIol0
 Z17 dC:\Users\JuHan\Desktop\Korea_Univ_2020_2\COSE222\Term Project\RV32I_System_Sim
-Z18 w1605113218
+Z18 w1605772988
 Z19 8C:/Users/JuHan/Desktop/Korea_Univ_2020_2/COSE222/Term Project/RV32I_System/RV32I_CPU/basic_modules.v
 Z20 FC:/Users/JuHan/Desktop/Korea_Univ_2020_2/COSE222/Term Project/RV32I_System/RV32I_CPU/basic_modules.v
 Z21 L0 289
 R8
 r1
 31
-Z22 !s108 1605512380.830000
+Z22 !s108 1605776326.890000
 Z23 !s107 C:/Users/JuHan/Desktop/Korea_Univ_2020_2/COSE222/Term Project/RV32I_System/RV32I_CPU/basic_modules.v|
 Z24 !s90 -reportprogress|300|-work|work|C:/Users/JuHan/Desktop/Korea_Univ_2020_2/COSE222/Term Project/RV32I_System/RV32I_CPU/basic_modules.v|
 R12
@@ -770,19 +770,19 @@ R12
 !s101 -O0
 valudec
 !i10b 1
-Z191 !s100 c1ePD]T`?bEgd5^DnC[6]0
-Z192 IObIOHo:K8h_8Fc>O4hMSm0
+Z191 !s100 dH7H9M6ck@2^h3kPBQ>5_0
+Z192 IL0kQikQQ<<E]R:^FkGb4O0
 Z193 V<MTfeadkAUVW_zEX58RE50
 R17
-Z194 w1605508198
+Z194 w1605776263
 Z195 8C:/Users/JuHan/Desktop/Korea_Univ_2020_2/COSE222/Term Project/RV32I_System/RV32I_CPU/rv32i_cpu.v
 Z196 FC:/Users/JuHan/Desktop/Korea_Univ_2020_2/COSE222/Term Project/RV32I_System/RV32I_CPU/rv32i_cpu.v
-Z197 L0 172
+Z197 L0 174
 R8
 r1
 !s85 0
 31
-Z198 !s108 1605512381.248000
+Z198 !s108 1605776327.199000
 Z199 !s107 C:/Users/JuHan/Desktop/Korea_Univ_2020_2/COSE222/Term Project/RV32I_System/RV32I_CPU/rv32i_cpu.v|
 Z200 !s90 -reportprogress|30|-work|work|C:/Users/JuHan/Desktop/Korea_Univ_2020_2/COSE222/Term Project/RV32I_System/RV32I_CPU/rv32i_cpu.v|
 !s101 -O0
@@ -903,14 +903,14 @@ Z224 !s100 J`[QDB]3ePUk=F2TOP?El2
 !s101 -O0
 vcontroller
 !i10b 1
-Z225 !s100 [JO[8ZokW_;`J29n]Dg6S3
-Z226 IoHO8jGi`>?`h1XUfR^V=X3
+Z225 !s100 ]TFHj1e5AUNPe26iLEU2J0
+Z226 I9DP_UGG4>]=Ki9jj`RI^d1
 Z227 VS[Z^RUOl;1ZUalDPQln5<1
 R17
 R194
 R195
 R196
-L0 84
+L0 86
 R8
 r1
 !s85 0
@@ -941,14 +941,14 @@ Z231 !s100 >BAGW@27>z72Bj6g1B9oB3
 !s101 -O0
 vdatapath
 !i10b 1
-!s100 2S>nCBUWh`C]]bDUKc9A;0
-I6c[DJ=87D4QBYL_IjVKbm3
-Z232 VOK;WaQ61c4>`aQSMCSJV81
+!s100 T@id_Z:9BTKGnF5e7=BCR1
+IeYTEGMhBn[<bc19GVV_<Q2
+Z232 V9nU]YD_LOXEhJJCCXIBmA1
 R17
 R194
 R195
 R196
-Z233 L0 232
+Z233 L0 234
 R8
 r1
 !s85 0
@@ -1227,9 +1227,9 @@ Z296 !s100 MGR>KLlDSPM8WnJhJC@MV3
 !s85 0
 !s101 -O0
 vhazard_detection
-Z297 !s100 =nJFfjFeVCUo8QW_FMU5H3
-Z298 I4]z?DR@kLO6W_RS?FzNYR1
-Z299 Vhk@[OR^ZJFoLE4A`=[c651
+Z297 !s100 UTR^Wo@o`_S8G7zz=V5lk1
+Z298 I`W@E`;?OJHGY:lORP64j@1
+Z299 VJWZZ:VaNW3ZM=_>?SB4IV0
 R17
 R18
 R19
@@ -1915,14 +1915,14 @@ Z447 !s100 HWVJYNTBRL2UjUS7N>DY71
 !s101 -O0
 vmaindec
 !i10b 1
-Z448 !s100 <6RS52ec]RAKEFXT`9[753
-Z449 IIQh0cjNB_>a3SSai0O1A^1
+Z448 !s100 Bh]RXZoX;4GN^if[dKWZA1
+Z449 IC_=caS`ecNK^ogDcbNcO33
 Z450 VdhXzYGC][edb4:W<;1c:53
 R17
 R194
 R195
 R196
-Z451 L0 136
+Z451 L0 138
 R8
 r1
 !s85 0
@@ -2228,9 +2228,9 @@ R12
 !s101 -O0
 vrv32i_cpu
 !i10b 1
-!s100 JBkiab=nzOhkAkKnljz0?1
-I]X_laknmC?4QgJ5n7feA?1
-Z525 VC;H2n;KC1aZSnAiUDXcPL0
+Z525 !s100 >6>;[QJK945J2ObHBUQMH2
+Z526 I9CFZHG74VNfcWMgAV70GQ2
+Z527 VC;H2n;KC1aZSnAiUDXcPL0
 R17
 R194
 R195
@@ -2246,53 +2246,53 @@ R200
 !s101 -O0
 R12
 vRV32I_System
-Z526 IYUc7C9BU0Rj5Nz:nPS>7l2
-Z527 V[^DSFKj=j]FV6fohJOiTf3
+Z528 IYUc7C9BU0Rj5Nz:nPS>7l2
+Z529 V[^DSFKj=j]FV6fohJOiTf3
 R3
-Z528 w1594611004
-Z529 8D:/KU/ESCA/teaching/cose222_CA/riscv/RISCV_design-clean/RV32I_CPU_Project/RV32I_System/RV32I_System.v
-Z530 FD:/KU/ESCA/teaching/cose222_CA/riscv/RISCV_design-clean/RV32I_CPU_Project/RV32I_System/RV32I_System.v
+Z530 w1594611004
+Z531 8D:/KU/ESCA/teaching/cose222_CA/riscv/RISCV_design-clean/RV32I_CPU_Project/RV32I_System/RV32I_System.v
+Z532 FD:/KU/ESCA/teaching/cose222_CA/riscv/RISCV_design-clean/RV32I_CPU_Project/RV32I_System/RV32I_System.v
 L0 27
 R8
 r1
 31
 R12
-Z531 n@r@v32@i_@system
-Z532 !s100 FgnL2lE=dcebcgln593V53
-Z533 !s108 1594693353.441000
-Z534 !s107 D:/KU/ESCA/teaching/cose222_CA/riscv/RISCV_design-clean/RV32I_CPU_Project/RV32I_System/RV32I_System.v|
-Z535 !s90 -reportprogress|300|-work|work|D:/KU/ESCA/teaching/cose222_CA/riscv/RISCV_design-clean/RV32I_CPU_Project/RV32I_System/RV32I_System.v|
+Z533 n@r@v32@i_@system
+Z534 !s100 FgnL2lE=dcebcgln593V53
+Z535 !s108 1594693353.441000
+Z536 !s107 D:/KU/ESCA/teaching/cose222_CA/riscv/RISCV_design-clean/RV32I_CPU_Project/RV32I_System/RV32I_System.v|
+Z537 !s90 -reportprogress|300|-work|work|D:/KU/ESCA/teaching/cose222_CA/riscv/RISCV_design-clean/RV32I_CPU_Project/RV32I_System/RV32I_System.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vRV32I_System_tb
-Z536 IY6WcP:moED`DJhJn<DJSA3
-Z537 VYj5Yf3:U?]<1OoHKG4YYQ0
+Z538 IY6WcP:moED`DJhJn<DJSA3
+Z539 VYj5Yf3:U?]<1OoHKG4YYQ0
 R3
-Z538 w1592143006
-Z539 8D:/KU/ESCA/teaching/cose222_CA/riscv/RISCV_design-clean/RV32I_CPU_Project/RV32I_System/RV32I_System_tb.v
-Z540 FD:/KU/ESCA/teaching/cose222_CA/riscv/RISCV_design-clean/RV32I_CPU_Project/RV32I_System/RV32I_System_tb.v
+Z540 w1592143006
+Z541 8D:/KU/ESCA/teaching/cose222_CA/riscv/RISCV_design-clean/RV32I_CPU_Project/RV32I_System/RV32I_System_tb.v
+Z542 FD:/KU/ESCA/teaching/cose222_CA/riscv/RISCV_design-clean/RV32I_CPU_Project/RV32I_System/RV32I_System_tb.v
 L0 12
 R8
 r1
 31
 R12
-Z541 n@r@v32@i_@system_tb
-Z542 !s100 ^Fhm]Y3Q5KEQh3RY<SI:R2
-Z543 !s108 1594693353.498000
-Z544 !s107 D:/KU/ESCA/teaching/cose222_CA/riscv/RISCV_design-clean/RV32I_CPU_Project/RV32I_System/RV32I_System_tb.v|
-Z545 !s90 -reportprogress|300|-work|work|D:/KU/ESCA/teaching/cose222_CA/riscv/RISCV_design-clean/RV32I_CPU_Project/RV32I_System/RV32I_System_tb.v|
+Z543 n@r@v32@i_@system_tb
+Z544 !s100 ^Fhm]Y3Q5KEQh3RY<SI:R2
+Z545 !s108 1594693353.498000
+Z546 !s107 D:/KU/ESCA/teaching/cose222_CA/riscv/RISCV_design-clean/RV32I_CPU_Project/RV32I_System/RV32I_System_tb.v|
+Z547 !s90 -reportprogress|300|-work|work|D:/KU/ESCA/teaching/cose222_CA/riscv/RISCV_design-clean/RV32I_CPU_Project/RV32I_System/RV32I_System_tb.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vscfifo
-Z546 I_^BRQekWF=@G9P^[ZDkn]2
-Z547 VUMV6g0FCa0N3lFO1VmUAB1
+Z548 I_^BRQekWF=@G9P^[ZDkn]2
+Z549 VUMV6g0FCa0N3lFO1VmUAB1
 R3
 R4
 R5
 R6
-Z548 L0 48197
+Z550 L0 48197
 R8
 r1
 31
@@ -2300,18 +2300,18 @@ R9
 R10
 R11
 R12
-Z549 !s100 i=79b>^C@?N6L>jdD98:50
+Z551 !s100 i=79b>^C@?N6L>jdD98:50
 !i10b 1
 !s85 0
 !s101 -O0
 vsignal_gen
-Z550 I9ETAmPCAAKQU19oF0CaPZ2
-Z551 VlANQ]2:@NW327hR21XHd@3
+Z552 I9ETAmPCAAKQU19oF0CaPZ2
+Z553 VlANQ]2:@NW327hR21XHd@3
 R3
 R4
 R5
 R6
-Z552 L0 50811
+Z554 L0 50811
 R8
 r1
 31
@@ -2319,18 +2319,18 @@ R9
 R10
 R11
 R12
-Z553 !s100 oen58M;ZQIZhFcTA_gIOE1
+Z555 !s100 oen58M;ZQIZhFcTA_gIOE1
 !i10b 1
 !s85 0
 !s101 -O0
 vsld_signaltap
-Z554 I2[B=@=MnG6^hDbH9O^hi`3
-Z555 VaPcf`]?TO6X5KHIWncDQB0
+Z556 I2[B=@=MnG6^hDbH9O^hi`3
+Z557 VaPcf`]?TO6X5KHIWncDQB0
 R3
 R4
 R5
 R6
-Z556 L0 52219
+Z558 L0 52219
 R8
 r1
 31
@@ -2338,18 +2338,18 @@ R9
 R10
 R11
 R12
-Z557 !s100 B44Tgh4:LB1_0>ZU81jBW3
+Z559 !s100 B44Tgh4:LB1_0>ZU81jBW3
 !i10b 1
 !s85 0
 !s101 -O0
 vsld_virtual_jtag
-Z558 Ib=XfnR;XoZY>eCJPaEn8o0
-Z559 Vf2g7oS=5=F3IO@[SB6kgz2
+Z560 Ib=XfnR;XoZY>eCJPaEn8o0
+Z561 Vf2g7oS=5=F3IO@[SB6kgz2
 R3
 R4
 R5
 R6
-Z560 L0 52092
+Z562 L0 52092
 R8
 r1
 31
@@ -2357,18 +2357,18 @@ R9
 R10
 R11
 R12
-Z561 !s100 5G9=LUnB?K1E_EMEzg8_e2
+Z563 !s100 5G9=LUnB?K1E_EMEzg8_e2
 !i10b 1
 !s85 0
 !s101 -O0
 vsld_virtual_jtag_basic
-Z562 IjZa:occ_b@z=[XW?;oJgc1
-Z563 VgN1]76z<g[F9Z_FM;6QOV2
+Z564 IjZa:occ_b@z=[XW?;oJgc1
+Z565 VgN1]76z<g[F9Z_FM;6QOV2
 R3
 R4
 R5
 R6
-Z564 L0 52495
+Z566 L0 52495
 R8
 r1
 31
@@ -2376,18 +2376,18 @@ R9
 R10
 R11
 R12
-Z565 !s100 J:?AHo1ePfcUz:b]ffe=D0
+Z567 !s100 J:?AHo1ePfcUz:b]ffe=D0
 !i10b 1
 !s85 0
 !s101 -O0
 vstratix_lvds_rx
-Z566 IBoW3j2SYYMdh4ZY?Lo>om1
-Z567 V39zBWPn2G7n8FGOMRmNJB0
+Z568 IBoW3j2SYYMdh4ZY?Lo>om1
+Z569 V39zBWPn2G7n8FGOMRmNJB0
 R3
 R4
 R5
 R6
-Z568 L0 24912
+Z570 L0 24912
 R8
 r1
 31
@@ -2395,18 +2395,18 @@ R9
 R10
 R11
 R12
-Z569 !s100 ;ol[ddUFfQX3?dhK8Bii]3
+Z571 !s100 ;ol[ddUFfQX3?dhK8Bii]3
 !i10b 1
 !s85 0
 !s101 -O0
 vstratix_tx_outclk
-Z570 IRebRD]6fU5JR0daMBmJJE3
-Z571 Vh80DY6<NJ0Bn98@EoCo8n1
+Z572 IRebRD]6fU5JR0daMBmJJE3
+Z573 Vh80DY6<NJ0Bn98@EoCo8n1
 R3
 R4
 R5
 R6
-Z572 L0 28776
+Z574 L0 28776
 R8
 r1
 31
@@ -2414,18 +2414,18 @@ R9
 R10
 R11
 R12
-Z573 !s100 gSJjJ=LKXcYg<dP=AJ6XU0
+Z575 !s100 gSJjJ=LKXcYg<dP=AJ6XU0
 !i10b 1
 !s85 0
 !s101 -O0
 vstratixgx_dpa_lvds_rx
-Z574 ID25AT=R>C8EKWOIWOafDV1
-Z575 V`[XhBYMJchCjeXnWloPH;3
+Z576 ID25AT=R>C8EKWOIWOafDV1
+Z577 V`[XhBYMJchCjeXnWloPH;3
 R3
 R4
 R5
 R6
-Z576 L0 25020
+Z578 L0 25020
 R8
 r1
 31
@@ -2433,18 +2433,18 @@ R9
 R10
 R11
 R12
-Z577 !s100 RN=kA7iJl`OM>dB4_Q@IC1
+Z579 !s100 RN=kA7iJl`OM>dB4_Q@IC1
 !i10b 1
 !s85 0
 !s101 -O0
 vstratixii_lvds_rx
-Z578 I5hnib;SXd=@NRKinX5odz3
-Z579 V5D>4DFSRXh3=Nm=hc48Kd2
+Z580 I5hnib;SXd=@NRKinX5odz3
+Z581 V5D>4DFSRXh3=Nm=hc48Kd2
 R3
 R4
 R5
 R6
-Z580 L0 25423
+Z582 L0 25423
 R8
 r1
 31
@@ -2452,18 +2452,18 @@ R9
 R10
 R11
 R12
-Z581 !s100 3;ejLAKZAGL4@X3e17LCY2
+Z583 !s100 3;ejLAKZAGL4@X3e17LCY2
 !i10b 1
 !s85 0
 !s101 -O0
 vstratixii_tx_outclk
-Z582 I]:3R>Yd:1=AadALf^eoT>2
-Z583 V=n_<[`Vzf2Rz<[OlZ?^mI1
+Z584 I]:3R>Yd:1=AadALf^eoT>2
+Z585 V=n_<[`Vzf2Rz<[OlZ?^mI1
 R3
 R4
 R5
 R6
-Z584 L0 28884
+Z586 L0 28884
 R8
 r1
 31
@@ -2471,18 +2471,18 @@ R9
 R10
 R11
 R12
-Z585 !s100 ?o>7aAMk?jgTUQ;kYVfLN1
+Z587 !s100 ?o>7aAMk?jgTUQ;kYVfLN1
 !i10b 1
 !s85 0
 !s101 -O0
 vstratixiii_lvds_rx
-Z586 ImRd]<dW??JOfnWi9eP?Em0
-Z587 VoUk;[:B=^AmQb8<2mQYcL3
+Z588 ImRd]<dW??JOfnWi9eP?Em0
+Z589 VoUk;[:B=^AmQb8<2mQYcL3
 R3
 R4
 R5
 R6
-Z588 L0 26222
+Z590 L0 26222
 R8
 r1
 31
@@ -2490,18 +2490,18 @@ R9
 R10
 R11
 R12
-Z589 !s100 ELHKId]SBjJ^:h2[zRC3W0
+Z591 !s100 ELHKId]SBjJ^:h2[zRC3W0
 !i10b 1
 !s85 0
 !s101 -O0
 vstratixiii_lvds_rx_channel
-Z590 IW1>DBPIdBIbcWjjYoEgc]2
-Z591 V6g9^E94B=2R;m4N=Eh2zm1
+Z592 IW1>DBPIdBIbcWjjYoEgc]2
+Z593 V6g9^E94B=2R;m4N=Eh2zm1
 R3
 R4
 R5
 R6
-Z592 L0 26404
+Z594 L0 26404
 R8
 r1
 31
@@ -2509,18 +2509,18 @@ R9
 R10
 R11
 R12
-Z593 !s100 IDzbdcJ[8J0]>9oBCJCER0
+Z595 !s100 IDzbdcJ[8J0]>9oBCJCER0
 !i10b 1
 !s85 0
 !s101 -O0
 vstratixiii_lvds_rx_dpa
-Z594 IMa6iO];XQSfO9jbQhH?3:1
-Z595 VenIPQShS6??nhY:JSTm8<3
+Z596 IMa6iO];XQSfO9jbQhH?3:1
+Z597 VenIPQShS6??nhY:JSTm8<3
 R3
 R4
 R5
 R6
-Z596 L0 27013
+Z598 L0 27013
 R8
 r1
 31
@@ -2528,18 +2528,18 @@ R9
 R10
 R11
 R12
-Z597 !s100 5<Y4K[HRETgYoV]n0Y>ik2
+Z599 !s100 5<Y4K[HRETgYoV]n0Y>ik2
 !i10b 1
 !s85 0
 !s101 -O0
 vstratixv_local_clk_divider
-Z598 IDH?Pc]8]Tb=`V9D<lV3@g0
-Z599 V9QKP]A2;J<z_KOj[g[gGS3
+Z600 IDH?Pc]8]Tb=`V9D<lV3@g0
+Z601 V9QKP]A2;J<z_KOj[g[gGS3
 R3
 R4
 R5
 R6
-Z600 L0 28682
+Z602 L0 28682
 R8
 r1
 31
@@ -2547,18 +2547,18 @@ R9
 R10
 R11
 R12
-Z601 !s100 =16:Z_`J]Ebk86`aBO>FD1
+Z603 !s100 =16:Z_`J]Ebk86`aBO>FD1
 !i10b 1
 !s85 0
 !s101 -O0
 vstx_m_cntr
-Z602 I>V_]LS8>zAc[YS6Vb;<dm3
-Z603 V:[2:D[_10ghn[bgc=CD302
+Z604 I>V_]LS8>zAc[YS6Vb;<dm3
+Z605 V:[2:D[_10ghn[bgc=CD302
 R3
 R4
 R5
 R6
-Z604 L0 2254
+Z606 L0 2254
 R8
 r1
 31
@@ -2566,18 +2566,18 @@ R9
 R10
 R11
 R12
-Z605 !s100 F7iBFS@f1U5063UAS0@8;3
+Z607 !s100 F7iBFS@f1U5063UAS0@8;3
 !i10b 1
 !s85 0
 !s101 -O0
 vstx_n_cntr
-Z606 IGRTE>RKkY?a`?W8k:j]_`1
-Z607 V4CiQB5Uz?;=OULO:MD>Eo1
+Z608 IGRTE>RKkY?a`?W8k:j]_`1
+Z609 V4CiQB5Uz?;=OULO:MD>Eo1
 R3
 R4
 R5
 R6
-Z608 L0 2332
+Z610 L0 2332
 R8
 r1
 31
@@ -2585,18 +2585,18 @@ R9
 R10
 R11
 R12
-Z609 !s100 FPVbWISMdGQmHhP;MU05;0
+Z611 !s100 FPVbWISMdGQmHhP;MU05;0
 !i10b 1
 !s85 0
 !s101 -O0
 vstx_scale_cntr
-Z610 IhHm5ZlKZGfA0K3SS_4d]X2
-Z611 VG8KIUm2mDHoX1DjR8TDdJ1
+Z612 IhHm5ZlKZGfA0K3SS_4d]X2
+Z613 VG8KIUm2mDHoX1DjR8TDdJ1
 R3
 R4
 R5
 R6
-Z612 L0 2417
+Z614 L0 2417
 R8
 r1
 31
@@ -2604,38 +2604,38 @@ R9
 R10
 R11
 R12
-Z613 !s100 IU<;EHR2WBaZo5nM:V0Ie3
+Z615 !s100 IU<;EHR2WBaZo5nM:V0Ie3
 !i10b 1
 !s85 0
 !s101 -O0
 vTimerCounter
-Z614 IGU]AAVcPG8`4]61OS4QP^1
-Z615 V?6SiADLzC[nVUWOhUg7E;3
+Z616 IGU]AAVcPG8`4]61OS4QP^1
+Z617 V?6SiADLzC[nVUWOhUg7E;3
 R3
-Z616 w1283850562
-Z617 8D:/KU/ESCA/teaching/cose222_CA/riscv/RISCV_design-clean/RV32I_CPU_Project/RV32I_System/Timer/TimerCounter.v
-Z618 FD:/KU/ESCA/teaching/cose222_CA/riscv/RISCV_design-clean/RV32I_CPU_Project/RV32I_System/Timer/TimerCounter.v
+Z618 w1283850562
+Z619 8D:/KU/ESCA/teaching/cose222_CA/riscv/RISCV_design-clean/RV32I_CPU_Project/RV32I_System/Timer/TimerCounter.v
+Z620 FD:/KU/ESCA/teaching/cose222_CA/riscv/RISCV_design-clean/RV32I_CPU_Project/RV32I_System/Timer/TimerCounter.v
 L0 3
 R8
 r1
 31
 R12
-Z619 n@timer@counter
-Z620 !s100 KJ<:WCaLaQ>8Dl<M>nLT@1
-Z621 !s108 1594693324.505000
-Z622 !s107 D:/KU/ESCA/teaching/cose222_CA/riscv/RISCV_design-clean/RV32I_CPU_Project/RV32I_System/Timer/TimerCounter.v|
-Z623 !s90 -reportprogress|300|-work|work|D:/KU/ESCA/teaching/cose222_CA/riscv/RISCV_design-clean/RV32I_CPU_Project/RV32I_System/Timer/TimerCounter.v|
+Z621 n@timer@counter
+Z622 !s100 KJ<:WCaLaQ>8Dl<M>nLT@1
+Z623 !s108 1594693324.505000
+Z624 !s107 D:/KU/ESCA/teaching/cose222_CA/riscv/RISCV_design-clean/RV32I_CPU_Project/RV32I_System/Timer/TimerCounter.v|
+Z625 !s90 -reportprogress|300|-work|work|D:/KU/ESCA/teaching/cose222_CA/riscv/RISCV_design-clean/RV32I_CPU_Project/RV32I_System/Timer/TimerCounter.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vttn_m_cntr
-Z624 INaXi;HR=3IAeTW;Pe@o@h2
-Z625 ViEB@`bJmQ[jz8=2kGYhDn3
+Z626 INaXi;HR=3IAeTW;Pe@o@h2
+Z627 ViEB@`bJmQ[jz8=2kGYhDn3
 R3
 R4
 R5
 R6
-Z626 L0 10254
+Z628 L0 10254
 R8
 r1
 31
@@ -2643,18 +2643,18 @@ R9
 R10
 R11
 R12
-Z627 !s100 >;H8@9j]:3oM@LE?z>IRG1
+Z629 !s100 >;H8@9j]:3oM@LE?z>IRG1
 !i10b 1
 !s85 0
 !s101 -O0
 vttn_n_cntr
-Z628 I:d[=j:MBEkAbEfCE9@aaA3
-Z629 VWh8a]<5HCnf>2<AJGoZ2`0
+Z630 I:d[=j:MBEkAbEfCE9@aaA3
+Z631 VWh8a]<5HCnf>2<AJGoZ2`0
 R3
 R4
 R5
 R6
-Z630 L0 10335
+Z632 L0 10335
 R8
 r1
 31
@@ -2662,18 +2662,18 @@ R9
 R10
 R11
 R12
-Z631 !s100 hadNe5UEIKdVa<:]`8g;`1
+Z633 !s100 hadNe5UEIKdVa<:]`8g;`1
 !i10b 1
 !s85 0
 !s101 -O0
 vttn_scale_cntr
-Z632 IAKUemSeJ?DOI24Ak7ac0h0
-Z633 VXPfdhMTXDmY9JYEiBjd?Q2
+Z634 IAKUemSeJ?DOI24Ak7ac0h0
+Z635 VXPfdhMTXDmY9JYEiBjd?Q2
 R3
 R4
 R5
 R6
-Z634 L0 10406
+Z636 L0 10406
 R8
 r1
 31
@@ -2681,7 +2681,7 @@ R9
 R10
 R11
 R12
-Z635 !s100 KAX1YFIPbl9JDa4[^:JJ;1
+Z637 !s100 KAX1YFIPbl9JDa4[^:JJ;1
 !i10b 1
 !s85 0
 !s101 -O0

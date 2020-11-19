@@ -18,8 +18,6 @@ def press(num):
         expression = expression.replace('×', '*')
         expression = expression.replace('÷', '/')
 
-        print(expression)
-
         try:
             total = str(eval(expression))[0:16]
 
@@ -84,8 +82,8 @@ def setup_GUI():
                         font='Arial 15', command=lambda: press('c'))
     backspaceBtn = t.Button(window, text='＜', width=5, height=1, bg='orange', fg='black',
                             font='Arial 15', command=lambda: press('b'))
-    modBtn = t.Button(window, text='％', width=5, height=1, bg='orange', fg='black',
-                      font='Arial 15', command=lambda: press('%'))
+    percentBtn = t.Button(window, text='％', width=5, height=1, bg='orange', fg='black',
+                          font='Arial 15', command=lambda: press('*0.01'))
     squareBtn = t.Button(window, text='X²', width=5, height=1, bg='orange', fg='black',
                          font='Arial 15', command=lambda: press('**2'))
     addBtn = t.Button(window, text='+', width=5, height=2, bg='orange', fg='gray',
@@ -103,7 +101,7 @@ def setup_GUI():
 
     clearBtn.grid(row=1, column=0)
     backspaceBtn.grid(row=1, column=1)
-    modBtn.grid(row=1, column=2)
+    percentBtn.grid(row=1, column=2)
     squareBtn.grid(row=1, column=3)
     addBtn.grid(row=2, column=3)
     subBtn.grid(row=3, column=3)

@@ -1,5 +1,5 @@
 Fitter report for RV32I_System
-Wed Nov 25 17:27:02 2020
+Wed Nov 25 18:09:53 2020
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -71,15 +71,15 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Fitter Summary                                                                  ;
 +------------------------------------+--------------------------------------------+
-; Fitter Status                      ; Successful - Wed Nov 25 17:27:02 2020      ;
+; Fitter Status                      ; Successful - Wed Nov 25 18:09:52 2020      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; RV32I_System                               ;
 ; Top-level Entity Name              ; RV32I_System                               ;
 ; Family                             ; Cyclone III                                ;
 ; Device                             ; EP3C16F484C6                               ;
 ; Timing Models                      ; Final                                      ;
-; Total logic elements               ; 3,128 / 15,408 ( 20 % )                    ;
-;     Total combinational functions  ; 3,058 / 15,408 ( 20 % )                    ;
+; Total logic elements               ; 3,108 / 15,408 ( 20 % )                    ;
+;     Total combinational functions  ; 3,038 / 15,408 ( 20 % )                    ;
 ;     Dedicated logic registers      ; 1,728 / 15,408 ( 11 % )                    ;
 ; Total registers                    ; 1728                                       ;
 ; Total pins                         ; 52 / 347 ( 15 % )                          ;
@@ -157,12 +157,12 @@ applicable agreement for further details.
 ; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.50        ;
+; Average used               ; 1.00        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;  16.7%      ;
+;     Processors 2-4         ; < 0.1%      ;
 +----------------------------+-------------+
 
 
@@ -626,8 +626,8 @@ applicable agreement for further details.
 ; Type                ; Total [A + B]       ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+---------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                     ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 4936 ) ; 0.00 % ( 0 / 4936 )        ; 0.00 % ( 0 / 4936 )      ;
-;     -- Achieved     ; 0.00 % ( 0 / 4936 ) ; 0.00 % ( 0 / 4936 )        ; 0.00 % ( 0 / 4936 )      ;
+;     -- Requested    ; 0.00 % ( 0 / 4916 ) ; 0.00 % ( 0 / 4916 )        ; 0.00 % ( 0 / 4916 )      ;
+;     -- Achieved     ; 0.00 % ( 0 / 4916 ) ; 0.00 % ( 0 / 4916 )        ; 0.00 % ( 0 / 4916 )      ;
 ;                     ;                     ;                            ;                          ;
 ; Routing (by net)    ;                     ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )    ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -650,7 +650,7 @@ applicable agreement for further details.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 4922 )   ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 4902 )   ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 14 )     ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -666,26 +666,26 @@ The pin-out file can be found in C:/Users/JuHan/Desktop/Korea_Univ_2020_2/COSE22
 +---------------------------------------------+---------------------------+
 ; Resource                                    ; Usage                     ;
 +---------------------------------------------+---------------------------+
-; Total logic elements                        ; 3,128 / 15,408 ( 20 % )   ;
-;     -- Combinational with no register       ; 1400                      ;
+; Total logic elements                        ; 3,108 / 15,408 ( 20 % )   ;
+;     -- Combinational with no register       ; 1380                      ;
 ;     -- Register only                        ; 70                        ;
 ;     -- Combinational with a register        ; 1658                      ;
 ;                                             ;                           ;
 ; Logic element usage by number of LUT inputs ;                           ;
-;     -- 4 input functions                    ; 2075                      ;
-;     -- 3 input functions                    ; 531                       ;
-;     -- <=2 input functions                  ; 452                       ;
+;     -- 4 input functions                    ; 2050                      ;
+;     -- 3 input functions                    ; 530                       ;
+;     -- <=2 input functions                  ; 458                       ;
 ;     -- Register only                        ; 70                        ;
 ;                                             ;                           ;
 ; Logic elements by mode                      ;                           ;
-;     -- normal mode                          ; 2909                      ;
+;     -- normal mode                          ; 2889                      ;
 ;     -- arithmetic mode                      ; 149                       ;
 ;                                             ;                           ;
 ; Total registers*                            ; 1,728 / 17,068 ( 10 % )   ;
 ;     -- Dedicated logic registers            ; 1,728 / 15,408 ( 11 % )   ;
 ;     -- I/O registers                        ; 0 / 1,660 ( 0 % )         ;
 ;                                             ;                           ;
-; Total LABs:  partially or completely used   ; 233 / 963 ( 24 % )        ;
+; Total LABs:  partially or completely used   ; 239 / 963 ( 25 % )        ;
 ; Virtual pins                                ; 0                         ;
 ; I/O pins                                    ; 52 / 347 ( 15 % )         ;
 ;     -- Clock pins                           ; 1 / 8 ( 13 % )            ;
@@ -702,12 +702,12 @@ The pin-out file can be found in C:/Users/JuHan/Desktop/Korea_Univ_2020_2/COSE22
 ; CRC blocks                                  ; 0 / 1 ( 0 % )             ;
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )             ;
 ; Impedance control blocks                    ; 0 / 4 ( 0 % )             ;
-; Average interconnect usage (total/H/V)      ; 10% / 10% / 10%           ;
-; Peak interconnect usage (total/H/V)         ; 37% / 35% / 40%           ;
+; Average interconnect usage (total/H/V)      ; 9% / 9% / 10%             ;
+; Peak interconnect usage (total/H/V)         ; 33% / 31% / 37%           ;
 ; Maximum fan-out                             ; 1728                      ;
-; Highest non-global fan-out                  ; 577                       ;
-; Total fan-out                               ; 16052                     ;
-; Average fan-out                             ; 3.23                      ;
+; Highest non-global fan-out                  ; 555                       ;
+; Total fan-out                               ; 15966                     ;
+; Average fan-out                             ; 3.22                      ;
 +---------------------------------------------+---------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -720,26 +720,26 @@ The pin-out file can be found in C:/Users/JuHan/Desktop/Korea_Univ_2020_2/COSE22
 +---------------------------------------------+-----------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                   ; Low                            ;
 ;                                             ;                       ;                                ;
-; Total logic elements                        ; 3128 / 15408 ( 20 % ) ; 0 / 15408 ( 0 % )              ;
-;     -- Combinational with no register       ; 1400                  ; 0                              ;
+; Total logic elements                        ; 3108 / 15408 ( 20 % ) ; 0 / 15408 ( 0 % )              ;
+;     -- Combinational with no register       ; 1380                  ; 0                              ;
 ;     -- Register only                        ; 70                    ; 0                              ;
 ;     -- Combinational with a register        ; 1658                  ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Logic element usage by number of LUT inputs ;                       ;                                ;
-;     -- 4 input functions                    ; 2075                  ; 0                              ;
-;     -- 3 input functions                    ; 531                   ; 0                              ;
-;     -- <=2 input functions                  ; 452                   ; 0                              ;
+;     -- 4 input functions                    ; 2050                  ; 0                              ;
+;     -- 3 input functions                    ; 530                   ; 0                              ;
+;     -- <=2 input functions                  ; 458                   ; 0                              ;
 ;     -- Register only                        ; 70                    ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Logic elements by mode                      ;                       ;                                ;
-;     -- normal mode                          ; 2909                  ; 0                              ;
+;     -- normal mode                          ; 2889                  ; 0                              ;
 ;     -- arithmetic mode                      ; 149                   ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Total registers                             ; 1728                  ; 0                              ;
 ;     -- Dedicated logic registers            ; 1728 / 15408 ( 11 % ) ; 0 / 15408 ( 0 % )              ;
 ;     -- I/O registers                        ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
-; Total LABs:  partially or completely used   ; 233 / 963 ( 24 % )    ; 0 / 963 ( 0 % )                ;
+; Total LABs:  partially or completely used   ; 239 / 963 ( 25 % )    ; 0 / 963 ( 0 % )                ;
 ;                                             ;                       ;                                ;
 ; Virtual pins                                ; 0                     ; 0                              ;
 ; I/O pins                                    ; 52                    ; 0                              ;
@@ -757,8 +757,8 @@ The pin-out file can be found in C:/Users/JuHan/Desktop/Korea_Univ_2020_2/COSE22
 ;     -- Registered Output Connections        ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Internal Connections                        ;                       ;                                ;
-;     -- Total Connections                    ; 16067                 ; 1755                           ;
-;     -- Registered Connections               ; 8315                  ; 0                              ;
+;     -- Total Connections                    ; 15981                 ; 1755                           ;
+;     -- Registered Connections               ; 8244                  ; 0                              ;
 ;                                             ;                       ;                                ;
 ; External Connections                        ;                       ;                                ;
 ;     -- Top                                  ; 0                     ; 1746                           ;
@@ -1454,7 +1454,7 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                     ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                                                  ; Library Name ;
 +------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------------------------------------------------------------------------+--------------+
-; |RV32I_System                                  ; 3128 (5)    ; 1728 (1)                  ; 0 (0)         ; 65536       ; 8    ; 0            ; 0       ; 0         ; 52   ; 0            ; 1400 (4)     ; 70 (0)            ; 1658 (2)         ; |RV32I_System                                                                                        ; work         ;
+; |RV32I_System                                  ; 3108 (5)    ; 1728 (1)                  ; 0 (0)         ; 65536       ; 8    ; 0            ; 0       ; 0         ; 52   ; 0            ; 1380 (4)     ; 70 (0)            ; 1658 (2)         ; |RV32I_System                                                                                        ; work         ;
 ;    |ALTPLL_clkgen:pll0|                        ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |RV32I_System|ALTPLL_clkgen:pll0                                                                     ; work         ;
 ;       |altpll:altpll_component|                ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |RV32I_System|ALTPLL_clkgen:pll0|altpll:altpll_component                                             ; work         ;
 ;          |ALTPLL_clkgen_altpll:auto_generated| ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |RV32I_System|ALTPLL_clkgen:pll0|altpll:altpll_component|ALTPLL_clkgen_altpll:auto_generated         ; work         ;
@@ -1476,13 +1476,13 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ;    |ram2port_inst_data:iMem|                   ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 65536       ; 8    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |RV32I_System|ram2port_inst_data:iMem                                                                ; work         ;
 ;       |altsyncram:altsyncram_component|        ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 65536       ; 8    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |RV32I_System|ram2port_inst_data:iMem|altsyncram:altsyncram_component                                ; work         ;
 ;          |altsyncram_5ul2:auto_generated|      ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 65536       ; 8    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |RV32I_System|ram2port_inst_data:iMem|altsyncram:altsyncram_component|altsyncram_5ul2:auto_generated ; work         ;
-;    |rv32i_cpu:icpu|                            ; 2773 (67)   ; 1432 (32)                 ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1341 (35)    ; 32 (0)            ; 1400 (32)        ; |RV32I_System|rv32i_cpu:icpu                                                                         ; work         ;
+;    |rv32i_cpu:icpu|                            ; 2753 (46)   ; 1432 (32)                 ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1321 (14)    ; 32 (0)            ; 1400 (32)        ; |RV32I_System|rv32i_cpu:icpu                                                                         ; work         ;
 ;       |controller:i_controller|                ; 9 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (0)        ; 0 (0)             ; 2 (0)            ; |RV32I_System|rv32i_cpu:icpu|controller:i_controller                                                 ; work         ;
 ;          |aludec:i_aludec|                     ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 2 (2)            ; |RV32I_System|rv32i_cpu:icpu|controller:i_controller|aludec:i_aludec                                 ; work         ;
 ;          |maindec:i_maindec|                   ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; |RV32I_System|rv32i_cpu:icpu|controller:i_controller|maindec:i_maindec                               ; work         ;
-;       |datapath:i_datapath|                    ; 2699 (1299) ; 1400 (408)                ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1299 (862)   ; 32 (32)           ; 1368 (1355)      ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath                                                     ; work         ;
-;          |alu:i_alu|                           ; 380 (302)   ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 380 (302)    ; 0 (0)             ; 0 (0)            ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu                                           ; work         ;
-;             |adder_32bit:iadder32|             ; 78 (14)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 78 (14)      ; 0 (0)             ; 0 (0)            ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|adder_32bit:iadder32                      ; work         ;
+;       |datapath:i_datapath|                    ; 2700 (1302) ; 1400 (408)                ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1300 (865)   ; 32 (32)           ; 1368 (1355)      ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath                                                     ; work         ;
+;          |alu:i_alu|                           ; 378 (302)   ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 378 (302)    ; 0 (0)             ; 0 (0)            ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu                                           ; work         ;
+;             |adder_32bit:iadder32|             ; 76 (9)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 76 (9)       ; 0 (0)             ; 0 (0)            ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|adder_32bit:iadder32                      ; work         ;
 ;                |adder_1bit:bit0|               ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|adder_32bit:iadder32|adder_1bit:bit0      ; work         ;
 ;                |adder_1bit:bit10|              ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|adder_32bit:iadder32|adder_1bit:bit10     ; work         ;
 ;                |adder_1bit:bit11|              ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|adder_32bit:iadder32|adder_1bit:bit11     ; work         ;
@@ -1507,17 +1507,18 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ;                |adder_1bit:bit29|              ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|adder_32bit:iadder32|adder_1bit:bit29     ; work         ;
 ;                |adder_1bit:bit2|               ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|adder_32bit:iadder32|adder_1bit:bit2      ; work         ;
 ;                |adder_1bit:bit30|              ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|adder_32bit:iadder32|adder_1bit:bit30     ; work         ;
+;                |adder_1bit:bit31|              ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|adder_32bit:iadder32|adder_1bit:bit31     ; work         ;
 ;                |adder_1bit:bit3|               ; 3 (3)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|adder_32bit:iadder32|adder_1bit:bit3      ; work         ;
 ;                |adder_1bit:bit4|               ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|adder_32bit:iadder32|adder_1bit:bit4      ; work         ;
 ;                |adder_1bit:bit5|               ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|adder_32bit:iadder32|adder_1bit:bit5      ; work         ;
 ;                |adder_1bit:bit6|               ; 3 (3)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|adder_32bit:iadder32|adder_1bit:bit6      ; work         ;
 ;                |adder_1bit:bit7|               ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|adder_32bit:iadder32|adder_1bit:bit7      ; work         ;
-;                |adder_1bit:bit8|               ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|adder_32bit:iadder32|adder_1bit:bit8      ; work         ;
+;                |adder_1bit:bit8|               ; 3 (3)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|adder_32bit:iadder32|adder_1bit:bit8      ; work         ;
 ;                |adder_1bit:bit9|               ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|adder_32bit:iadder32|adder_1bit:bit9      ; work         ;
-;          |forwarding:i_forwarding|             ; 19 (19)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 12 (12)          ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|forwarding:i_forwarding                             ; work         ;
+;          |forwarding:i_forwarding|             ; 19 (19)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 13 (13)          ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|forwarding:i_forwarding                             ; work         ;
 ;          |forwardingWBtoD:i_forwardingWBtoD|   ; 8 (8)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 0 (0)            ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|forwardingWBtoD:i_forwardingWBtoD                   ; work         ;
 ;          |hazard_detection:i_hazard_detection| ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|hazard_detection:i_hazard_detection                 ; work         ;
-;          |regfile:i_regfile|                   ; 1028 (1028) ; 992 (992)                 ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 35 (35)      ; 0 (0)             ; 993 (993)        ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|regfile:i_regfile                                   ; work         ;
+;          |regfile:i_regfile|                   ; 1028 (1028) ; 992 (992)                 ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 36 (36)      ; 0 (0)             ; 992 (992)        ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|regfile:i_regfile                                   ; work         ;
 +------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1569,14 +1570,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; CLOCK_50  ; Input    ; --            ; --            ; --                    ; --  ; --   ;
 ; SW[0]     ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; SW[4]     ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
-; SW[2]     ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
+; SW[2]     ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; BUTTON[2] ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 ; SW[1]     ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; BUTTON[1] ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; SW[3]     ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; SW[7]     ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 ; SW[6]     ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; SW[9]     ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; SW[9]     ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 ; SW[8]     ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; SW[5]     ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 +-----------+----------+---------------+---------------+-----------------------+-----+------+
@@ -1623,21 +1624,21 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - GPIO:iGPIO|pulse_gen:sw4|c_state~35     ; 1                 ; 6       ;
 ;      - GPIO:iGPIO|pulse_gen:sw4|c_state~36     ; 1                 ; 6       ;
 ; SW[2]                                          ;                   ;         ;
-;      - GPIO:iGPIO|pulse_gen:sw2|c_state~22     ; 1                 ; 6       ;
-;      - GPIO:iGPIO|pulse_gen:sw2|c_state~23     ; 1                 ; 6       ;
-;      - GPIO:iGPIO|pulse_gen:sw2|c_state~24     ; 1                 ; 6       ;
-;      - GPIO:iGPIO|pulse_gen:sw2|c_state~25     ; 1                 ; 6       ;
-;      - GPIO:iGPIO|pulse_gen:sw2|c_state~26     ; 1                 ; 6       ;
-;      - GPIO:iGPIO|pulse_gen:sw2|c_state~27     ; 1                 ; 6       ;
-;      - GPIO:iGPIO|pulse_gen:sw2|c_state~28     ; 1                 ; 6       ;
-;      - GPIO:iGPIO|pulse_gen:sw2|c_state~29     ; 1                 ; 6       ;
-;      - GPIO:iGPIO|pulse_gen:sw2|c_state~30     ; 1                 ; 6       ;
-;      - GPIO:iGPIO|pulse_gen:sw2|c_state~31     ; 1                 ; 6       ;
-;      - GPIO:iGPIO|pulse_gen:sw2|c_state~32     ; 1                 ; 6       ;
-;      - GPIO:iGPIO|pulse_gen:sw2|c_state~33     ; 1                 ; 6       ;
-;      - GPIO:iGPIO|pulse_gen:sw2|c_state~34     ; 1                 ; 6       ;
-;      - GPIO:iGPIO|pulse_gen:sw2|c_state~35     ; 1                 ; 6       ;
-;      - GPIO:iGPIO|pulse_gen:sw2|c_state~36     ; 1                 ; 6       ;
+;      - GPIO:iGPIO|pulse_gen:sw2|c_state~22     ; 0                 ; 6       ;
+;      - GPIO:iGPIO|pulse_gen:sw2|c_state~23     ; 0                 ; 6       ;
+;      - GPIO:iGPIO|pulse_gen:sw2|c_state~24     ; 0                 ; 6       ;
+;      - GPIO:iGPIO|pulse_gen:sw2|c_state~25     ; 0                 ; 6       ;
+;      - GPIO:iGPIO|pulse_gen:sw2|c_state~26     ; 0                 ; 6       ;
+;      - GPIO:iGPIO|pulse_gen:sw2|c_state~27     ; 0                 ; 6       ;
+;      - GPIO:iGPIO|pulse_gen:sw2|c_state~28     ; 0                 ; 6       ;
+;      - GPIO:iGPIO|pulse_gen:sw2|c_state~29     ; 0                 ; 6       ;
+;      - GPIO:iGPIO|pulse_gen:sw2|c_state~30     ; 0                 ; 6       ;
+;      - GPIO:iGPIO|pulse_gen:sw2|c_state~31     ; 0                 ; 6       ;
+;      - GPIO:iGPIO|pulse_gen:sw2|c_state~32     ; 0                 ; 6       ;
+;      - GPIO:iGPIO|pulse_gen:sw2|c_state~33     ; 0                 ; 6       ;
+;      - GPIO:iGPIO|pulse_gen:sw2|c_state~34     ; 0                 ; 6       ;
+;      - GPIO:iGPIO|pulse_gen:sw2|c_state~35     ; 0                 ; 6       ;
+;      - GPIO:iGPIO|pulse_gen:sw2|c_state~36     ; 0                 ; 6       ;
 ; BUTTON[2]                                      ;                   ;         ;
 ;      - GPIO:iGPIO|pulse_gen:button2|c_state~22 ; 1                 ; 6       ;
 ;      - GPIO:iGPIO|pulse_gen:button2|c_state~23 ; 1                 ; 6       ;
@@ -1735,21 +1736,21 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - GPIO:iGPIO|pulse_gen:sw6|c_state~35     ; 0                 ; 6       ;
 ;      - GPIO:iGPIO|pulse_gen:sw6|c_state~36     ; 0                 ; 6       ;
 ; SW[9]                                          ;                   ;         ;
-;      - GPIO:iGPIO|pulse_gen:sw9|c_state~22     ; 0                 ; 6       ;
-;      - GPIO:iGPIO|pulse_gen:sw9|c_state~23     ; 0                 ; 6       ;
-;      - GPIO:iGPIO|pulse_gen:sw9|c_state~24     ; 0                 ; 6       ;
-;      - GPIO:iGPIO|pulse_gen:sw9|c_state~25     ; 0                 ; 6       ;
-;      - GPIO:iGPIO|pulse_gen:sw9|c_state~26     ; 0                 ; 6       ;
-;      - GPIO:iGPIO|pulse_gen:sw9|c_state~27     ; 0                 ; 6       ;
-;      - GPIO:iGPIO|pulse_gen:sw9|c_state~28     ; 0                 ; 6       ;
-;      - GPIO:iGPIO|pulse_gen:sw9|c_state~29     ; 0                 ; 6       ;
-;      - GPIO:iGPIO|pulse_gen:sw9|c_state~30     ; 0                 ; 6       ;
-;      - GPIO:iGPIO|pulse_gen:sw9|c_state~31     ; 0                 ; 6       ;
-;      - GPIO:iGPIO|pulse_gen:sw9|c_state~32     ; 0                 ; 6       ;
-;      - GPIO:iGPIO|pulse_gen:sw9|c_state~33     ; 0                 ; 6       ;
-;      - GPIO:iGPIO|pulse_gen:sw9|c_state~34     ; 0                 ; 6       ;
-;      - GPIO:iGPIO|pulse_gen:sw9|c_state~35     ; 0                 ; 6       ;
-;      - GPIO:iGPIO|pulse_gen:sw9|c_state~36     ; 0                 ; 6       ;
+;      - GPIO:iGPIO|pulse_gen:sw9|c_state~22     ; 1                 ; 6       ;
+;      - GPIO:iGPIO|pulse_gen:sw9|c_state~23     ; 1                 ; 6       ;
+;      - GPIO:iGPIO|pulse_gen:sw9|c_state~24     ; 1                 ; 6       ;
+;      - GPIO:iGPIO|pulse_gen:sw9|c_state~25     ; 1                 ; 6       ;
+;      - GPIO:iGPIO|pulse_gen:sw9|c_state~26     ; 1                 ; 6       ;
+;      - GPIO:iGPIO|pulse_gen:sw9|c_state~27     ; 1                 ; 6       ;
+;      - GPIO:iGPIO|pulse_gen:sw9|c_state~28     ; 1                 ; 6       ;
+;      - GPIO:iGPIO|pulse_gen:sw9|c_state~29     ; 1                 ; 6       ;
+;      - GPIO:iGPIO|pulse_gen:sw9|c_state~30     ; 1                 ; 6       ;
+;      - GPIO:iGPIO|pulse_gen:sw9|c_state~31     ; 1                 ; 6       ;
+;      - GPIO:iGPIO|pulse_gen:sw9|c_state~32     ; 1                 ; 6       ;
+;      - GPIO:iGPIO|pulse_gen:sw9|c_state~33     ; 1                 ; 6       ;
+;      - GPIO:iGPIO|pulse_gen:sw9|c_state~34     ; 1                 ; 6       ;
+;      - GPIO:iGPIO|pulse_gen:sw9|c_state~35     ; 1                 ; 6       ;
+;      - GPIO:iGPIO|pulse_gen:sw9|c_state~36     ; 1                 ; 6       ;
 ; SW[8]                                          ;                   ;         ;
 ;      - GPIO:iGPIO|pulse_gen:sw8|c_state~22     ; 0                 ; 6       ;
 ;      - GPIO:iGPIO|pulse_gen:sw8|c_state~23     ; 0                 ; 6       ;
@@ -1793,58 +1794,58 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ALTPLL_clkgen:pll0|altpll:altpll_component|ALTPLL_clkgen_altpll:auto_generated|wire_pll1_clk[0] ; PLL_2              ; 1728    ; Clock                     ; yes    ; Global Clock         ; GCLK8            ; --                        ;
 ; ALTPLL_clkgen:pll0|altpll:altpll_component|ALTPLL_clkgen_altpll:auto_generated|wire_pll1_clk[1] ; PLL_2              ; 8       ; Clock                     ; yes    ; Global Clock         ; GCLK9            ; --                        ;
 ; ALTPLL_clkgen:pll0|altpll:altpll_component|ALTPLL_clkgen_altpll:auto_generated|wire_pll1_clk[2] ; PLL_2              ; 8       ; Clock                     ; yes    ; Global Clock         ; GCLK7            ; --                        ;
-; Addr_Decoder:iDecoder|Equal0~5                                                                  ; LCCOMB_X26_Y15_N30 ; 9       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; Addr_Decoder:iDecoder|Equal1~6                                                                  ; LCCOMB_X15_Y24_N22 ; 36      ; Sync. load                ; no     ; --                   ; --               ; --                        ;
+; Addr_Decoder:iDecoder|Equal0~5                                                                  ; LCCOMB_X19_Y17_N14 ; 9       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; Addr_Decoder:iDecoder|Equal1~6                                                                  ; LCCOMB_X14_Y20_N8  ; 36      ; Sync. load                ; no     ; --                   ; --               ; --                        ;
 ; CLOCK_50                                                                                        ; PIN_G21            ; 1       ; Clock                     ; no     ; --                   ; --               ; --                        ;
-; GPIO:iGPIO|HEX0_R[0]~1                                                                          ; LCCOMB_X20_Y24_N20 ; 7       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; GPIO:iGPIO|HEX1_R[4]~0                                                                          ; LCCOMB_X20_Y24_N8  ; 7       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; GPIO:iGPIO|HEX2_R[1]~0                                                                          ; LCCOMB_X20_Y24_N6  ; 7       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; GPIO:iGPIO|HEX3_R[3]~3                                                                          ; LCCOMB_X20_Y24_N4  ; 7       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; GPIO:iGPIO|LEDG_R[2]~0                                                                          ; LCCOMB_X20_Y24_N22 ; 10      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; TimerCounter:iTimer|CompareR[30]~0                                                              ; LCCOMB_X17_Y23_N16 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; TimerCounter:iTimer|always2~0                                                                   ; LCCOMB_X16_Y24_N22 ; 32      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
-; reset_ff                                                                                        ; FF_X17_Y25_N17     ; 577     ; Async. clear, Sync. clear ; no     ; --                   ; --               ; --                        ;
-; rv32i_cpu:icpu|datapath:i_datapath|ex_mem_controls[4]                                           ; FF_X17_Y23_N25     ; 20      ; Write enable              ; no     ; --                   ; --               ; --                        ;
-; rv32i_cpu:icpu|datapath:i_datapath|forwardingWBtoD:i_forwardingWBtoD|rd_to_rs1                  ; LCCOMB_X23_Y24_N14 ; 33      ; Sync. load                ; no     ; --                   ; --               ; --                        ;
-; rv32i_cpu:icpu|datapath:i_datapath|forwardingWBtoD:i_forwardingWBtoD|rd_to_rs2                  ; LCCOMB_X24_Y25_N8  ; 33      ; Sync. load                ; no     ; --                   ; --               ; --                        ;
-; rv32i_cpu:icpu|datapath:i_datapath|hazard_detection:i_hazard_detection|pcwrite~6                ; LCCOMB_X21_Y16_N18 ; 41      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; rv32i_cpu:icpu|datapath:i_datapath|id_ex_rs1_data[24]~42                                        ; LCCOMB_X20_Y18_N20 ; 32      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
-; rv32i_cpu:icpu|datapath:i_datapath|id_ex_rs2_data[17]~43                                        ; LCCOMB_X19_Y19_N16 ; 32      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
-; rv32i_cpu:icpu|datapath:i_datapath|if_id_pc[1]~1                                                ; LCCOMB_X23_Y14_N4  ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; rv32i_cpu:icpu|datapath:i_datapath|mem_wb_MemRdata[20]~72                                       ; LCCOMB_X21_Y19_N24 ; 22      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
-; rv32i_cpu:icpu|datapath:i_datapath|pc[0]~38                                                     ; LCCOMB_X26_Y13_N6  ; 2       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; rv32i_cpu:icpu|datapath:i_datapath|regfile:i_regfile|Decoder0~14                                ; LCCOMB_X20_Y23_N16 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; rv32i_cpu:icpu|datapath:i_datapath|regfile:i_regfile|Decoder0~16                                ; LCCOMB_X23_Y24_N4  ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; rv32i_cpu:icpu|datapath:i_datapath|regfile:i_regfile|Decoder0~17                                ; LCCOMB_X20_Y23_N10 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; rv32i_cpu:icpu|datapath:i_datapath|regfile:i_regfile|Decoder0~18                                ; LCCOMB_X23_Y24_N30 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; rv32i_cpu:icpu|datapath:i_datapath|regfile:i_regfile|Decoder0~20                                ; LCCOMB_X24_Y23_N4  ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; rv32i_cpu:icpu|datapath:i_datapath|regfile:i_regfile|Decoder0~22                                ; LCCOMB_X20_Y23_N20 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; rv32i_cpu:icpu|datapath:i_datapath|regfile:i_regfile|Decoder0~23                                ; LCCOMB_X20_Y23_N22 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; rv32i_cpu:icpu|datapath:i_datapath|regfile:i_regfile|Decoder0~24                                ; LCCOMB_X24_Y23_N14 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; rv32i_cpu:icpu|datapath:i_datapath|regfile:i_regfile|Decoder0~25                                ; LCCOMB_X20_Y23_N8  ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; rv32i_cpu:icpu|datapath:i_datapath|regfile:i_regfile|Decoder0~26                                ; LCCOMB_X24_Y23_N0  ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; rv32i_cpu:icpu|datapath:i_datapath|regfile:i_regfile|Decoder0~27                                ; LCCOMB_X20_Y23_N26 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; rv32i_cpu:icpu|datapath:i_datapath|regfile:i_regfile|Decoder0~28                                ; LCCOMB_X24_Y23_N26 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; rv32i_cpu:icpu|datapath:i_datapath|regfile:i_regfile|Decoder0~29                                ; LCCOMB_X20_Y23_N12 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; rv32i_cpu:icpu|datapath:i_datapath|regfile:i_regfile|Decoder0~30                                ; LCCOMB_X24_Y23_N12 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; rv32i_cpu:icpu|datapath:i_datapath|regfile:i_regfile|Decoder0~31                                ; LCCOMB_X20_Y23_N30 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; rv32i_cpu:icpu|datapath:i_datapath|regfile:i_regfile|Decoder0~32                                ; LCCOMB_X24_Y23_N6  ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; rv32i_cpu:icpu|datapath:i_datapath|regfile:i_regfile|Decoder0~33                                ; LCCOMB_X20_Y23_N0  ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; rv32i_cpu:icpu|datapath:i_datapath|regfile:i_regfile|Decoder0~34                                ; LCCOMB_X20_Y23_N2  ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; rv32i_cpu:icpu|datapath:i_datapath|regfile:i_regfile|Decoder0~35                                ; LCCOMB_X20_Y23_N28 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; rv32i_cpu:icpu|datapath:i_datapath|regfile:i_regfile|Decoder0~36                                ; LCCOMB_X20_Y23_N14 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; rv32i_cpu:icpu|datapath:i_datapath|regfile:i_regfile|Decoder0~37                                ; LCCOMB_X24_Y23_N24 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; rv32i_cpu:icpu|datapath:i_datapath|regfile:i_regfile|Decoder0~38                                ; LCCOMB_X24_Y23_N2  ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; rv32i_cpu:icpu|datapath:i_datapath|regfile:i_regfile|Decoder0~39                                ; LCCOMB_X20_Y23_N24 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; rv32i_cpu:icpu|datapath:i_datapath|regfile:i_regfile|Decoder0~40                                ; LCCOMB_X20_Y23_N18 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; rv32i_cpu:icpu|datapath:i_datapath|regfile:i_regfile|Decoder0~41                                ; LCCOMB_X24_Y23_N28 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; rv32i_cpu:icpu|datapath:i_datapath|regfile:i_regfile|Decoder0~42                                ; LCCOMB_X24_Y23_N30 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; rv32i_cpu:icpu|datapath:i_datapath|regfile:i_regfile|Decoder0~43                                ; LCCOMB_X24_Y23_N8  ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; rv32i_cpu:icpu|datapath:i_datapath|regfile:i_regfile|Decoder0~44                                ; LCCOMB_X24_Y23_N10 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; rv32i_cpu:icpu|datapath:i_datapath|regfile:i_regfile|Decoder0~45                                ; LCCOMB_X24_Y23_N20 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; rv32i_cpu:icpu|datapath:i_datapath|regfile:i_regfile|Decoder0~46                                ; LCCOMB_X24_Y23_N22 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; rv32i_cpu:icpu|datapath:i_datapath|regfile:i_regfile|Decoder0~47                                ; LCCOMB_X20_Y23_N4  ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; rv32i_cpu:icpu|if_id_inst[2]~3                                                                  ; LCCOMB_X20_Y16_N30 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; GPIO:iGPIO|HEX0_R[4]~1                                                                          ; LCCOMB_X14_Y21_N28 ; 7       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; GPIO:iGPIO|HEX1_R[0]~0                                                                          ; LCCOMB_X14_Y21_N0  ; 7       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; GPIO:iGPIO|HEX2_R[0]~0                                                                          ; LCCOMB_X14_Y21_N30 ; 7       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; GPIO:iGPIO|HEX3_R[4]~3                                                                          ; LCCOMB_X14_Y21_N12 ; 7       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; GPIO:iGPIO|LEDG_R[5]~0                                                                          ; LCCOMB_X14_Y21_N22 ; 10      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; TimerCounter:iTimer|CompareR[0]~0                                                               ; LCCOMB_X15_Y19_N0  ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; TimerCounter:iTimer|always2~0                                                                   ; LCCOMB_X15_Y21_N4  ; 32      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
+; reset_ff                                                                                        ; FF_X15_Y20_N29     ; 555     ; Async. clear, Sync. clear ; no     ; --                   ; --               ; --                        ;
+; rv32i_cpu:icpu|datapath:i_datapath|ex_mem_controls[4]                                           ; FF_X15_Y19_N21     ; 20      ; Write enable              ; no     ; --                   ; --               ; --                        ;
+; rv32i_cpu:icpu|datapath:i_datapath|forwardingWBtoD:i_forwardingWBtoD|rd_to_rs1                  ; LCCOMB_X26_Y15_N30 ; 33      ; Sync. load                ; no     ; --                   ; --               ; --                        ;
+; rv32i_cpu:icpu|datapath:i_datapath|forwardingWBtoD:i_forwardingWBtoD|rd_to_rs2                  ; LCCOMB_X26_Y15_N20 ; 33      ; Sync. load                ; no     ; --                   ; --               ; --                        ;
+; rv32i_cpu:icpu|datapath:i_datapath|hazard_detection:i_hazard_detection|pcwrite~6                ; LCCOMB_X21_Y16_N14 ; 41      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; rv32i_cpu:icpu|datapath:i_datapath|id_ex_rs1_data[29]~42                                        ; LCCOMB_X23_Y17_N14 ; 32      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
+; rv32i_cpu:icpu|datapath:i_datapath|id_ex_rs2_data[0]~43                                         ; LCCOMB_X21_Y15_N26 ; 32      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
+; rv32i_cpu:icpu|datapath:i_datapath|if_id_pc[8]~1                                                ; LCCOMB_X14_Y17_N22 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; rv32i_cpu:icpu|datapath:i_datapath|mem_wb_MemRdata[17]~72                                       ; LCCOMB_X15_Y19_N24 ; 22      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
+; rv32i_cpu:icpu|datapath:i_datapath|pc[0]~37                                                     ; LCCOMB_X11_Y18_N10 ; 2       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; rv32i_cpu:icpu|datapath:i_datapath|regfile:i_regfile|Decoder0~14                                ; LCCOMB_X28_Y21_N26 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; rv32i_cpu:icpu|datapath:i_datapath|regfile:i_regfile|Decoder0~16                                ; LCCOMB_X26_Y14_N24 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; rv32i_cpu:icpu|datapath:i_datapath|regfile:i_regfile|Decoder0~17                                ; LCCOMB_X28_Y21_N28 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; rv32i_cpu:icpu|datapath:i_datapath|regfile:i_regfile|Decoder0~18                                ; LCCOMB_X26_Y14_N2  ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; rv32i_cpu:icpu|datapath:i_datapath|regfile:i_regfile|Decoder0~20                                ; LCCOMB_X28_Y23_N28 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; rv32i_cpu:icpu|datapath:i_datapath|regfile:i_regfile|Decoder0~22                                ; LCCOMB_X26_Y14_N12 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; rv32i_cpu:icpu|datapath:i_datapath|regfile:i_regfile|Decoder0~23                                ; LCCOMB_X26_Y14_N14 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; rv32i_cpu:icpu|datapath:i_datapath|regfile:i_regfile|Decoder0~24                                ; LCCOMB_X28_Y23_N6  ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; rv32i_cpu:icpu|datapath:i_datapath|regfile:i_regfile|Decoder0~25                                ; LCCOMB_X28_Y21_N22 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; rv32i_cpu:icpu|datapath:i_datapath|regfile:i_regfile|Decoder0~26                                ; LCCOMB_X26_Y14_N0  ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; rv32i_cpu:icpu|datapath:i_datapath|regfile:i_regfile|Decoder0~27                                ; LCCOMB_X28_Y21_N16 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; rv32i_cpu:icpu|datapath:i_datapath|regfile:i_regfile|Decoder0~28                                ; LCCOMB_X26_Y14_N10 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; rv32i_cpu:icpu|datapath:i_datapath|regfile:i_regfile|Decoder0~29                                ; LCCOMB_X26_Y14_N4  ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; rv32i_cpu:icpu|datapath:i_datapath|regfile:i_regfile|Decoder0~30                                ; LCCOMB_X28_Y23_N16 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; rv32i_cpu:icpu|datapath:i_datapath|regfile:i_regfile|Decoder0~31                                ; LCCOMB_X26_Y14_N22 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; rv32i_cpu:icpu|datapath:i_datapath|regfile:i_regfile|Decoder0~32                                ; LCCOMB_X28_Y23_N18 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; rv32i_cpu:icpu|datapath:i_datapath|regfile:i_regfile|Decoder0~33                                ; LCCOMB_X26_Y14_N16 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; rv32i_cpu:icpu|datapath:i_datapath|regfile:i_regfile|Decoder0~34                                ; LCCOMB_X28_Y21_N10 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; rv32i_cpu:icpu|datapath:i_datapath|regfile:i_regfile|Decoder0~35                                ; LCCOMB_X28_Y21_N12 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; rv32i_cpu:icpu|datapath:i_datapath|regfile:i_regfile|Decoder0~36                                ; LCCOMB_X26_Y14_N18 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; rv32i_cpu:icpu|datapath:i_datapath|regfile:i_regfile|Decoder0~37                                ; LCCOMB_X26_Y14_N20 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; rv32i_cpu:icpu|datapath:i_datapath|regfile:i_regfile|Decoder0~38                                ; LCCOMB_X28_Y23_N20 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; rv32i_cpu:icpu|datapath:i_datapath|regfile:i_regfile|Decoder0~39                                ; LCCOMB_X28_Y21_N14 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; rv32i_cpu:icpu|datapath:i_datapath|regfile:i_regfile|Decoder0~40                                ; LCCOMB_X26_Y14_N30 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; rv32i_cpu:icpu|datapath:i_datapath|regfile:i_regfile|Decoder0~41                                ; LCCOMB_X26_Y14_N8  ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; rv32i_cpu:icpu|datapath:i_datapath|regfile:i_regfile|Decoder0~42                                ; LCCOMB_X28_Y23_N14 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; rv32i_cpu:icpu|datapath:i_datapath|regfile:i_regfile|Decoder0~43                                ; LCCOMB_X26_Y14_N26 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; rv32i_cpu:icpu|datapath:i_datapath|regfile:i_regfile|Decoder0~44                                ; LCCOMB_X28_Y23_N8  ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; rv32i_cpu:icpu|datapath:i_datapath|regfile:i_regfile|Decoder0~45                                ; LCCOMB_X28_Y23_N26 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; rv32i_cpu:icpu|datapath:i_datapath|regfile:i_regfile|Decoder0~46                                ; LCCOMB_X26_Y14_N28 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; rv32i_cpu:icpu|datapath:i_datapath|regfile:i_regfile|Decoder0~47                                ; LCCOMB_X26_Y14_N6  ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; rv32i_cpu:icpu|if_id_inst[20]~1                                                                 ; LCCOMB_X19_Y16_N24 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
 +-------------------------------------------------------------------------------------------------+--------------------+---------+---------------------------+--------+----------------------+------------------+---------------------------+
 
 
@@ -1864,7 +1865,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------------------------------------------------------------+---------+
 ; Name                                                                                      ; Fan-Out ;
 +-------------------------------------------------------------------------------------------+---------+
-; reset_ff                                                                                  ; 577     ;
+; reset_ff                                                                                  ; 555     ;
 ; rv32i_cpu:icpu|if_id_inst[18]                                                             ; 199     ;
 ; rv32i_cpu:icpu|if_id_inst[23]                                                             ; 199     ;
 ; rv32i_cpu:icpu|if_id_inst[17]                                                             ; 198     ;
@@ -1873,39 +1874,38 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; rv32i_cpu:icpu|if_id_inst[21]                                                             ; 198     ;
 ; rv32i_cpu:icpu|if_id_inst[15]                                                             ; 197     ;
 ; rv32i_cpu:icpu|if_id_inst[20]                                                             ; 197     ;
-; rv32i_cpu:icpu|datapath:i_datapath|id_ex_controls[7]                                      ; 193     ;
-; rv32i_cpu:icpu|datapath:i_datapath|id_ex_controls[3]                                      ; 98      ;
-; rv32i_cpu:icpu|datapath:i_datapath|forwarding:i_forwarding|ex_mem_to_alu_src2             ; 93      ;
-; rv32i_cpu:icpu|datapath:i_datapath|forwarding:i_forwarding|ex_mem_to_alu_src1             ; 92      ;
-; rv32i_cpu:icpu|datapath:i_datapath|branch_taken~8                                         ; 73      ;
-; rv32i_cpu:icpu|datapath:i_datapath|id_ex_controls[2]                                      ; 72      ;
-; rv32i_cpu:icpu|datapath:i_datapath|id_ex_alucontrol[4]                                    ; 67      ;
+; rv32i_cpu:icpu|datapath:i_datapath|id_ex_controls[7]                                      ; 192     ;
+; rv32i_cpu:icpu|datapath:i_datapath|forwarding:i_forwarding|ex_mem_to_alu_src2             ; 97      ;
+; rv32i_cpu:icpu|datapath:i_datapath|forwarding:i_forwarding|ex_mem_to_alu_src1             ; 90      ;
+; rv32i_cpu:icpu|datapath:i_datapath|id_ex_controls[3]                                      ; 74      ;
+; rv32i_cpu:icpu|datapath:i_datapath|id_ex_alucontrol[4]                                    ; 65      ;
 ; rv32i_cpu:icpu|datapath:i_datapath|id_ex_alucontrol[1]                                    ; 63      ;
-; rv32i_cpu:icpu|datapath:i_datapath|id_ex_alucontrol[0]                                    ; 57      ;
+; rv32i_cpu:icpu|datapath:i_datapath|id_ex_alucontrol[0]                                    ; 56      ;
 ; rv32i_cpu:icpu|datapath:i_datapath|id_ex_auipc_lui_imm[31]                                ; 54      ;
-; rv32i_cpu:icpu|datapath:i_datapath|id_ex_controls[6]                                      ; 54      ;
-; rv32i_cpu:icpu|datapath:i_datapath|id_ex_rs1_data[24]~34                                  ; 48      ;
-; rv32i_cpu:icpu|datapath:i_datapath|id_ex_rs1_data[24]~33                                  ; 48      ;
-; rv32i_cpu:icpu|datapath:i_datapath|id_ex_rs1_data[24]~30                                  ; 48      ;
-; rv32i_cpu:icpu|datapath:i_datapath|id_ex_rs1_data[24]~27                                  ; 48      ;
-; rv32i_cpu:icpu|datapath:i_datapath|id_ex_rs2_data[17]~35                                  ; 48      ;
-; rv32i_cpu:icpu|datapath:i_datapath|id_ex_rs2_data[17]~34                                  ; 48      ;
-; rv32i_cpu:icpu|datapath:i_datapath|id_ex_rs2_data[17]~31                                  ; 48      ;
-; rv32i_cpu:icpu|datapath:i_datapath|id_ex_rs2_data[17]~28                                  ; 48      ;
+; rv32i_cpu:icpu|datapath:i_datapath|id_ex_controls[6]                                      ; 52      ;
+; rv32i_cpu:icpu|datapath:i_datapath|id_ex_controls[2]                                      ; 51      ;
+; rv32i_cpu:icpu|datapath:i_datapath|id_ex_rs1_data[29]~34                                  ; 48      ;
+; rv32i_cpu:icpu|datapath:i_datapath|id_ex_rs1_data[29]~33                                  ; 48      ;
+; rv32i_cpu:icpu|datapath:i_datapath|id_ex_rs1_data[29]~30                                  ; 48      ;
+; rv32i_cpu:icpu|datapath:i_datapath|id_ex_rs1_data[29]~27                                  ; 48      ;
+; rv32i_cpu:icpu|datapath:i_datapath|id_ex_rs2_data[0]~35                                   ; 48      ;
+; rv32i_cpu:icpu|datapath:i_datapath|id_ex_rs2_data[0]~34                                   ; 48      ;
+; rv32i_cpu:icpu|datapath:i_datapath|id_ex_rs2_data[0]~31                                   ; 48      ;
+; rv32i_cpu:icpu|datapath:i_datapath|id_ex_rs2_data[0]~28                                   ; 48      ;
+; rv32i_cpu:icpu|datapath:i_datapath|branch_taken~9                                         ; 46      ;
 ; rv32i_cpu:icpu|datapath:i_datapath|hazard_detection:i_hazard_detection|pcwrite~6          ; 41      ;
-; rv32i_cpu:icpu|datapath:i_datapath|alusrc2[0]~8                                           ; 40      ;
+; rv32i_cpu:icpu|datapath:i_datapath|alusrc2[0]~4                                           ; 40      ;
+; rv32i_cpu:icpu|datapath:i_datapath|forwarding:i_forwarding|mem_wb_to_alu_src1             ; 38      ;
 ; rv32i_cpu:icpu|datapath:i_datapath|forwarding:i_forwarding|mem_wb_to_alu_src2             ; 38      ;
-; rv32i_cpu:icpu|datapath:i_datapath|alusrc2[1]~10                                          ; 37      ;
-; rv32i_cpu:icpu|datapath:i_datapath|forwarding:i_forwarding|mem_wb_to_alu_src1             ; 37      ;
+; rv32i_cpu:icpu|datapath:i_datapath|alusrc2[1]~6                                           ; 37      ;
+; rv32i_cpu:icpu|datapath:i_datapath|id_ex_rs2_data[1]~1                                    ; 37      ;
 ; Addr_Decoder:iDecoder|Equal1~6                                                            ; 36      ;
 ; rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|ShiftLeft0~11                                ; 36      ;
 ; rv32i_cpu:icpu|datapath:i_datapath|mem_wb_rd[4]                                           ; 36      ;
 ; rv32i_cpu:icpu|datapath:i_datapath|mem_wb_rd[3]                                           ; 36      ;
 ; rv32i_cpu:icpu|datapath:i_datapath|mem_wb_rd[1]                                           ; 36      ;
-; rv32i_cpu:icpu|datapath:i_datapath|id_ex_rs1_data[5]~0                                    ; 36      ;
-; rv32i_cpu:icpu|datapath:i_datapath|id_ex_rs1_data[6]~1                                    ; 36      ;
 ; rv32i_cpu:icpu|datapath:i_datapath|id_ex_rs2_data[3]~3                                    ; 36      ;
-; rv32i_cpu:icpu|datapath:i_datapath|id_ex_rs2_data[1]~1                                    ; 36      ;
+; rv32i_cpu:icpu|datapath:i_datapath|id_ex_rs2_data[2]~2                                    ; 36      ;
 ; rv32i_cpu:icpu|datapath:i_datapath|id_ex_rs1_data[31]~16                                  ; 35      ;
 ; rv32i_cpu:icpu|datapath:i_datapath|id_ex_rs1_data[30]~15                                  ; 35      ;
 ; rv32i_cpu:icpu|datapath:i_datapath|id_ex_rs1_data[20]~11                                  ; 35      ;
@@ -1924,23 +1924,24 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; rv32i_cpu:icpu|datapath:i_datapath|id_ex_rs2_data[25]~10                                  ; 35      ;
 ; rv32i_cpu:icpu|datapath:i_datapath|id_ex_rs1_data[22]~13                                  ; 35      ;
 ; rv32i_cpu:icpu|datapath:i_datapath|id_ex_rs1_data[23]~14                                  ; 35      ;
+; rv32i_cpu:icpu|datapath:i_datapath|id_ex_rs1_data[8]~3                                    ; 35      ;
+; rv32i_cpu:icpu|datapath:i_datapath|id_ex_rs1_data[6]~1                                    ; 35      ;
+; rv32i_cpu:icpu|datapath:i_datapath|id_ex_rs1_data[5]~0                                    ; 35      ;
 ; rv32i_cpu:icpu|datapath:i_datapath|id_ex_rs2_data[12]~5                                   ; 35      ;
 ; rv32i_cpu:icpu|datapath:i_datapath|id_ex_rs2_data[13]~6                                   ; 35      ;
 ; rv32i_cpu:icpu|datapath:i_datapath|id_ex_rs1_data[10]~5                                   ; 35      ;
 ; rv32i_cpu:icpu|datapath:i_datapath|id_ex_rs1_data[11]~6                                   ; 35      ;
 ; rv32i_cpu:icpu|datapath:i_datapath|id_ex_rs1_data[9]~4                                    ; 35      ;
-; rv32i_cpu:icpu|datapath:i_datapath|id_ex_rs2_data[2]~2                                    ; 35      ;
+; rv32i_cpu:icpu|datapath:i_datapath|id_ex_rs1_data[7]~2                                    ; 35      ;
+; rv32i_cpu:icpu|datapath:i_datapath|id_ex_rs2_data[4]~4                                    ; 35      ;
 ; rv32i_cpu:icpu|datapath:i_datapath|id_ex_rs2_data[0]~0                                    ; 35      ;
-; rv32i_cpu:icpu|datapath:i_datapath|id_ex_rs1_data[7]~2                                    ; 34      ;
-; rv32i_cpu:icpu|datapath:i_datapath|id_ex_rs1_data[8]~3                                    ; 34      ;
-; rv32i_cpu:icpu|datapath:i_datapath|id_ex_rs2_data[4]~4                                    ; 34      ;
 ; rv32i_cpu:icpu|datapath:i_datapath|forwardingWBtoD:i_forwardingWBtoD|rd_to_rs1            ; 33      ;
 ; rv32i_cpu:icpu|datapath:i_datapath|forwardingWBtoD:i_forwardingWBtoD|rd_to_rs2            ; 33      ;
 ; ~GND                                                                                      ; 32      ;
 ; rv32i_cpu:icpu|datapath:i_datapath|regfile:i_regfile|Decoder0~47                          ; 32      ;
 ; rv32i_cpu:icpu|datapath:i_datapath|regfile:i_regfile|Decoder0~46                          ; 32      ;
 ; rv32i_cpu:icpu|datapath:i_datapath|regfile:i_regfile|Decoder0~45                          ; 32      ;
-; rv32i_cpu:icpu|datapath:i_datapath|if_id_pc[1]~1                                          ; 32      ;
+; rv32i_cpu:icpu|datapath:i_datapath|if_id_pc[8]~1                                          ; 32      ;
 ; rv32i_cpu:icpu|datapath:i_datapath|regfile:i_regfile|Decoder0~44                          ; 32      ;
 ; rv32i_cpu:icpu|datapath:i_datapath|regfile:i_regfile|Decoder0~43                          ; 32      ;
 ; rv32i_cpu:icpu|datapath:i_datapath|regfile:i_regfile|Decoder0~42                          ; 32      ;
@@ -1970,23 +1971,24 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; rv32i_cpu:icpu|datapath:i_datapath|regfile:i_regfile|Decoder0~16                          ; 32      ;
 ; rv32i_cpu:icpu|datapath:i_datapath|regfile:i_regfile|Decoder0~14                          ; 32      ;
 ; TimerCounter:iTimer|always2~0                                                             ; 32      ;
-; TimerCounter:iTimer|CompareR[30]~0                                                        ; 32      ;
-; rv32i_cpu:icpu|if_id_inst[2]~3                                                            ; 32      ;
-; rv32i_cpu:icpu|datapath:i_datapath|id_ex_rs1_data[24]~42                                  ; 32      ;
-; rv32i_cpu:icpu|datapath:i_datapath|id_ex_rs2_data[17]~43                                  ; 32      ;
+; TimerCounter:iTimer|CompareR[0]~0                                                         ; 32      ;
+; rv32i_cpu:icpu|if_id_inst[20]~1                                                           ; 32      ;
+; rv32i_cpu:icpu|datapath:i_datapath|id_ex_rs1_data[29]~42                                  ; 32      ;
+; rv32i_cpu:icpu|datapath:i_datapath|id_ex_rs2_data[0]~43                                   ; 32      ;
 ; rv32i_cpu:icpu|datapath:i_datapath|mem_wb_controls[1]                                     ; 32      ;
+; rv32i_cpu:icpu|always0~1                                                                  ; 30      ;
 ; GPIO:iGPIO|Equal0~2                                                                       ; 30      ;
 ; rv32i_cpu:icpu|datapath:i_datapath|always6~0                                              ; 29      ;
 ; rv32i_cpu:icpu|datapath:i_datapath|id_ex_alucontrol[2]                                    ; 28      ;
-; rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|Mux16~0                                      ; 27      ;
-; rv32i_cpu:icpu|datapath:i_datapath|mem_wb_MemRdata[20]~72                                 ; 22      ;
+; rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|Mux16~0                                      ; 26      ;
+; rv32i_cpu:icpu|datapath:i_datapath|mem_wb_MemRdata[17]~72                                 ; 22      ;
 ; rv32i_cpu:icpu|datapath:i_datapath|ex_mem_controls[4]                                     ; 20      ;
 ; rv32i_cpu:icpu|datapath:i_datapath|ex_mem_aluout[3]                                       ; 20      ;
 ; rv32i_cpu:icpu|datapath:i_datapath|ex_mem_aluout[2]                                       ; 20      ;
-; rv32i_cpu:icpu|datapath:i_datapath|alusrc2[3]~15                                          ; 18      ;
+; rv32i_cpu:icpu|datapath:i_datapath|alusrc2[3]~11                                          ; 19      ;
+; rv32i_cpu:icpu|datapath:i_datapath|ex_mem_aluout[8]                                       ; 18      ;
 ; rv32i_cpu:icpu|datapath:i_datapath|ex_mem_aluout[4]                                       ; 18      ;
-; rv32i_cpu:icpu|datapath:i_datapath|alusrc2[2]~14                                          ; 16      ;
-; rv32i_cpu:icpu|datapath:i_datapath|ex_mem_aluout[8]                                       ; 16      ;
+; rv32i_cpu:icpu|datapath:i_datapath|alusrc2[2]~10                                          ; 16      ;
 ; rv32i_cpu:icpu|datapath:i_datapath|ex_mem_aluout[9]                                       ; 16      ;
 ; rv32i_cpu:icpu|datapath:i_datapath|ex_mem_aluout[6]                                       ; 16      ;
 ; rv32i_cpu:icpu|datapath:i_datapath|ex_mem_aluout[13]                                      ; 16      ;
@@ -2002,18 +2004,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; SW[2]~input                                                                               ; 15      ;
 ; SW[4]~input                                                                               ; 15      ;
 ; SW[0]~input                                                                               ; 15      ;
-; rv32i_cpu:icpu|datapath:i_datapath|mem_wb_MemRdata[3]~78                                  ; 15      ;
+; rv32i_cpu:icpu|datapath:i_datapath|mem_wb_MemRdata[9]~78                                  ; 15      ;
+; rv32i_cpu:icpu|datapath:i_datapath|ex_mem_aluout[7]                                       ; 15      ;
 ; rv32i_cpu:icpu|datapath:i_datapath|ex_mem_aluout[5]                                       ; 15      ;
 ; rv32i_cpu:icpu|datapath:i_datapath|ex_mem_aluout[11]                                      ; 14      ;
 ; rv32i_cpu:icpu|datapath:i_datapath|ex_mem_aluout[10]                                      ; 14      ;
-; rv32i_cpu:icpu|datapath:i_datapath|ex_mem_aluout[7]                                       ; 14      ;
 ; rv32i_cpu:icpu|datapath:i_datapath|ex_mem_aluout[12]                                      ; 14      ;
-; rv32i_cpu:icpu|datapath:i_datapath|alusrc2[3]~12                                          ; 13      ;
 ; GPIO:iGPIO|DataOut[0]~2                                                                   ; 12      ;
-; rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|Mux9~1                                       ; 12      ;
-; rv32i_cpu:icpu|datapath:i_datapath|alusrc1~7                                              ; 11      ;
-; rv32i_cpu:icpu|datapath:i_datapath|mem_wb_controls[3]                                     ; 11      ;
-; rv32i_cpu:icpu|datapath:i_datapath|mem_wb_controls[2]                                     ; 11      ;
+; rv32i_cpu:icpu|datapath:i_datapath|alusrc2[3]~8                                           ; 12      ;
+; rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|Mux12~1                                      ; 11      ;
+; rv32i_cpu:icpu|datapath:i_datapath|alusrc1~8                                              ; 11      ;
 ; rv32i_cpu:icpu|datapath:i_datapath|pc[12]                                                 ; 10      ;
 ; rv32i_cpu:icpu|datapath:i_datapath|pc[11]                                                 ; 10      ;
 ; rv32i_cpu:icpu|datapath:i_datapath|pc[10]                                                 ; 10      ;
@@ -2025,33 +2025,35 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; rv32i_cpu:icpu|datapath:i_datapath|pc[4]                                                  ; 10      ;
 ; rv32i_cpu:icpu|datapath:i_datapath|pc[3]                                                  ; 10      ;
 ; rv32i_cpu:icpu|datapath:i_datapath|pc[2]                                                  ; 10      ;
-; rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|Mux9~2                                       ; 10      ;
-; GPIO:iGPIO|LEDG_R[2]~0                                                                    ; 10      ;
+; rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|Mux12~2                                      ; 10      ;
+; GPIO:iGPIO|LEDG_R[5]~0                                                                    ; 10      ;
 ; Addr_Decoder:iDecoder|Equal1~5                                                            ; 10      ;
 ; Addr_Decoder:iDecoder|Equal0~5                                                            ; 9       ;
 ; rv32i_cpu:icpu|if_id_inst[5]                                                              ; 9       ;
 ; rv32i_cpu:icpu|if_id_inst[6]                                                              ; 9       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|mem_wb_rd[0]                                           ; 9       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|mem_wb_rd[2]                                           ; 9       ;
-; rv32i_cpu:icpu|datapath:i_datapath|id_ex_auipc_lui_imm[24]                                ; 9       ;
+; rv32i_cpu:icpu|datapath:i_datapath|mem_wb_controls[3]                                     ; 9       ;
+; rv32i_cpu:icpu|datapath:i_datapath|mem_wb_controls[2]                                     ; 9       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|regfile:i_regfile|Decoder0~21                          ; 8       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|regfile:i_regfile|Decoder0~19                          ; 8       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|regfile:i_regfile|Decoder0~15                          ; 8       ;
-; rv32i_cpu:icpu|always0~0                                                                  ; 8       ;
 ; rv32i_cpu:icpu|if_id_inst[2]                                                              ; 8       ;
 ; rv32i_cpu:icpu|if_id_inst[4]                                                              ; 8       ;
-; rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|Mux9~0                                       ; 8       ;
-; rv32i_cpu:icpu|datapath:i_datapath|alusrc2[4]~6                                           ; 8       ;
+; rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|Mux12~0                                      ; 8       ;
+; rv32i_cpu:icpu|datapath:i_datapath|alusrc2[4]~2                                           ; 8       ;
+; rv32i_cpu:icpu|datapath:i_datapath|id_ex_auipc_lui_imm[24]                                ; 8       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|regfile:i_regfile|Decoder0~13                          ; 7       ;
-; rv32i_cpu:icpu|datapath:i_datapath|mem_wb_MemRdata[3]~46                                  ; 7       ;
-; rv32i_cpu:icpu|datapath:i_datapath|id_ex_funct3[0]                                        ; 7       ;
-; rv32i_cpu:icpu|datapath:i_datapath|alusrc2[1]~16                                          ; 7       ;
+; rv32i_cpu:icpu|datapath:i_datapath|mem_wb_MemRdata[9]~46                                  ; 7       ;
+; rv32i_cpu:icpu|datapath:i_datapath|alusrc2[1]~12                                          ; 7       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|id_ex_controls[4]                                      ; 7       ;
+; rv32i_cpu:icpu|datapath:i_datapath|mem_wb_controls[0]                                     ; 7       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|id_ex_auipc_lui_imm[22]                                ; 7       ;
-; GPIO:iGPIO|HEX0_R[0]~1                                                                    ; 7       ;
-; GPIO:iGPIO|HEX1_R[4]~0                                                                    ; 7       ;
-; GPIO:iGPIO|HEX2_R[1]~0                                                                    ; 7       ;
-; GPIO:iGPIO|HEX3_R[3]~3                                                                    ; 7       ;
+; rv32i_cpu:icpu|datapath:i_datapath|ex_mem_rd[4]                                           ; 7       ;
+; GPIO:iGPIO|HEX0_R[4]~1                                                                    ; 7       ;
+; GPIO:iGPIO|HEX1_R[0]~0                                                                    ; 7       ;
+; GPIO:iGPIO|HEX2_R[0]~0                                                                    ; 7       ;
+; GPIO:iGPIO|HEX3_R[4]~3                                                                    ; 7       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|ex_mem_aluout[28]                                      ; 7       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|ex_mem_aluout[27]                                      ; 7       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|ex_mem_aluout[26]                                      ; 7       ;
@@ -2072,22 +2074,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; rv32i_cpu:icpu|datapath:i_datapath|id_ex_controls~1                                       ; 6       ;
 ; rv32i_cpu:icpu|if_id_inst[3]                                                              ; 6       ;
 ; rv32i_cpu:icpu|if_id_inst[24]                                                             ; 6       ;
-; rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|Mux5~1                                       ; 6       ;
-; rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|Mux5~0                                       ; 6       ;
-; rv32i_cpu:icpu|datapath:i_datapath|alusrc1~103                                            ; 6       ;
+; rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|Mux6~1                                       ; 6       ;
+; rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|Mux6~0                                       ; 6       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|id_ex_funct3[2]                                        ; 6       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|id_ex_auipc_lui_imm[25]                                ; 6       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|id_ex_auipc_lui_imm[26]                                ; 6       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|id_ex_auipc_lui_imm[27]                                ; 6       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|id_ex_auipc_lui_imm[28]                                ; 6       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|id_ex_auipc_lui_imm[29]                                ; 6       ;
+; rv32i_cpu:icpu|datapath:i_datapath|id_ex_funct3[0]                                        ; 6       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|id_ex_funct3[1]                                        ; 6       ;
+; rv32i_cpu:icpu|datapath:i_datapath|id_ex_auipc_lui_imm[19]                                ; 6       ;
+; rv32i_cpu:icpu|datapath:i_datapath|id_ex_auipc_lui_imm[15]                                ; 6       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|id_ex_se_imm_stype[4]                                  ; 6       ;
-; rv32i_cpu:icpu|datapath:i_datapath|mem_wb_controls[0]                                     ; 6       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|forwarding:i_forwarding|ex_mem_to_alu_src2~2           ; 6       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|id_ex_auipc_lui_imm[23]                                ; 6       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|forwarding:i_forwarding|ex_mem_to_alu_src2~1           ; 6       ;
-; rv32i_cpu:icpu|datapath:i_datapath|ex_mem_rd[4]                                           ; 6       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|id_ex_auipc_lui_imm[20]                                ; 6       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|id_ex_auipc_lui_imm[21]                                ; 6       ;
 ; GPIO:iGPIO|HEX3_R~9                                                                       ; 6       ;
@@ -2101,23 +2103,20 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; rv32i_cpu:icpu|datapath:i_datapath|ex_mem_aluout[31]                                      ; 6       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|ex_mem_aluout[30]                                      ; 6       ;
 ; GPIO:iGPIO|HEX3_R~0                                                                       ; 6       ;
-; rv32i_cpu:icpu|datapath:i_datapath|pc[12]~10                                              ; 5       ;
-; rv32i_cpu:icpu|datapath:i_datapath|id_ex_controls~5                                       ; 5       ;
+; rv32i_cpu:icpu|datapath:i_datapath|id_ex_controls~3                                       ; 5       ;
 ; TimerCounter:iTimer|Equal2~1                                                              ; 5       ;
-; rv32i_cpu:icpu|datapath:i_datapath|alusrc2[31]~65                                         ; 5       ;
+; rv32i_cpu:icpu|datapath:i_datapath|alusrc1~105                                            ; 5       ;
+; rv32i_cpu:icpu|datapath:i_datapath|alusrc1~103                                            ; 5       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|alusrc1~101                                            ; 5       ;
-; rv32i_cpu:icpu|datapath:i_datapath|alusrc1~99                                             ; 5       ;
-; rv32i_cpu:icpu|datapath:i_datapath|alusrc1~84                                             ; 5       ;
+; rv32i_cpu:icpu|datapath:i_datapath|alusrc1~86                                             ; 5       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|id_ex_auipc_lui_imm[30]                                ; 5       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|id_ex_se_imm_stype[2]                                  ; 5       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|id_ex_se_imm_stype[3]                                  ; 5       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|id_ex_se_imm_stype[1]                                  ; 5       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|id_ex_se_imm_stype[0]                                  ; 5       ;
-; rv32i_cpu:icpu|datapath:i_datapath|id_ex_auipc_lui_imm[19]                                ; 5       ;
-; rv32i_cpu:icpu|datapath:i_datapath|id_ex_auipc_lui_imm[18]                                ; 5       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|id_ex_auipc_lui_imm[17]                                ; 5       ;
+; rv32i_cpu:icpu|datapath:i_datapath|id_ex_auipc_lui_imm[18]                                ; 5       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|id_ex_auipc_lui_imm[16]                                ; 5       ;
-; rv32i_cpu:icpu|datapath:i_datapath|id_ex_auipc_lui_imm[15]                                ; 5       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|forwarding:i_forwarding|Equal2~0                       ; 5       ;
 ; rv32i_cpu:icpu|if_id_inst[13]                                                             ; 4       ;
 ; rv32i_cpu:icpu|if_id_inst[14]                                                             ; 4       ;
@@ -2125,11 +2124,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; rv32i_cpu:icpu|if_id_inst[1]                                                              ; 4       ;
 ; rv32i_cpu:icpu|if_id_inst[0]                                                              ; 4       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|ShiftLeft0~79                                ; 4       ;
-; rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|ShiftLeft0~72                                ; 4       ;
+; rv32i_cpu:icpu|datapath:i_datapath|alusrc2[31]~64                                         ; 4       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|adder_32bit:iadder32|adder_1bit:bit30|cout~0 ; 4       ;
+; rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|ShiftLeft0~72                                ; 4       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|ShiftLeft0~58                                ; 4       ;
-; rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|Mux1~0                                       ; 4       ;
+; rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|Mux0~0                                       ; 4       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|ShiftLeft0~45                                ; 4       ;
+; rv32i_cpu:icpu|datapath:i_datapath|alusrc1~100                                            ; 4       ;
+; rv32i_cpu:icpu|datapath:i_datapath|alusrc1~99                                             ; 4       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|alusrc1~98                                             ; 4       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|alusrc1~97                                             ; 4       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|alusrc1~96                                             ; 4       ;
@@ -2142,31 +2144,32 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; rv32i_cpu:icpu|datapath:i_datapath|alusrc1~89                                             ; 4       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|alusrc1~88                                             ; 4       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|alusrc1~87                                             ; 4       ;
-; rv32i_cpu:icpu|datapath:i_datapath|alusrc1~86                                             ; 4       ;
-; rv32i_cpu:icpu|datapath:i_datapath|alusrc1~85                                             ; 4       ;
-; rv32i_cpu:icpu|datapath:i_datapath|alusrc2[28]~34                                         ; 4       ;
+; rv32i_cpu:icpu|datapath:i_datapath|alusrc2[28]~33                                         ; 4       ;
+; rv32i_cpu:icpu|datapath:i_datapath|alusrc2[29]~31                                         ; 4       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|ShiftLeft0~39                                ; 4       ;
-; rv32i_cpu:icpu|datapath:i_datapath|alusrc1~61                                             ; 4       ;
-; rv32i_cpu:icpu|datapath:i_datapath|alusrc1~51                                             ; 4       ;
-; rv32i_cpu:icpu|datapath:i_datapath|alusrc2[6]~28                                          ; 4       ;
-; rv32i_cpu:icpu|datapath:i_datapath|alusrc1~41                                             ; 4       ;
+; rv32i_cpu:icpu|datapath:i_datapath|alusrc1~63                                             ; 4       ;
+; rv32i_cpu:icpu|datapath:i_datapath|alusrc1~53                                             ; 4       ;
+; rv32i_cpu:icpu|datapath:i_datapath|alusrc2[6]~27                                          ; 4       ;
+; rv32i_cpu:icpu|datapath:i_datapath|alusrc2[8]~23                                          ; 4       ;
+; rv32i_cpu:icpu|datapath:i_datapath|alusrc1~42                                             ; 4       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|ShiftLeft0~28                                ; 4       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|ShiftLeft0~22                                ; 4       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|ShiftLeft0~18                                ; 4       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|ShiftLeft0~16                                ; 4       ;
-; rv32i_cpu:icpu|datapath:i_datapath|alusrc1~18                                             ; 4       ;
+; rv32i_cpu:icpu|datapath:i_datapath|alusrc1~19                                             ; 4       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|ShiftLeft0~9                                 ; 4       ;
-; rv32i_cpu:icpu|datapath:i_datapath|after_forward_rs2[3]~13                                ; 4       ;
-; rv32i_cpu:icpu|datapath:i_datapath|alusrc2[3]~11                                          ; 4       ;
-; rv32i_cpu:icpu|datapath:i_datapath|alusrc1~11                                             ; 4       ;
-; rv32i_cpu:icpu|datapath:i_datapath|alusrc1~9                                              ; 4       ;
+; rv32i_cpu:icpu|datapath:i_datapath|after_forward_rs2[3]~17                                ; 4       ;
+; rv32i_cpu:icpu|datapath:i_datapath|alusrc2[3]~7                                           ; 4       ;
+; rv32i_cpu:icpu|datapath:i_datapath|alusrc1~12                                             ; 4       ;
+; rv32i_cpu:icpu|datapath:i_datapath|alusrc1~10                                             ; 4       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|ex_mem_rd[3]                                           ; 4       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|ex_mem_rd[2]                                           ; 4       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|ex_mem_rd[1]                                           ; 4       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|ex_mem_rd[0]                                           ; 4       ;
-; GPIO:iGPIO|HEX3_R[3]~1                                                                    ; 4       ;
+; GPIO:iGPIO|HEX3_R[4]~1                                                                    ; 4       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|ex_mem_aluout[0]                                       ; 4       ;
-; rv32i_cpu:icpu|datapath:i_datapath|pc[12]~29                                              ; 3       ;
+; rv32i_cpu:icpu|datapath:i_datapath|pc[20]~76                                              ; 3       ;
+; rv32i_cpu:icpu|datapath:i_datapath|pc[20]~35                                              ; 3       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|id_ex_pc[31]                                           ; 3       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|id_ex_pc[30]                                           ; 3       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|id_ex_pc[29]                                           ; 3       ;
@@ -2203,81 +2206,78 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; rv32i_cpu:icpu|if_id_inst[31]                                                             ; 3       ;
 ; rv32i_cpu:icpu|if_id_inst[29]                                                             ; 3       ;
 ; rv32i_cpu:icpu|if_id_inst[30]                                                             ; 3       ;
-; rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|adder_32bit:iadder32|adder_1bit:bit1|sum~0   ; 3       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|Mux31~3                                      ; 3       ;
-; rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|adder_32bit:iadder32|adder_1bit:bit22|sum    ; 3       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|ShiftLeft0~88                                ; 3       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|ShiftLeft0~81                                ; 3       ;
+; rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|adder_32bit:iadder32|adder_1bit:bit31|sum~0  ; 3       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|ShiftLeft0~76                                ; 3       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|ShiftLeft0~73                                ; 3       ;
-; rv32i_cpu:icpu|datapath:i_datapath|alusrc2[30]~64                                         ; 3       ;
+; rv32i_cpu:icpu|datapath:i_datapath|alusrc2[30]~63                                         ; 3       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|ShiftLeft0~64                                ; 3       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|ShiftLeft0~61                                ; 3       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|ShiftLeft0~46                                ; 3       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|ShiftLeft0~43                                ; 3       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|adder_32bit:iadder32|adder_1bit:bit27|cout~0 ; 3       ;
-; rv32i_cpu:icpu|datapath:i_datapath|alusrc2[14]~62                                         ; 3       ;
-; rv32i_cpu:icpu|datapath:i_datapath|alusrc2[15]~60                                         ; 3       ;
-; rv32i_cpu:icpu|datapath:i_datapath|alusrc2[16]~58                                         ; 3       ;
-; rv32i_cpu:icpu|datapath:i_datapath|alusrc2[17]~56                                         ; 3       ;
-; rv32i_cpu:icpu|datapath:i_datapath|alusrc2[18]~54                                         ; 3       ;
-; rv32i_cpu:icpu|datapath:i_datapath|alusrc2[19]~52                                         ; 3       ;
-; rv32i_cpu:icpu|datapath:i_datapath|alusrc2[20]~50                                         ; 3       ;
-; rv32i_cpu:icpu|datapath:i_datapath|alusrc2[21]~48                                         ; 3       ;
-; rv32i_cpu:icpu|datapath:i_datapath|alusrc2[22]~46                                         ; 3       ;
-; rv32i_cpu:icpu|datapath:i_datapath|alusrc2[23]~44                                         ; 3       ;
-; rv32i_cpu:icpu|datapath:i_datapath|alusrc2[24]~42                                         ; 3       ;
-; rv32i_cpu:icpu|datapath:i_datapath|alusrc2[25]~40                                         ; 3       ;
-; rv32i_cpu:icpu|datapath:i_datapath|alusrc2[26]~38                                         ; 3       ;
-; rv32i_cpu:icpu|datapath:i_datapath|alusrc2[27]~36                                         ; 3       ;
-; rv32i_cpu:icpu|datapath:i_datapath|alusrc2[29]~32                                         ; 3       ;
+; rv32i_cpu:icpu|datapath:i_datapath|alusrc2[14]~61                                         ; 3       ;
+; rv32i_cpu:icpu|datapath:i_datapath|alusrc2[15]~59                                         ; 3       ;
+; rv32i_cpu:icpu|datapath:i_datapath|alusrc2[16]~57                                         ; 3       ;
+; rv32i_cpu:icpu|datapath:i_datapath|alusrc2[17]~55                                         ; 3       ;
+; rv32i_cpu:icpu|datapath:i_datapath|alusrc2[18]~53                                         ; 3       ;
+; rv32i_cpu:icpu|datapath:i_datapath|alusrc2[19]~51                                         ; 3       ;
+; rv32i_cpu:icpu|datapath:i_datapath|alusrc2[20]~49                                         ; 3       ;
+; rv32i_cpu:icpu|datapath:i_datapath|alusrc2[21]~47                                         ; 3       ;
+; rv32i_cpu:icpu|datapath:i_datapath|alusrc2[22]~45                                         ; 3       ;
+; rv32i_cpu:icpu|datapath:i_datapath|alusrc2[23]~43                                         ; 3       ;
+; rv32i_cpu:icpu|datapath:i_datapath|alusrc2[24]~41                                         ; 3       ;
+; rv32i_cpu:icpu|datapath:i_datapath|alusrc2[25]~39                                         ; 3       ;
+; rv32i_cpu:icpu|datapath:i_datapath|alusrc2[26]~37                                         ; 3       ;
+; rv32i_cpu:icpu|datapath:i_datapath|alusrc2[27]~35                                         ; 3       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|ShiftLeft0~38                                ; 3       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|Mux3~0                                       ; 3       ;
-; rv32i_cpu:icpu|datapath:i_datapath|alusrc1~63                                             ; 3       ;
-; rv32i_cpu:icpu|datapath:i_datapath|alusrc1~57                                             ; 3       ;
+; rv32i_cpu:icpu|datapath:i_datapath|alusrc1~65                                             ; 3       ;
+; rv32i_cpu:icpu|datapath:i_datapath|alusrc1~59                                             ; 3       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|ShiftLeft0~30                                ; 3       ;
+; rv32i_cpu:icpu|datapath:i_datapath|alusrc1~52                                             ; 3       ;
+; rv32i_cpu:icpu|datapath:i_datapath|alusrc1~51                                             ; 3       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|alusrc1~50                                             ; 3       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|alusrc1~49                                             ; 3       ;
-; rv32i_cpu:icpu|datapath:i_datapath|alusrc1~48                                             ; 3       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|alusrc1~47                                             ; 3       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|alusrc1~46                                             ; 3       ;
-; rv32i_cpu:icpu|datapath:i_datapath|alusrc1~45                                             ; 3       ;
-; rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|adder_32bit:iadder32|adder_1bit:bit5|cout~0  ; 3       ;
-; rv32i_cpu:icpu|datapath:i_datapath|alusrc1~43                                             ; 3       ;
-; rv32i_cpu:icpu|datapath:i_datapath|alusrc2[5]~30                                          ; 3       ;
-; rv32i_cpu:icpu|datapath:i_datapath|alusrc2[7]~26                                          ; 3       ;
-; rv32i_cpu:icpu|datapath:i_datapath|alusrc2[8]~25                                          ; 3       ;
-; rv32i_cpu:icpu|datapath:i_datapath|alusrc2[9]~24                                          ; 3       ;
-; rv32i_cpu:icpu|datapath:i_datapath|alusrc2[10]~23                                         ; 3       ;
-; rv32i_cpu:icpu|datapath:i_datapath|alusrc2[11]~22                                         ; 3       ;
-; rv32i_cpu:icpu|datapath:i_datapath|alusrc2[12]~21                                         ; 3       ;
-; rv32i_cpu:icpu|datapath:i_datapath|alusrc2[13]~19                                         ; 3       ;
-; rv32i_cpu:icpu|datapath:i_datapath|alusrc1~40                                             ; 3       ;
+; rv32i_cpu:icpu|datapath:i_datapath|alusrc1~44                                             ; 3       ;
+; rv32i_cpu:icpu|datapath:i_datapath|alusrc2[5]~29                                          ; 3       ;
+; rv32i_cpu:icpu|datapath:i_datapath|alusrc2[7]~25                                          ; 3       ;
+; rv32i_cpu:icpu|datapath:i_datapath|alusrc2[9]~21                                          ; 3       ;
+; rv32i_cpu:icpu|datapath:i_datapath|alusrc2[10]~20                                         ; 3       ;
+; rv32i_cpu:icpu|datapath:i_datapath|alusrc2[11]~19                                         ; 3       ;
+; rv32i_cpu:icpu|datapath:i_datapath|alusrc2[12]~18                                         ; 3       ;
+; rv32i_cpu:icpu|datapath:i_datapath|alusrc2[13]~16                                         ; 3       ;
+; rv32i_cpu:icpu|datapath:i_datapath|alusrc1~41                                             ; 3       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|ShiftLeft0~25                                ; 3       ;
-; rv32i_cpu:icpu|datapath:i_datapath|alusrc1~34                                             ; 3       ;
-; rv32i_cpu:icpu|datapath:i_datapath|alusrc1~32                                             ; 3       ;
-; rv32i_cpu:icpu|datapath:i_datapath|alusrc1~30                                             ; 3       ;
-; rv32i_cpu:icpu|datapath:i_datapath|alusrc1~28                                             ; 3       ;
-; rv32i_cpu:icpu|datapath:i_datapath|alusrc1~26                                             ; 3       ;
-; rv32i_cpu:icpu|datapath:i_datapath|alusrc1~24                                             ; 3       ;
-; rv32i_cpu:icpu|datapath:i_datapath|alusrc1~22                                             ; 3       ;
-; rv32i_cpu:icpu|datapath:i_datapath|alusrc2[4]~17                                          ; 3       ;
-; rv32i_cpu:icpu|datapath:i_datapath|alusrc1~20                                             ; 3       ;
+; rv32i_cpu:icpu|datapath:i_datapath|alusrc1~35                                             ; 3       ;
+; rv32i_cpu:icpu|datapath:i_datapath|alusrc1~33                                             ; 3       ;
+; rv32i_cpu:icpu|datapath:i_datapath|alusrc1~31                                             ; 3       ;
+; rv32i_cpu:icpu|datapath:i_datapath|alusrc1~29                                             ; 3       ;
+; rv32i_cpu:icpu|datapath:i_datapath|alusrc1~27                                             ; 3       ;
+; rv32i_cpu:icpu|datapath:i_datapath|alusrc1~25                                             ; 3       ;
+; rv32i_cpu:icpu|datapath:i_datapath|alusrc1~23                                             ; 3       ;
+; rv32i_cpu:icpu|datapath:i_datapath|alusrc2[4]~14                                          ; 3       ;
+; rv32i_cpu:icpu|datapath:i_datapath|alusrc1~21                                             ; 3       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|ShiftLeft0~14                                ; 3       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|ShiftLeft0~13                                ; 3       ;
-; rv32i_cpu:icpu|datapath:i_datapath|alusrc1~16                                             ; 3       ;
+; rv32i_cpu:icpu|datapath:i_datapath|alusrc1~18                                             ; 3       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|ShiftLeft0~12                                ; 3       ;
+; rv32i_cpu:icpu|datapath:i_datapath|alusrc1~16                                             ; 3       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|alusrc1~14                                             ; 3       ;
-; rv32i_cpu:icpu|datapath:i_datapath|alusrc1~13                                             ; 3       ;
-; rv32i_cpu:icpu|datapath:i_datapath|after_forward_rs2[2]~15                                ; 3       ;
-; rv32i_cpu:icpu|datapath:i_datapath|after_forward_rs2[2]~14                                ; 3       ;
-; rv32i_cpu:icpu|datapath:i_datapath|after_forward_rs2[1]~11                                ; 3       ;
-; rv32i_cpu:icpu|datapath:i_datapath|alusrc2[1]~9                                           ; 3       ;
-; rv32i_cpu:icpu|datapath:i_datapath|forwarding:i_forwarding|mem_wb_to_alu_src1~0           ; 3       ;
-; rv32i_cpu:icpu|datapath:i_datapath|after_forward_rs2[4]~9                                 ; 3       ;
-; rv32i_cpu:icpu|datapath:i_datapath|after_forward_rs2[4]~8                                 ; 3       ;
+; rv32i_cpu:icpu|datapath:i_datapath|after_forward_rs2[2]~19                                ; 3       ;
+; rv32i_cpu:icpu|datapath:i_datapath|after_forward_rs2[2]~18                                ; 3       ;
+; rv32i_cpu:icpu|datapath:i_datapath|alusrc2[2]~9                                           ; 3       ;
+; rv32i_cpu:icpu|datapath:i_datapath|after_forward_rs2[1]~15                                ; 3       ;
+; rv32i_cpu:icpu|datapath:i_datapath|alusrc2[1]~5                                           ; 3       ;
+; rv32i_cpu:icpu|datapath:i_datapath|after_forward_rs2[4]~13                                ; 3       ;
+; rv32i_cpu:icpu|datapath:i_datapath|after_forward_rs2[4]~12                                ; 3       ;
+; rv32i_cpu:icpu|datapath:i_datapath|regfile:i_regfile|Decoder0~12                          ; 3       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|ex_mem_controls[0]                                     ; 3       ;
-; GPIO:iGPIO|HEX3_R[3]~2                                                                    ; 3       ;
+; GPIO:iGPIO|HEX3_R[4]~2                                                                    ; 3       ;
 ; GPIO:iGPIO|Equal0~1                                                                       ; 3       ;
 ; TimerCounter:iTimer|CounterR[31]                                                          ; 3       ;
 ; TimerCounter:iTimer|CounterR[30]                                                          ; 3       ;
@@ -2312,16 +2312,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; TimerCounter:iTimer|CounterR[4]                                                           ; 3       ;
 ; TimerCounter:iTimer|StatusR[0]                                                            ; 3       ;
 ; TimerCounter:iTimer|CounterR[0]                                                           ; 3       ;
-; rv32i_cpu:icpu|datapath:i_datapath|mem_wb_MemRdata[1]~79                                  ; 2       ;
+; rv32i_cpu:icpu|datapath:i_datapath|mem_wb_MemRdata[2]~79                                  ; 2       ;
 ; GPIO:iGPIO|always0~2                                                                      ; 2       ;
-; rv32i_cpu:icpu|datapath:i_datapath|mem_wb_MemRdata[1]~77                                  ; 2       ;
-; rv32i_cpu:icpu|datapath:i_datapath|mem_wb_MemRdata[1]~76                                  ; 2       ;
-; rv32i_cpu:icpu|datapath:i_datapath|alusrc1~105                                            ; 2       ;
-; rv32i_cpu:icpu|datapath:i_datapath|alusrc1~104                                            ; 2       ;
+; rv32i_cpu:icpu|datapath:i_datapath|mem_wb_MemRdata[2]~77                                  ; 2       ;
+; rv32i_cpu:icpu|datapath:i_datapath|mem_wb_MemRdata[2]~76                                  ; 2       ;
+; rv32i_cpu:icpu|datapath:i_datapath|alusrc1~108                                            ; 2       ;
+; rv32i_cpu:icpu|datapath:i_datapath|alusrc1~107                                            ; 2       ;
+; rv32i_cpu:icpu|datapath:i_datapath|alusrc1~106                                            ; 2       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|ShiftLeft0~123                               ; 2       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|ShiftLeft0~122                               ; 2       ;
-; rv32i_cpu:icpu|datapath:i_datapath|after_forward_rs2[4]~74                                ; 2       ;
-; rv32i_cpu:icpu|datapath:i_datapath|pc[0]~38                                               ; 2       ;
+; rv32i_cpu:icpu|datapath:i_datapath|pc[0]~37                                               ; 2       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|pc[31]                                                 ; 2       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|pc[30]                                                 ; 2       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|pc[29]                                                 ; 2       ;
@@ -2864,6 +2864,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; rv32i_cpu:icpu|datapath:i_datapath|regfile:i_regfile|x24[25]                              ; 2       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|regfile:i_regfile|x20[25]                              ; 2       ;
 ; rv32i_cpu:icpu|datapath:i_datapath|regfile:i_regfile|x30[25]                              ; 2       ;
+; rv32i_cpu:icpu|datapath:i_datapath|regfile:i_regfile|x18[25]                              ; 2       ;
 +-------------------------------------------------------------------------------------------+---------+
 
 
@@ -2872,7 +2873,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------------------------------------------+------+----------------+-------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+----------------+--------------------------------------------------------------------------------------------------------------------------------+----------------------+-----------------+-----------------+---------------+
 ; Name                                                                                              ; Type ; Mode           ; Clock Mode  ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Port A Input Registers ; Port A Output Registers ; Port B Input Registers ; Port B Output Registers ; Size  ; Implementation Port A Depth ; Implementation Port A Width ; Implementation Port B Depth ; Implementation Port B Width ; Implementation Bits ; M9Ks ; MIF            ; Location                                                                                                                       ; Mixed Width RDW Mode ; Port A RDW Mode ; Port B RDW Mode ; Fits in MLABs ;
 +---------------------------------------------------------------------------------------------------+------+----------------+-------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+----------------+--------------------------------------------------------------------------------------------------------------------------------+----------------------+-----------------+-----------------+---------------+
-; ram2port_inst_data:iMem|altsyncram:altsyncram_component|altsyncram_5ul2:auto_generated|ALTSYNCRAM ; AUTO ; True Dual Port ; Dual Clocks ; 2048         ; 32           ; 2048         ; 32           ; yes                    ; no                      ; yes                    ; no                      ; 65536 ; 2048                        ; 32                          ; 2048                        ; 32                          ; 65536               ; 8    ; insts_data.mif ; M9K_X25_Y22_N0, M9K_X25_Y21_N0, M9K_X25_Y18_N0, M9K_X25_Y19_N0, M9K_X25_Y15_N0, M9K_X25_Y17_N0, M9K_X25_Y20_N0, M9K_X25_Y16_N0 ; Don't care           ; Old data        ; Old data        ; No - Unknown  ;
+; ram2port_inst_data:iMem|altsyncram:altsyncram_component|altsyncram_5ul2:auto_generated|ALTSYNCRAM ; AUTO ; True Dual Port ; Dual Clocks ; 2048         ; 32           ; 2048         ; 32           ; yes                    ; no                      ; yes                    ; no                      ; 65536 ; 2048                        ; 32                          ; 2048                        ; 32                          ; 65536               ; 8    ; insts_data.mif ; M9K_X13_Y21_N0, M9K_X13_Y20_N0, M9K_X13_Y19_N0, M9K_X13_Y17_N0, M9K_X13_Y16_N0, M9K_X13_Y15_N0, M9K_X25_Y19_N0, M9K_X13_Y18_N0 ; Don't care           ; Old data        ; Old data        ; No - Unknown  ;
 +---------------------------------------------------------------------------------------------------+------+----------------+-------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+----------------+--------------------------------------------------------------------------------------------------------------------------------+----------------------+-----------------+-----------------+---------------+
 Note: Fitter may spread logical memories into multiple blocks to improve timing. The actual required RAM blocks can be found in the Fitter Resource Usage section.
 
@@ -2883,23 +2884,23 @@ RAM content values are presented in the following format: (Binary) (Octal) (Deci
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ;   Addr   ;              +0              ;              +1              ;              +2              ;              +3              ;              +4              ;              +5              ;              +6              ;              +7              ;
 +----------+------------------------------+------------------------------+------------------------------+------------------------------+------------------------------+------------------------------+------------------------------+------------------------------+
-;0;(01000000000000000000000110010011) (-2147483025) (1073742227) (40000193)    ;(00000000000100011001000110010011) (4310623) (1151379) (119193)   ;(00000000001100011000000110110011) (14300663) (3244467) (3181B3)   ;(00000000001100011000000110110011) (14300663) (3244467) (3181B3)   ;(11111111111111110000001000110111) (-176711) (-64969) (-15-13-12-9)   ;(00000000010000011110001000110011) (20361063) (4317747) (41E233)   ;(00001010010000100001000001100011) (1220410143) (172101731) (A421063)   ;(01000010010000000000000100010011) (-1927483225) (1111490835) (42400113)   ;
-;8;(00000000010000010010000000100011) (20220043) (4268067) (412023)    ;(01000010000000000000010010010011) (-1947481425) (1107297427) (42000493)   ;(00000000000001001010010100000011) (1122403) (304387) (4A503)   ;(00000000000000010010000110000011) (220603) (74115) (12183)   ;(00000000101000011010011000100011) (50323043) (10593827) (A1A623)   ;(11111111110001001010010100000011) (-16655375) (-3889917) (-3-11-5-10-15-13)   ;(00000000000000010010000110000011) (220603) (74115) (12183)   ;(00000001000000011000000110010011) (100300623) (16875923) (1018193)   ;
-;16;(00000000101000011010000000100011) (50320043) (10592291) (A1A023)    ;(00000110000000011000101001100011) (600305143) (100764259) (6018A63)   ;(00000000000000010010000110000011) (220603) (74115) (12183)   ;(00000001010000011000000110010011) (120300623) (21070227) (1418193)   ;(11111111100001001010010100000011) (-36655375) (-8084221) (-7-11-5-10-15-13)   ;(00000000101000011010000000100011) (50320043) (10592291) (A1A023)   ;(11111111010001001010010100000011) (-56655375) (-12278525) (-11-11-5-10-15-13)   ;(00000000010000011000000110010011) (20300623) (4293011) (418193)   ;
-;24;(00000000101000011010000000100011) (50320043) (10592291) (A1A023)    ;(00000011100000000000000001101111) (340000157) (58720367) (380006F)   ;(00000000100001001000010010010011) (41102223) (8684691) (848493)   ;(11111111000001001010010100000011) (-76655375) (-16472829) (-15-11-5-10-15-13)   ;(00000000000000010010000110000011) (220603) (74115) (12183)   ;(00000000110000011000000110010011) (60300623) (12681619) (C18193)   ;(00000000101000011010000000100011) (50320043) (10592291) (A1A023)   ;(11111110110001001010010100000011) (-116655375) (-20667133) (-1-3-11-5-10-15-13)   ;
-;32;(00000000010000011000000110010011) (20300623) (4293011) (418193)    ;(00000000101000011010000000100011) (50320043) (10592291) (A1A023)   ;(11111110100001001010010100000011) (-136655375) (-24861437) (-1-7-11-5-10-15-13)   ;(00000000010000000000001000010011) (20001023) (4194835) (400213)   ;(00000000010000011000000110110011) (20300663) (4293043) (4181B3)   ;(00000000101000011010000000100011) (50320043) (10592291) (A1A023)   ;(00000000000000001000000001100111) (100147) (32871) (8067)   ;(11111110010001001010010100000011) (-156655375) (-29055741) (-1-11-11-5-10-15-13)   ;
-;40;(00000000000000010010000110000011) (220603) (74115) (12183)    ;(00000000100000011000000110010011) (40300623) (8487315) (818193)   ;(00000001000000011000000110010011) (100300623) (16875923) (1018193)   ;(00000000101000011010000000100011) (50320043) (10592291) (A1A023)   ;(11111011110111111111000011101111) (-410007421) (-69209873) (-4-200-15-1-1)   ;(00000000000000000000000001101111) (157) (111) (6F)   ;(00000000000000000000000001101111) (157) (111) (6F)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
-;48;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(11111111000000010000000100010011) (-77577355) (-16711405) (-15-14-15-14-14-13)   ;(00000000100000010010011000100011) (40223043) (8463907) (812623)   ;(00000001000000010000010000010011) (100202023) (16843795) (1010413)   ;(00000000000000000000000000010011) (23) (19) (13)   ;(00000000110000010010010000000011) (60222003) (12657667) (C12403)   ;(00000001000000010000000100010011) (100200423) (16843027) (1010113)   ;
-;56;(00000000000000001000000001100111) (100147) (32871) (8067)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
-;64;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
-;72;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
-;80;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
-;88;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
-;96;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
-;104;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
-;112;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
-;120;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
-;128;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;0;(01000000000000000000000100010011) (-2147483225) (1073742099) (40000113)    ;(00000000110000000000000001101111) (60000157) (12583023) (C0006F)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(11111110000000010000000100010011) (-177577355) (-33488621) (-1-15-14-15-14-14-13)   ;(00000000000100010010111000100011) (4227043) (1125923) (112E23)   ;(00000000100000010010110000100011) (40226043) (8465443) (812C23)   ;(00000010000000010000010000010011) (200202023) (33621011) (2010413)   ;
+;8;(00000000010100000000011110010011) (24003623) (5244819) (500793)    ;(11111110111101000010001000100011) (-102756735) (-17554909) (-10-11-13-13-13-13)   ;(11111111101100000000011110010011) (-23774155) (-5240941) (-4-15-15-8-6-13)   ;(11111110111101000010000000100011) (-102757735) (-17555421) (-10-11-13-15-13-13)   ;(00000101000000000000000001101111) (500000157) (83886191) (500006F)   ;(11111110000001000000011100010011) (-176774355) (-33290477) (-1-15-11-15-8-14-13)   ;(11111110010001000000011110010011) (-156774155) (-29096045) (-1-11-11-15-8-6-13)   ;(00000000000001110000010110010011) (1602623) (460179) (70593)   ;
+;16;(00000000000001111000010100010011) (1702423) (492819) (78513)    ;(00000100110000000000000011101111) (460000357) (79692015) (4C000EF)   ;(11111110101001000010010000100011) (-126755735) (-22797277) (-1-5-11-13-11-13-13)   ;(11111110100001000010010100000011) (-136755375) (-24894205) (-1-7-11-13-10-15-13)   ;(00001000000000000000000011101111) (1000000357) (134217967) (80000EF)   ;(11111110000001000010011000100011) (-176754735) (-33282525) (-1-15-11-13-9-13-13)   ;(00000001000000000000000001101111) (100000157) (16777327) (100006F)   ;(11111110110001000010011110000011) (-116754175) (-20699261) (-1-3-11-13-8-7-13)   ;
+;24;(00000000000101111000011110010011) (5703623) (1542035) (178793)    ;(11111110111101000010011000100011) (-102754735) (-17553885) (-10-11-13-9-13-13)   ;(11111110110001000010011100000011) (-116754375) (-20699389) (-1-3-11-13-8-15-13)   ;(00000000000001010000011110110111) (1203667) (329655) (507B7)   ;(11111110111101110110011011100011) (-102114435) (-17340701) (-10-8-9-9-1-13)   ;(11111110000001000010011110000011) (-176754175) (-33282173) (-1-15-11-13-8-7-13)   ;(00000000000101111000011110010011) (5703623) (1542035) (178793)   ;(11111110111101000010000000100011) (-102757735) (-17555421) (-10-11-13-15-13-13)   ;
+;32;(11111110000001000010011100000011) (-176754375) (-33282301) (-1-15-11-13-8-15-13)    ;(00000000010000000000011110010011) (20003623) (4196243) (400793)   ;(11111010111001111101011011100011) (-506024435) (-85469469) (-5-1-8-2-9-1-13)   ;(11111001110111111111000001101111) (-610007621) (-102764433) (-6-200-15-9-1)   ;(11111101000000010000000100010011) (-277577355) (-50265837) (-2-15-14-15-14-14-13)   ;(00000010100000010010011000100011) (240223043) (42018339) (2812623)   ;(00000011000000010000010000010011) (300202023) (50398227) (3010413)   ;(11111100101001000010111000100011) (-326750735) (-56349149) (-3-5-11-13-1-13-13)   ;
+;40;(11111100101101000010110000100011) (-322751735) (-55301085) (-3-4-11-13-3-13-13)    ;(11111101110001000010011110000011) (-216754175) (-37476477) (-2-3-11-13-8-7-13)   ;(00000000000001111010011100000011) (1723403) (501507) (7A703)   ;(11111101100001000010011110000011) (-236754175) (-41670781) (-2-7-11-13-8-7-13)   ;(00000000000001111010011110000011) (1723603) (501635) (7A783)   ;(00000000111101110000011110110011) (75603663) (16189363) (F707B3)   ;(11111110111101000010011000100011) (-102754735) (-17553885) (-10-11-13-9-13-13)   ;(11111110110001000010011110000011) (-116754175) (-20699261) (-1-3-11-13-8-7-13)   ;
+;48;(00000000000001111000010100010011) (1702423) (492819) (78513)    ;(00000010110000010010010000000011) (260222003) (46212099) (2C12403)   ;(00000011000000010000000100010011) (300200423) (50397459) (3010113)   ;(00000000000000001000000001100111) (100147) (32871) (8067)   ;(11111101000000010000000100010011) (-277577355) (-50265837) (-2-15-14-15-14-14-13)   ;(00000010100000010010011000100011) (240223043) (42018339) (2812623)   ;(00000011000000010000010000010011) (300202023) (50398227) (3010413)   ;(11111100101001000010111000100011) (-326750735) (-56349149) (-3-5-11-13-1-13-13)   ;
+;56;(11111111111111110010011110110111) (-154111) (-55369) (-13-8-4-9)    ;(00000000110001111000011110010011) (61703623) (13076371) (C78793)   ;(11111110111101000010011000100011) (-102754735) (-17553885) (-10-11-13-9-13-13)   ;(11111101110001000010011110000011) (-216754175) (-37476477) (-2-3-11-13-8-7-13)   ;(00000000000001111001101001100011) (1715143) (498275) (79A63)   ;(11111110110001000010011110000011) (-116754175) (-20699261) (-1-3-11-13-8-7-13)   ;(00000100000000000000011100010011) (400003423) (67110675) (4000713)   ;(00000000111001111010000000100011) (71720043) (15179811) (E7A023)   ;
+;64;(00010000100000000000000001101111) (2040000157) (276824175) (1080006F)    ;(11111101110001000010011100000011) (-216754375) (-37476605) (-2-3-11-13-8-15-13)   ;(00000000000100000000011110010011) (4003623) (1050515) (100793)   ;(00000000111101110001101001100011) (75615143) (16194147) (F71A63)   ;(11111110110001000010011110000011) (-116754175) (-20699261) (-1-3-11-13-8-7-13)   ;(00000111100100000000011100010011) (744003423) (126879507) (7900713)   ;(00000000111001111010000000100011) (71720043) (15179811) (E7A023)   ;(00001110110000000000000001101111) (1660000157) (247464047) (EC0006F)   ;
+;72;(11111101110001000010011100000011) (-216754375) (-37476605) (-2-3-11-13-8-15-13)    ;(00000000001000000000011110010011) (10003623) (2099091) (200793)   ;(00000000111101110001101001100011) (75615143) (16194147) (F71A63)   ;(11111110110001000010011110000011) (-116754175) (-20699261) (-1-3-11-13-8-7-13)   ;(00000010010000000000011100010011) (220003423) (37750547) (2400713)   ;(00000000111001111010000000100011) (71720043) (15179811) (E7A023)   ;(00001101000000000000000001101111) (1500000157) (218103919) (D00006F)   ;(11111101110001000010011100000011) (-216754375) (-37476605) (-2-3-11-13-8-15-13)   ;
+;80;(00000000001100000000011110010011) (14003623) (3147667) (300793)    ;(00000000111101110001101001100011) (75615143) (16194147) (F71A63)   ;(11111110110001000010011110000011) (-116754175) (-20699261) (-1-3-11-13-8-7-13)   ;(00000011000000000000011100010011) (300003423) (50333459) (3000713)   ;(00000000111001111010000000100011) (71720043) (15179811) (E7A023)   ;(00001011010000000000000001101111) (1320000157) (188743791) (B40006F)   ;(11111101110001000010011100000011) (-216754375) (-37476605) (-2-3-11-13-8-15-13)   ;(00000000010000000000011110010011) (20003623) (4196243) (400793)   ;
+;88;(00000000111101110001101001100011) (75615143) (16194147) (F71A63)    ;(11111110110001000010011110000011) (-116754175) (-20699261) (-1-3-11-13-8-7-13)   ;(00000001100100000000011100010011) (144003423) (26216211) (1900713)   ;(00000000111001111010000000100011) (71720043) (15179811) (E7A023)   ;(00001001100000000000000001101111) (1140000157) (159383663) (980006F)   ;(11111101110001000010011100000011) (-216754375) (-37476605) (-2-3-11-13-8-15-13)   ;(00000000010100000000011110010011) (24003623) (5244819) (500793)   ;(00000000111101110001101001100011) (75615143) (16194147) (F71A63)   ;
+;96;(11111110110001000010011110000011) (-116754175) (-20699261) (-1-3-11-13-8-7-13)    ;(00000001001000000000011100010011) (110003423) (18876179) (1200713)   ;(00000000111001111010000000100011) (71720043) (15179811) (E7A023)   ;(00000111110000000000000001101111) (760000157) (130023535) (7C0006F)   ;(11111101110001000010011100000011) (-216754375) (-37476605) (-2-3-11-13-8-15-13)   ;(00000000011000000000011110010011) (30003623) (6293395) (600793)   ;(00000000111101110001101001100011) (75615143) (16194147) (F71A63)   ;(11111110110001000010011110000011) (-116754175) (-20699261) (-1-3-11-13-8-7-13)   ;
+;104;(00000000001000000000011100010011) (10003423) (2098963) (200713)    ;(00000000111001111010000000100011) (71720043) (15179811) (E7A023)   ;(00000110000000000000000001101111) (600000157) (100663407) (600006F)   ;(11111101110001000010011100000011) (-216754375) (-37476605) (-2-3-11-13-8-15-13)   ;(00000000011100000000011110010011) (34003623) (7341971) (700793)   ;(00000000111101110001101001100011) (75615143) (16194147) (F71A63)   ;(11111110110001000010011110000011) (-116754175) (-20699261) (-1-3-11-13-8-7-13)   ;(00000111100000000000011100010011) (740003423) (125830931) (7800713)   ;
+;112;(00000000111001111010000000100011) (71720043) (15179811) (E7A023)    ;(00000100010000000000000001101111) (420000157) (71303279) (440006F)   ;(11111101110001000010011100000011) (-216754375) (-37476605) (-2-3-11-13-8-15-13)   ;(00000000100000000000011110010011) (40003623) (8390547) (800793)   ;(00000000111101110001100001100011) (75614143) (16193635) (F71863)   ;(11111110110001000010011110000011) (-116754175) (-20699261) (-1-3-11-13-8-7-13)   ;(00000000000001111010000000100011) (1720043) (499747) (7A023)   ;(00000010110000000000000001101111) (260000157) (46137455) (2C0006F)   ;
+;120;(11111101110001000010011100000011) (-216754375) (-37476605) (-2-3-11-13-8-15-13)    ;(00000000100100000000011110010011) (44003623) (9439123) (900793)   ;(00000000111101110001101001100011) (75615143) (16194147) (F71A63)   ;(11111110110001000010011110000011) (-116754175) (-20699261) (-1-3-11-13-8-7-13)   ;(00000001000000000000011100010011) (100003423) (16779027) (1000713)   ;(00000000111001111010000000100011) (71720043) (15179811) (E7A023)   ;(00000001000000000000000001101111) (100000157) (16777327) (100006F)   ;(11111110110001000010011110000011) (-116754175) (-20699261) (-1-3-11-13-8-7-13)   ;
+;128;(00000011111100000000011100010011) (374003423) (66062099) (3F00713)    ;(00000000111001111010000000100011) (71720043) (15179811) (E7A023)   ;(00000000000000000000000000010011) (23) (19) (13)   ;(00000010110000010010010000000011) (260222003) (46212099) (2C12403)   ;(00000011000000010000000100010011) (300200423) (50397459) (3010113)   ;(00000000000000001000000001100111) (100147) (32871) (8067)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
 ;136;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
 ;144;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
 ;152;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
@@ -2915,7 +2916,7 @@ RAM content values are presented in the following format: (Binary) (Octal) (Deci
 ;232;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
 ;240;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
 ;248;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
-;256;(00000000000000000000000001000000) (100) (64) (40)    ;(00000000000000000000000001111001) (171) (121) (79)   ;(00000000000000000000000000100100) (44) (36) (24)   ;(00000000000000000000000000110000) (60) (48) (30)   ;(00000000000000000000000000011001) (31) (25) (19)   ;(00000000000000000000000000010010) (22) (18) (12)   ;(00000000000000000000000000000010) (2) (2) (02)   ;(00000000000000000000000001111000) (170) (120) (78)   ;
+;256;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
 ;264;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
 ;272;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
 ;280;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
@@ -3146,170 +3147,171 @@ RAM content values are presented in the following format: (Binary) (Octal) (Deci
 +-----------------------+-------------------------+
 ; Routing Resource Type ; Usage                   ;
 +-----------------------+-------------------------+
-; Block interconnects   ; 5,115 / 47,787 ( 11 % ) ;
-; C16 interconnects     ; 34 / 1,804 ( 2 % )      ;
-; C4 interconnects      ; 3,311 / 31,272 ( 11 % ) ;
-; Direct links          ; 423 / 47,787 ( < 1 % )  ;
+; Block interconnects   ; 5,109 / 47,787 ( 11 % ) ;
+; C16 interconnects     ; 36 / 1,804 ( 2 % )      ;
+; C4 interconnects      ; 3,343 / 31,272 ( 11 % ) ;
+; Direct links          ; 435 / 47,787 ( < 1 % )  ;
 ; Global clocks         ; 3 / 20 ( 15 % )         ;
 ; Local interconnects   ; 1,901 / 15,408 ( 12 % ) ;
-; R24 interconnects     ; 87 / 1,775 ( 5 % )      ;
-; R4 interconnects      ; 4,204 / 41,310 ( 10 % ) ;
+; R24 interconnects     ; 73 / 1,775 ( 4 % )      ;
+; R4 interconnects      ; 3,912 / 41,310 ( 9 % )  ;
 +-----------------------+-------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Logic Elements                                                          ;
 +---------------------------------------------+-------------------------------+
-; Number of Logic Elements  (Average = 13.42) ; Number of LABs  (Total = 233) ;
+; Number of Logic Elements  (Average = 13.00) ; Number of LABs  (Total = 239) ;
 +---------------------------------------------+-------------------------------+
-; 1                                           ; 7                             ;
-; 2                                           ; 6                             ;
-; 3                                           ; 2                             ;
-; 4                                           ; 6                             ;
+; 1                                           ; 18                            ;
+; 2                                           ; 7                             ;
+; 3                                           ; 0                             ;
+; 4                                           ; 2                             ;
 ; 5                                           ; 2                             ;
-; 6                                           ; 1                             ;
-; 7                                           ; 2                             ;
-; 8                                           ; 6                             ;
-; 9                                           ; 1                             ;
-; 10                                          ; 4                             ;
-; 11                                          ; 5                             ;
-; 12                                          ; 10                            ;
-; 13                                          ; 12                            ;
-; 14                                          ; 21                            ;
-; 15                                          ; 41                            ;
-; 16                                          ; 107                           ;
+; 6                                           ; 2                             ;
+; 7                                           ; 3                             ;
+; 8                                           ; 3                             ;
+; 9                                           ; 3                             ;
+; 10                                          ; 5                             ;
+; 11                                          ; 2                             ;
+; 12                                          ; 11                            ;
+; 13                                          ; 9                             ;
+; 14                                          ; 25                            ;
+; 15                                          ; 49                            ;
+; 16                                          ; 98                            ;
 +---------------------------------------------+-------------------------------+
 
 
 +--------------------------------------------------------------------+
 ; LAB-wide Signals                                                   ;
 +------------------------------------+-------------------------------+
-; LAB-wide Signals  (Average = 1.74) ; Number of LABs  (Total = 233) ;
+; LAB-wide Signals  (Average = 1.75) ; Number of LABs  (Total = 239) ;
 +------------------------------------+-------------------------------+
-; 1 Async. clear                     ; 12                            ;
-; 1 Clock                            ; 195                           ;
-; 1 Clock enable                     ; 61                            ;
-; 1 Sync. clear                      ; 25                            ;
+; 1 Async. clear                     ; 7                             ;
+; 1 Clock                            ; 202                           ;
+; 1 Clock enable                     ; 70                            ;
+; 1 Sync. clear                      ; 29                            ;
 ; 1 Sync. load                       ; 23                            ;
-; 2 Clock enables                    ; 89                            ;
+; 2 Clock enables                    ; 87                            ;
 +------------------------------------+-------------------------------+
 
 
 +------------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                          ;
 +----------------------------------------------+-------------------------------+
-; Number of Signals Sourced  (Average = 20.77) ; Number of LABs  (Total = 233) ;
+; Number of Signals Sourced  (Average = 20.19) ; Number of LABs  (Total = 239) ;
 +----------------------------------------------+-------------------------------+
 ; 0                                            ; 0                             ;
-; 1                                            ; 2                             ;
-; 2                                            ; 8                             ;
+; 1                                            ; 3                             ;
+; 2                                            ; 17                            ;
 ; 3                                            ; 1                             ;
-; 4                                            ; 6                             ;
-; 5                                            ; 1                             ;
-; 6                                            ; 2                             ;
-; 7                                            ; 0                             ;
-; 8                                            ; 3                             ;
-; 9                                            ; 2                             ;
-; 10                                           ; 2                             ;
-; 11                                           ; 0                             ;
-; 12                                           ; 3                             ;
-; 13                                           ; 1                             ;
-; 14                                           ; 1                             ;
-; 15                                           ; 12                            ;
-; 16                                           ; 23                            ;
-; 17                                           ; 5                             ;
-; 18                                           ; 17                            ;
-; 19                                           ; 7                             ;
-; 20                                           ; 22                            ;
-; 21                                           ; 8                             ;
-; 22                                           ; 12                            ;
-; 23                                           ; 5                             ;
-; 24                                           ; 7                             ;
+; 4                                            ; 5                             ;
+; 5                                            ; 0                             ;
+; 6                                            ; 0                             ;
+; 7                                            ; 1                             ;
+; 8                                            ; 1                             ;
+; 9                                            ; 0                             ;
+; 10                                           ; 3                             ;
+; 11                                           ; 1                             ;
+; 12                                           ; 2                             ;
+; 13                                           ; 4                             ;
+; 14                                           ; 5                             ;
+; 15                                           ; 7                             ;
+; 16                                           ; 27                            ;
+; 17                                           ; 10                            ;
+; 18                                           ; 12                            ;
+; 19                                           ; 11                            ;
+; 20                                           ; 20                            ;
+; 21                                           ; 6                             ;
+; 22                                           ; 8                             ;
+; 23                                           ; 8                             ;
+; 24                                           ; 5                             ;
 ; 25                                           ; 8                             ;
-; 26                                           ; 13                            ;
-; 27                                           ; 4                             ;
-; 28                                           ; 6                             ;
-; 29                                           ; 4                             ;
+; 26                                           ; 5                             ;
+; 27                                           ; 5                             ;
+; 28                                           ; 11                            ;
+; 29                                           ; 2                             ;
 ; 30                                           ; 19                            ;
-; 31                                           ; 2                             ;
-; 32                                           ; 27                            ;
+; 31                                           ; 0                             ;
+; 32                                           ; 32                            ;
 +----------------------------------------------+-------------------------------+
 
 
-+----------------------------------------------------------------------------------+
-; LAB Signals Sourced Out                                                          ;
-+--------------------------------------------------+-------------------------------+
-; Number of Signals Sourced Out  (Average = 10.12) ; Number of LABs  (Total = 233) ;
-+--------------------------------------------------+-------------------------------+
-; 0                                                ; 0                             ;
-; 1                                                ; 16                            ;
-; 2                                                ; 11                            ;
-; 3                                                ; 6                             ;
-; 4                                                ; 6                             ;
-; 5                                                ; 16                            ;
-; 6                                                ; 20                            ;
-; 7                                                ; 24                            ;
-; 8                                                ; 16                            ;
-; 9                                                ; 14                            ;
-; 10                                               ; 5                             ;
-; 11                                               ; 10                            ;
-; 12                                               ; 7                             ;
-; 13                                               ; 4                             ;
-; 14                                               ; 10                            ;
-; 15                                               ; 10                            ;
-; 16                                               ; 26                            ;
-; 17                                               ; 4                             ;
-; 18                                               ; 5                             ;
-; 19                                               ; 7                             ;
-; 20                                               ; 3                             ;
-; 21                                               ; 3                             ;
-; 22                                               ; 3                             ;
-; 23                                               ; 0                             ;
-; 24                                               ; 3                             ;
-; 25                                               ; 1                             ;
-; 26                                               ; 3                             ;
-+--------------------------------------------------+-------------------------------+
++---------------------------------------------------------------------------------+
+; LAB Signals Sourced Out                                                         ;
++-------------------------------------------------+-------------------------------+
+; Number of Signals Sourced Out  (Average = 9.86) ; Number of LABs  (Total = 239) ;
++-------------------------------------------------+-------------------------------+
+; 0                                               ; 0                             ;
+; 1                                               ; 17                            ;
+; 2                                               ; 21                            ;
+; 3                                               ; 4                             ;
+; 4                                               ; 5                             ;
+; 5                                               ; 16                            ;
+; 6                                               ; 19                            ;
+; 7                                               ; 17                            ;
+; 8                                               ; 18                            ;
+; 9                                               ; 14                            ;
+; 10                                              ; 19                            ;
+; 11                                              ; 8                             ;
+; 12                                              ; 5                             ;
+; 13                                              ; 2                             ;
+; 14                                              ; 10                            ;
+; 15                                              ; 6                             ;
+; 16                                              ; 25                            ;
+; 17                                              ; 1                             ;
+; 18                                              ; 10                            ;
+; 19                                              ; 1                             ;
+; 20                                              ; 7                             ;
+; 21                                              ; 2                             ;
+; 22                                              ; 2                             ;
+; 23                                              ; 3                             ;
+; 24                                              ; 2                             ;
+; 25                                              ; 1                             ;
+; 26                                              ; 3                             ;
+; 27                                              ; 1                             ;
++-------------------------------------------------+-------------------------------+
 
 
 +------------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                          ;
 +----------------------------------------------+-------------------------------+
-; Number of Distinct Inputs  (Average = 20.20) ; Number of LABs  (Total = 233) ;
+; Number of Distinct Inputs  (Average = 19.64) ; Number of LABs  (Total = 239) ;
 +----------------------------------------------+-------------------------------+
 ; 0                                            ; 0                             ;
 ; 1                                            ; 0                             ;
 ; 2                                            ; 2                             ;
-; 3                                            ; 14                            ;
-; 4                                            ; 2                             ;
+; 3                                            ; 15                            ;
+; 4                                            ; 3                             ;
 ; 5                                            ; 2                             ;
-; 6                                            ; 9                             ;
-; 7                                            ; 5                             ;
-; 8                                            ; 3                             ;
-; 9                                            ; 2                             ;
+; 6                                            ; 14                            ;
+; 7                                            ; 3                             ;
+; 8                                            ; 4                             ;
+; 9                                            ; 3                             ;
 ; 10                                           ; 4                             ;
-; 11                                           ; 6                             ;
-; 12                                           ; 3                             ;
-; 13                                           ; 1                             ;
+; 11                                           ; 3                             ;
+; 12                                           ; 2                             ;
+; 13                                           ; 3                             ;
 ; 14                                           ; 7                             ;
 ; 15                                           ; 15                            ;
-; 16                                           ; 7                             ;
-; 17                                           ; 3                             ;
-; 18                                           ; 9                             ;
-; 19                                           ; 4                             ;
-; 20                                           ; 9                             ;
-; 21                                           ; 11                            ;
+; 16                                           ; 1                             ;
+; 17                                           ; 10                            ;
+; 18                                           ; 8                             ;
+; 19                                           ; 12                            ;
+; 20                                           ; 5                             ;
+; 21                                           ; 7                             ;
 ; 22                                           ; 6                             ;
-; 23                                           ; 9                             ;
-; 24                                           ; 2                             ;
-; 25                                           ; 6                             ;
-; 26                                           ; 8                             ;
-; 27                                           ; 5                             ;
-; 28                                           ; 15                            ;
-; 29                                           ; 20                            ;
-; 30                                           ; 8                             ;
-; 31                                           ; 20                            ;
-; 32                                           ; 13                            ;
-; 33                                           ; 2                             ;
+; 23                                           ; 6                             ;
+; 24                                           ; 9                             ;
+; 25                                           ; 8                             ;
+; 26                                           ; 13                            ;
+; 27                                           ; 10                            ;
+; 28                                           ; 6                             ;
+; 29                                           ; 18                            ;
+; 30                                           ; 14                            ;
+; 31                                           ; 11                            ;
+; 32                                           ; 11                            ;
+; 33                                           ; 3                             ;
 +----------------------------------------------+-------------------------------+
 
 
@@ -3707,7 +3709,7 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "VGA_R[2]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "VGA_R[3]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "VGA_VS" is assigned to location or region, but does not exist in design
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:03
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:02
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:01
 Info (170191): Fitter placement operations beginning
@@ -3715,17 +3717,17 @@ Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:01
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 8% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 34% of the available device resources in the region that extends from location X21_Y10 to location X30_Y19
+    Info (170196): Router estimated peak interconnect usage is 28% of the available device resources in the region that extends from location X21_Y10 to location X30_Y19
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:02
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 1.58 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 1.72 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:02
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Warning (169177): 14 pins must meet Altera requirements for 3.3-, 3.0-, and 2.5-V interfaces. For more information, refer to AN 447: Interfacing Cyclone III Devices with 3.3/3.0/2.5-V LVTTL/LVCMOS I/O Systems.
     Info (169178): Pin BUTTON[0] uses I/O standard 3.3-V LVTTL at H2
@@ -3744,10 +3746,10 @@ Warning (169177): 14 pins must meet Altera requirements for 3.3-, 3.0-, and 2.5-
     Info (169178): Pin SW[5] uses I/O standard 3.3-V LVTTL at J7
 Info (144001): Generated suppressed messages file C:/Users/JuHan/Desktop/Korea_Univ_2020_2/COSE222/Term Project/RV32I_System_Syn/output_files/RV32I_System.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 206 warnings
-    Info: Peak virtual memory: 5398 megabytes
-    Info: Processing ended: Wed Nov 25 17:27:03 2020
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:17
+    Info: Peak virtual memory: 5410 megabytes
+    Info: Processing ended: Wed Nov 25 18:09:53 2020
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:16
 
 
 +----------------------------+

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for RV32I_System
-Wed Nov 25 17:26:47 2020
+Wed Nov 25 18:09:38 2020
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -81,13 +81,13 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Nov 25 17:26:47 2020      ;
+; Analysis & Synthesis Status        ; Successful - Wed Nov 25 18:09:38 2020      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; RV32I_System                               ;
 ; Top-level Entity Name              ; RV32I_System                               ;
 ; Family                             ; Cyclone III                                ;
-; Total logic elements               ; 4,088                                      ;
-;     Total combinational functions  ; 3,058                                      ;
+; Total logic elements               ; 4,068                                      ;
+;     Total combinational functions  ; 3,038                                      ;
 ;     Dedicated logic registers      ; 1,728                                      ;
 ; Total registers                    ; 1728                                       ;
 ; Total pins                         ; 52                                         ;
@@ -239,16 +239,16 @@ applicable agreement for further details.
 +---------------------------------------------+-------------------------------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                                           ;
 +---------------------------------------------+-------------------------------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 4,088                                                                                           ;
+; Estimated Total logic elements              ; 4,068                                                                                           ;
 ;                                             ;                                                                                                 ;
-; Total combinational functions               ; 3058                                                                                            ;
+; Total combinational functions               ; 3038                                                                                            ;
 ; Logic element usage by number of LUT inputs ;                                                                                                 ;
-;     -- 4 input functions                    ; 2075                                                                                            ;
-;     -- 3 input functions                    ; 531                                                                                             ;
-;     -- <=2 input functions                  ; 452                                                                                             ;
+;     -- 4 input functions                    ; 2050                                                                                            ;
+;     -- 3 input functions                    ; 530                                                                                             ;
+;     -- <=2 input functions                  ; 458                                                                                             ;
 ;                                             ;                                                                                                 ;
 ; Logic elements by mode                      ;                                                                                                 ;
-;     -- normal mode                          ; 2909                                                                                            ;
+;     -- normal mode                          ; 2889                                                                                            ;
 ;     -- arithmetic mode                      ; 149                                                                                             ;
 ;                                             ;                                                                                                 ;
 ; Total registers                             ; 1728                                                                                            ;
@@ -263,7 +263,7 @@ applicable agreement for further details.
 ;                                             ;                                                                                                 ;
 ; Maximum fan-out node                        ; ALTPLL_clkgen:pll0|altpll:altpll_component|ALTPLL_clkgen_altpll:auto_generated|wire_pll1_clk[0] ;
 ; Maximum fan-out                             ; 1762                                                                                            ;
-; Total fan-out                               ; 16606                                                                                           ;
+; Total fan-out                               ; 16515                                                                                           ;
 ; Average fan-out                             ; 3.37                                                                                            ;
 +---------------------------------------------+-------------------------------------------------------------------------------------------------+
 
@@ -273,7 +273,7 @@ applicable agreement for further details.
 +------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                     ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                  ; Library Name ;
 +------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------+--------------+
-; |RV32I_System                                  ; 3058 (6)          ; 1728 (1)     ; 65536       ; 0            ; 0       ; 0         ; 52   ; 0            ; |RV32I_System                                                                                        ; work         ;
+; |RV32I_System                                  ; 3038 (6)          ; 1728 (1)     ; 65536       ; 0            ; 0       ; 0         ; 52   ; 0            ; |RV32I_System                                                                                        ; work         ;
 ;    |ALTPLL_clkgen:pll0|                        ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RV32I_System|ALTPLL_clkgen:pll0                                                                     ; work         ;
 ;       |altpll:altpll_component|                ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RV32I_System|ALTPLL_clkgen:pll0|altpll:altpll_component                                             ; work         ;
 ;          |ALTPLL_clkgen_altpll:auto_generated| ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RV32I_System|ALTPLL_clkgen:pll0|altpll:altpll_component|ALTPLL_clkgen_altpll:auto_generated         ; work         ;
@@ -295,13 +295,13 @@ applicable agreement for further details.
 ;    |ram2port_inst_data:iMem|                   ; 0 (0)             ; 0 (0)        ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |RV32I_System|ram2port_inst_data:iMem                                                                ; work         ;
 ;       |altsyncram:altsyncram_component|        ; 0 (0)             ; 0 (0)        ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |RV32I_System|ram2port_inst_data:iMem|altsyncram:altsyncram_component                                ; work         ;
 ;          |altsyncram_5ul2:auto_generated|      ; 0 (0)             ; 0 (0)        ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |RV32I_System|ram2port_inst_data:iMem|altsyncram:altsyncram_component|altsyncram_5ul2:auto_generated ; work         ;
-;    |rv32i_cpu:icpu|                            ; 2740 (67)         ; 1432 (32)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RV32I_System|rv32i_cpu:icpu                                                                         ; work         ;
+;    |rv32i_cpu:icpu|                            ; 2720 (46)         ; 1432 (32)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RV32I_System|rv32i_cpu:icpu                                                                         ; work         ;
 ;       |controller:i_controller|                ; 9 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RV32I_System|rv32i_cpu:icpu|controller:i_controller                                                 ; work         ;
 ;          |aludec:i_aludec|                     ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RV32I_System|rv32i_cpu:icpu|controller:i_controller|aludec:i_aludec                                 ; work         ;
 ;          |maindec:i_maindec|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RV32I_System|rv32i_cpu:icpu|controller:i_controller|maindec:i_maindec                               ; work         ;
-;       |datapath:i_datapath|                    ; 2664 (2214)       ; 1400 (408)   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath                                                     ; work         ;
-;          |alu:i_alu|                           ; 380 (302)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu                                           ; work         ;
-;             |adder_32bit:iadder32|             ; 78 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|adder_32bit:iadder32                      ; work         ;
+;       |datapath:i_datapath|                    ; 2665 (2217)       ; 1400 (408)   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath                                                     ; work         ;
+;          |alu:i_alu|                           ; 378 (302)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu                                           ; work         ;
+;             |adder_32bit:iadder32|             ; 76 (9)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|adder_32bit:iadder32                      ; work         ;
 ;                |adder_1bit:bit0|               ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|adder_32bit:iadder32|adder_1bit:bit0      ; work         ;
 ;                |adder_1bit:bit10|              ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|adder_32bit:iadder32|adder_1bit:bit10     ; work         ;
 ;                |adder_1bit:bit11|              ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|adder_32bit:iadder32|adder_1bit:bit11     ; work         ;
@@ -326,12 +326,13 @@ applicable agreement for further details.
 ;                |adder_1bit:bit29|              ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|adder_32bit:iadder32|adder_1bit:bit29     ; work         ;
 ;                |adder_1bit:bit2|               ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|adder_32bit:iadder32|adder_1bit:bit2      ; work         ;
 ;                |adder_1bit:bit30|              ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|adder_32bit:iadder32|adder_1bit:bit30     ; work         ;
+;                |adder_1bit:bit31|              ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|adder_32bit:iadder32|adder_1bit:bit31     ; work         ;
 ;                |adder_1bit:bit3|               ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|adder_32bit:iadder32|adder_1bit:bit3      ; work         ;
 ;                |adder_1bit:bit4|               ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|adder_32bit:iadder32|adder_1bit:bit4      ; work         ;
 ;                |adder_1bit:bit5|               ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|adder_32bit:iadder32|adder_1bit:bit5      ; work         ;
 ;                |adder_1bit:bit6|               ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|adder_32bit:iadder32|adder_1bit:bit6      ; work         ;
 ;                |adder_1bit:bit7|               ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|adder_32bit:iadder32|adder_1bit:bit7      ; work         ;
-;                |adder_1bit:bit8|               ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|adder_32bit:iadder32|adder_1bit:bit8      ; work         ;
+;                |adder_1bit:bit8|               ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|adder_32bit:iadder32|adder_1bit:bit8      ; work         ;
 ;                |adder_1bit:bit9|               ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|adder_32bit:iadder32|adder_1bit:bit9      ; work         ;
 ;          |forwarding:i_forwarding|             ; 19 (19)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|forwarding:i_forwarding                             ; work         ;
 ;          |forwardingWBtoD:i_forwardingWBtoD|   ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|forwardingWBtoD:i_forwardingWBtoD                   ; work         ;
@@ -852,33 +853,33 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                             ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------+
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|id_ex_controls[3]     ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |RV32I_System|TimerCounter:iTimer|CompareR[30]                         ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |RV32I_System|rv32i_cpu:icpu|if_id_inst[2]                             ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|if_id_pc[1]           ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |RV32I_System|GPIO:iGPIO|LEDG_R[2]                                     ;
-; 4:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; Yes        ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|pc[12]                ;
-; 5:1                ; 7 bits    ; 21 LEs        ; 7 LEs                ; 14 LEs                 ; Yes        ; |RV32I_System|GPIO:iGPIO|HEX0_R[0]                                     ;
-; 6:1                ; 7 bits    ; 28 LEs        ; 7 LEs                ; 21 LEs                 ; Yes        ; |RV32I_System|GPIO:iGPIO|HEX1_R[4]                                     ;
-; 7:1                ; 7 bits    ; 28 LEs        ; 7 LEs                ; 21 LEs                 ; Yes        ; |RV32I_System|GPIO:iGPIO|HEX2_R[1]                                     ;
-; 7:1                ; 22 bits   ; 88 LEs        ; 44 LEs               ; 44 LEs                 ; Yes        ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|mem_wb_MemRdata[20]   ;
-; 8:1                ; 7 bits    ; 35 LEs        ; 7 LEs                ; 28 LEs                 ; Yes        ; |RV32I_System|GPIO:iGPIO|HEX3_R[3]                                     ;
-; 34:1               ; 32 bits   ; 704 LEs       ; 704 LEs              ; 0 LEs                  ; Yes        ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|id_ex_rs2_data[17]    ;
-; 34:1               ; 32 bits   ; 704 LEs       ; 704 LEs              ; 0 LEs                  ; Yes        ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|id_ex_rs1_data[24]    ;
-; 129:1              ; 2 bits    ; 172 LEs       ; 6 LEs                ; 166 LEs                ; Yes        ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|id_ex_alucontrol[2]   ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 21 LEs               ; 21 LEs                 ; Yes        ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|mem_wb_MemRdata[3]    ;
-; 10:1               ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; Yes        ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|mem_wb_MemRdata[1]    ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|rd_data[0]            ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|id_ex_controls[7]     ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |RV32I_System|TimerCounter:iTimer|CompareR[0]                          ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |RV32I_System|rv32i_cpu:icpu|if_id_inst[20]                            ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|if_id_pc[8]           ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |RV32I_System|GPIO:iGPIO|LEDG_R[5]                                     ;
+; 4:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; Yes        ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|pc[20]                ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 7 LEs                ; 14 LEs                 ; Yes        ; |RV32I_System|GPIO:iGPIO|HEX0_R[4]                                     ;
+; 6:1                ; 7 bits    ; 28 LEs        ; 7 LEs                ; 21 LEs                 ; Yes        ; |RV32I_System|GPIO:iGPIO|HEX1_R[0]                                     ;
+; 7:1                ; 7 bits    ; 28 LEs        ; 7 LEs                ; 21 LEs                 ; Yes        ; |RV32I_System|GPIO:iGPIO|HEX2_R[0]                                     ;
+; 7:1                ; 22 bits   ; 88 LEs        ; 44 LEs               ; 44 LEs                 ; Yes        ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|mem_wb_MemRdata[17]   ;
+; 8:1                ; 7 bits    ; 35 LEs        ; 7 LEs                ; 28 LEs                 ; Yes        ; |RV32I_System|GPIO:iGPIO|HEX3_R[4]                                     ;
+; 34:1               ; 32 bits   ; 704 LEs       ; 704 LEs              ; 0 LEs                  ; Yes        ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|id_ex_rs2_data[0]     ;
+; 34:1               ; 32 bits   ; 704 LEs       ; 704 LEs              ; 0 LEs                  ; Yes        ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|id_ex_rs1_data[29]    ;
+; 129:1              ; 2 bits    ; 172 LEs       ; 6 LEs                ; 166 LEs                ; Yes        ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|id_ex_alucontrol[1]   ;
+; 10:1               ; 7 bits    ; 42 LEs        ; 21 LEs               ; 21 LEs                 ; Yes        ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|mem_wb_MemRdata[9]    ;
+; 10:1               ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; Yes        ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|mem_wb_MemRdata[2]    ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|rd_data[24]           ;
 ; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|after_forward_rs2[27] ;
 ; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|alusrc1               ;
-; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|alusrc2[11]           ;
-; 4:1                ; 19 bits   ; 38 LEs        ; 38 LEs               ; 0 LEs                  ; No         ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|alusrc2[24]           ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|alusrc2[0]            ;
-; 9:1                ; 16 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; No         ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|Mux30       ;
-; 10:1               ; 8 bits    ; 48 LEs        ; 32 LEs               ; 16 LEs                 ; No         ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|Mux9        ;
-; 11:1               ; 4 bits    ; 28 LEs        ; 24 LEs               ; 4 LEs                  ; No         ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|Mux5        ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|alusrc2[5]            ;
+; 4:1                ; 19 bits   ; 38 LEs        ; 38 LEs               ; 0 LEs                  ; No         ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|alusrc2[17]           ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|alusrc2[2]            ;
+; 9:1                ; 16 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; No         ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|Mux18       ;
+; 10:1               ; 8 bits    ; 48 LEs        ; 32 LEs               ; 16 LEs                 ; No         ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|Mux12       ;
+; 11:1               ; 4 bits    ; 28 LEs        ; 24 LEs               ; 4 LEs                  ; No         ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|Mux6        ;
 ; 12:1               ; 2 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; No         ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|Mux3        ;
-; 13:1               ; 2 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; No         ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|Mux1        ;
+; 13:1               ; 2 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; No         ; |RV32I_System|rv32i_cpu:icpu|datapath:i_datapath|alu:i_alu|Mux0        ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------+
 
 
@@ -1717,7 +1718,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:07     ;
+; Top            ; 00:00:06     ;
 +----------------+--------------+
 
 
@@ -1727,7 +1728,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Wed Nov 25 17:26:37 2020
+    Info: Processing started: Wed Nov 25 18:09:28 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off RV32I_System -c RV32I_System
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file /users/juhan/desktop/korea_univ_2020_2/cose222/term project/rv32i_system/decoder/addr_decoder.v
@@ -1886,6 +1887,7 @@ Info (12133): Instantiated megafunction "ram2port_inst_data:iMem|altsyncram:alts
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_5ul2.tdf
     Info (12023): Found entity 1: altsyncram_5ul2
 Info (12128): Elaborating entity "altsyncram_5ul2" for hierarchy "ram2port_inst_data:iMem|altsyncram:altsyncram_component|altsyncram_5ul2:auto_generated"
+Critical Warning (127005): Memory depth (2048) in the design file differs from memory depth (512) in the Memory Initialization File "C:/Users/JuHan/Desktop/Korea_Univ_2020_2/COSE222/Term Project/RV32I_System_Syn/insts_data.mif" -- setting initial value for remaining addresses to 0
 Info (12128): Elaborating entity "Addr_Decoder" for hierarchy "Addr_Decoder:iDecoder"
 Info (12128): Elaborating entity "TimerCounter" for hierarchy "TimerCounter:iTimer"
 Info (12128): Elaborating entity "GPIO" for hierarchy "GPIO:iGPIO"
@@ -1895,15 +1897,15 @@ Info (17049): 60 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/Users/JuHan/Desktop/Korea_Univ_2020_2/COSE222/Term Project/RV32I_System_Syn/output_files/RV32I_System.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 4216 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 4196 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 14 input pins
     Info (21059): Implemented 38 output pins
-    Info (21061): Implemented 4131 logic cells
+    Info (21061): Implemented 4111 logic cells
     Info (21064): Implemented 32 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 10 warnings
-    Info: Peak virtual memory: 4674 megabytes
-    Info: Processing ended: Wed Nov 25 17:26:47 2020
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 11 warnings
+    Info: Peak virtual memory: 4682 megabytes
+    Info: Processing ended: Wed Nov 25 18:09:38 2020
     Info: Elapsed time: 00:00:10
     Info: Total CPU time (on all processors): 00:00:10
 

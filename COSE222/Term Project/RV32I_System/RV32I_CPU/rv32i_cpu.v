@@ -272,8 +272,8 @@ module datapath(input         clk, reset,
   wire      bgeu_taken;
 
   // **** Juhan Cha: Start ****
-  wire f3bne;
-  wire bne_taken;
+  wire f3bne, f3bltu, f3bge;
+  wire bne_taken, bltu_taken, bge_taken;
   wire [31:0] MemWdata;
   wire [31:0] aluout;
   wire branch_taken;
@@ -398,15 +398,22 @@ module datapath(input         clk, reset,
   // PC (Program Counter) logic 
   //
   assign f3beq  = (id_ex_funct3 == 3'b000);
-  assign f3blt  = (id_ex_funct3 == 3'b100);
-  assign f3bgeu = (id_ex_funct3 == 3'b111);
   assign f3bne  = (id_ex_funct3 == 3'b001);
+  assign f3blt  = (id_ex_funct3 == 3'b100);
+  assign f3bge  = (id_ex_funct3 == 3'b101);
+  assign f3bltu = (id_ex_funct3 == 3'b110);
+  assign f3bgeu = (id_ex_funct3 == 3'b111);
 
-  assign beq_taken  =  id_ex_controls[5] & f3beq & Zflag;
-  assign blt_taken  =  id_ex_controls[5] & f3blt & (Nflag != Vflag);
-  assign bgeu_taken =  id_ex_controls[5] & f3bgeu & Cflag;
-  assign bne_taken  =  id_ex_controls[5] & f3bne & !Zflag;
-  assign branch_taken = beq_taken | blt_taken | bgeu_taken | bne_taken;
+  assign beq_taken  = id_ex_controls[5] & f3beq & Zflag;
+  assign bne_taken  = id_ex_controls[5] & f3bne & !Zflag;
+
+  assign blt_taken  = id_ex_controls[5] & f3blt & (Nflag != Vflag);
+  assign bge_taken  = id_ex_controls[5] & f3bge & (Nflag == Vflag);
+  
+  assign bltu_taken = id_ex_controls[5] & f3bltu & !Cflag;
+  assign bgeu_taken = id_ex_controls[5] & f3bgeu & Cflag;
+
+  assign branch_taken = beq_taken | bne_taken | blt_taken | bge_taken | bltu_taken | bgeu_taken;
 
   // **** Juhan Cha: Start ****
   assign branch_dest = (id_ex_pc + id_ex_se_br_imm);

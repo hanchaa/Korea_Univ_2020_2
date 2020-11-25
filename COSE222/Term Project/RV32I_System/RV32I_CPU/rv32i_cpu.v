@@ -272,6 +272,8 @@ module datapath(input         clk, reset,
   wire      bgeu_taken;
 
   // **** Juhan Cha: Start ****
+  wire f3bne;
+  wire bne_taken;
   wire [31:0] MemWdata;
   wire [31:0] aluout;
   wire branch_taken;
@@ -301,7 +303,8 @@ module datapath(input         clk, reset,
 
   // pipelines for control signals
   reg [4:0] id_ex_alucontrol;
-  reg [11:0] id_ex_controls;
+  reg [8:0] id_ex_controls;
+  reg [2:0] id_ex_funct3;
   reg [8:0] ex_mem_controls;
   reg [3:0] mem_wb_controls;
 
@@ -340,7 +343,8 @@ module datapath(input         clk, reset,
       mem_wb_MemRdata <= 32'b0;
 
       id_ex_alucontrol <= 5'b0;
-      id_ex_controls <= 12'b0;
+      id_ex_controls <= 9'b0;
+      id_ex_funct3 <= 3'b0;
       ex_mem_controls <= 9'b0;
       mem_wb_controls <= 4'b0;
     end
@@ -374,8 +378,9 @@ module datapath(input         clk, reset,
       mem_wb_MemRdata <= #`simdelay MemRdata;
       
       id_ex_alucontrol <= #`simdelay alucontrol;
-      if (control_src) id_ex_controls <= 12'b0;
-      else id_ex_controls <= #`simdelay {auipc, lui, alusrc, branch, f3beq, f3blt, f3bgeu, memwrite, jal, jalr, memtoreg, regwrite};
+      if (control_src) id_ex_controls <= 9'b0;
+      else id_ex_controls <= #`simdelay {auipc, lui, alusrc, branch, memwrite, jal, jalr, memtoreg, regwrite};
+      id_ex_funct3 <= #`simdelay funct3;
       ex_mem_controls <= #`simdelay id_ex_controls[4:0];
       mem_wb_controls <= #`simdelay ex_mem_controls[3:0];
     end
@@ -392,14 +397,16 @@ module datapath(input         clk, reset,
   //
   // PC (Program Counter) logic 
   //
-  assign f3beq  = (funct3 == 3'b000);
-  assign f3blt  = (funct3 == 3'b100);
-  assign f3bgeu = (funct3 == 3'b111);
+  assign f3beq  = (id_ex_funct3 == 3'b000);
+  assign f3blt  = (id_ex_funct3 == 3'b100);
+  assign f3bgeu = (id_ex_funct3 == 3'b111);
+  assign f3bne  = (id_ex_funct3 == 3'b001);
 
-  assign beq_taken  =  id_ex_controls[8] & id_ex_controls[7] & Zflag;
-  assign blt_taken  =  id_ex_controls[8] & id_ex_controls[6] & (Nflag != Zflag);
-  assign bgeu_taken =  id_ex_controls[8] & id_ex_controls[5] & Cflag;
-  assign branch_taken = beq_taken | blt_taken | bgeu_taken;
+  assign beq_taken  =  id_ex_controls[5] & f3beq & Zflag;
+  assign blt_taken  =  id_ex_controls[5] & f3blt & (Nflag != Vflag);
+  assign bgeu_taken =  id_ex_controls[5] & f3bgeu & Cflag;
+  assign bne_taken  =  id_ex_controls[5] & f3bne & !Zflag;
+  assign branch_taken = beq_taken | blt_taken | bgeu_taken | bne_taken;
 
   // **** Juhan Cha: Start ****
   assign branch_dest = (id_ex_pc + id_ex_se_br_imm);
@@ -511,18 +518,18 @@ module datapath(input         clk, reset,
 	// 1st source to ALU (alusrc1)
 	always@(*)
 	begin
-		if      (id_ex_controls[11])	alusrc1[31:0] = id_ex_pc[31:0];
-		else if (id_ex_controls[10]) 	alusrc1[31:0] = 32'b0;
-		else          	              alusrc1[31:0] = after_forward_rs1[31:0];
+		if      (id_ex_controls[8])	alusrc1[31:0] = id_ex_pc[31:0];
+		else if (id_ex_controls[7])	alusrc1[31:0] = 32'b0;
+		else          	            alusrc1[31:0] = after_forward_rs1[31:0];
 	end
 	
 	// 2nd source to ALU (alusrc2)
 	always@(*)
 	begin
-		if	    (id_ex_controls[11] | id_ex_controls[10])   alusrc2[31:0] = id_ex_auipc_lui_imm[31:0];
-		else if (id_ex_controls[9] & id_ex_controls[4])     alusrc2[31:0] = id_ex_se_imm_stype[31:0];
-		else if (id_ex_controls[9])                         alusrc2[31:0] = id_ex_se_imm_itype[31:0];
-		else                                                alusrc2[31:0] = after_forward_rs2[31:0];
+		if	    (id_ex_controls[8] | id_ex_controls[7]) alusrc2[31:0] = id_ex_auipc_lui_imm[31:0];
+		else if (id_ex_controls[6] & id_ex_controls[4]) alusrc2[31:0] = id_ex_se_imm_stype[31:0];
+		else if (id_ex_controls[6])                     alusrc2[31:0] = id_ex_se_imm_itype[31:0];
+		else                                            alusrc2[31:0] = after_forward_rs2[31:0];
 	end
   // **** Juhan Cha: Finish ****
 	

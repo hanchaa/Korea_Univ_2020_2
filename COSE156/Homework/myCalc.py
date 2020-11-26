@@ -3,34 +3,48 @@ import tkinter as t
 window = None
 display_label = None
 expression = ''
+formula = ''
 
 
 def press(num):
     global expression
+    global formula
 
     if num == 'c':
+        display_label['text'] = '0'
         expression = ''
+        formula = ''
+
+        return
 
     elif num == 'b':
         expression = expression[:-1]
+        formula = formula[:-1]
 
     elif num == '=':
-        expression = expression.replace('×', '*')
-        expression = expression.replace('÷', '/')
-
         try:
-            total = str(eval(expression))[0:16]
+            total = str(eval(formula))[0:16]
 
         except:
             total = 'error  '
 
         display_label['text'] = total
         expression = ''
+        formula = ''
 
         return
 
     else:
         expression = expression + str(num)
+
+        if num == '×':
+            formula = formula + '*'
+
+        elif num == '÷':
+            formula = formula + '/'
+
+        else :
+            formula = formula + str(num)
 
     display_label['text'] = expression
 

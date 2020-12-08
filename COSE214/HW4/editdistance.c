@@ -54,17 +54,11 @@ void print_alignment(char align_str[][8], int level)
 // m : 문자열 2의 길이
 // level : 재귀호출의 레벨 (0, 1, 2, ...)
 // align_str : 정렬된 문자쌍들의 정보가 저장된 문자열 배열 예) "a - a", "a - b", "* - b", "ab - ba"
-static void backtrace_main(int *op_matrix, int col_size, char *str1, char *str2, int n, int m, int level, char align_str[][8])
+static void backtrace_main(int *op_matrix, int col_size, char *str1, char *str2, int n, int m, int level, char align_str[][8], int *cnt)
 {
-	static int cnt = 1;
-
-	// 새로운 단어 2개가 들어오면 카운터 초기화
-	if (level == 0)
-		cnt = 1;
-
 	if (n == 0 && m == 0)
 	{
-		printf("\n[%d] ==============================\n", cnt++);
+		printf("\n[%d] ==============================\n", (*cnt)++);
 		print_alignment(align_str, level - 1);
 		return;
 	}
@@ -72,25 +66,25 @@ static void backtrace_main(int *op_matrix, int col_size, char *str1, char *str2,
 	if (op_matrix[n * col_size + m] & SUBSTITUTE_OP || op_matrix[n * col_size + m] & MATCH_OP)
 	{
 		sprintf(align_str[level], "%c - %c", str1[n - 1], str2[m - 1]);
-		backtrace_main(op_matrix, col_size, str1, str2, n - 1, m - 1, level + 1, align_str);
+		backtrace_main(op_matrix, col_size, str1, str2, n - 1, m - 1, level + 1, align_str, cnt);
 	}
 
 	if (op_matrix[n * col_size + m] & INSERT_OP)
 	{
 		sprintf(align_str[level], "* - %c", str2[m - 1]);
-		backtrace_main(op_matrix, col_size, str1, str2, n, m - 1, level + 1, align_str);
+		backtrace_main(op_matrix, col_size, str1, str2, n, m - 1, level + 1, align_str, cnt);
 	}
 
 	if (op_matrix[n * col_size + m] & DELETE_OP)
 	{
 		sprintf(align_str[level], "%c - *", str1[n - 1]);
-		backtrace_main(op_matrix, col_size, str1, str2, n - 1, m, level + 1, align_str);
+		backtrace_main(op_matrix, col_size, str1, str2, n - 1, m, level + 1, align_str, cnt);
 	}
 
 	if (op_matrix[n * col_size + m] & TRANSPOSE_OP)
 	{
 		sprintf(align_str[level], "%c%c - %c%c", str1[n - 2], str1[n - 1], str2[m - 2], str2[m - 1]);
-		backtrace_main(op_matrix, col_size, str1, str2, n - 2, m - 2, level + 1, align_str);
+		backtrace_main(op_matrix, col_size, str1, str2, n - 2, m - 2, level + 1, align_str, cnt);
 	}
 }
 
@@ -103,8 +97,9 @@ static void backtrace_main(int *op_matrix, int col_size, char *str1, char *str2,
 void backtrace(int *op_matrix, int col_size, char *str1, char *str2, int n, int m)
 {
 	char align_str[n + m][8]; // n+m strings
+	int cnt = 1;
 
-	backtrace_main(op_matrix, col_size, str1, str2, n, m, 0, align_str);
+	backtrace_main(op_matrix, col_size, str1, str2, n, m, 0, align_str, &cnt);
 }
 
 ////////////////////////////////////////////////////////////////////////////////

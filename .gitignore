@@ -23,17 +23,15 @@ COSE222/Term Project/RV32I_System_Syn/output_files/RV32I_System.jdi
 COSE222/Term Project/RV32I_System_Syn/output_files/RV32I_System.sof
 
 COSE156/ex.py
-
 COSE156/naver_frozon2.txt
-
 COSE156/naver_showman.txt
-
 COSE156/naver_toy3.txt
-
 COSE156/wordcloud.png
-
 COSE156/iris.csv
-
 COSE156/titanic.csv
 
 COSE214/HW5/text.txt
+COSE214/HW5/result_text_output.txt
+COSE214/HW5/answer_text_output.txt
+COSE214/HW5/answer_text_binary.txt
+COSE214/HW5/result_text_binary.txt

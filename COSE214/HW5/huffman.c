@@ -1,4 +1,4 @@
-// #define BINARY_MODE
+#define BINARY_MODE
 
 #include <stdio.h>
 #include <stdlib.h>

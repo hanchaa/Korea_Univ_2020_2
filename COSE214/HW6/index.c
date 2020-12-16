@@ -4,7 +4,8 @@
 #include <assert.h>
 #include <sys/stat.h>
 
-#define MAX_FILE_NUM 677
+#define MAX_2GRAM_INDEX 676
+#define MAX_1GRAM_INDEX 26
 
 typedef struct
 {
@@ -15,14 +16,14 @@ typedef struct
 
 BIGRAM_INDEX *CreateIndexArray(void)
 {
-    BIGRAM_INDEX *temp = (BIGRAM_INDEX *)malloc(sizeof(BIGRAM_INDEX) * MAX_FILE_NUM);
+    BIGRAM_INDEX *temp = (BIGRAM_INDEX *)malloc(sizeof(BIGRAM_INDEX) * (MAX_2GRAM_INDEX + MAX_1GRAM_INDEX));
     if (temp == NULL)
     {
         printf("No available memory!\n");
         assert(100);
     }
 
-    for (int i = 0; i < MAX_FILE_NUM; i++)
+    for (int i = 0; i < MAX_2GRAM_INDEX + MAX_1GRAM_INDEX; i++)
     {
         temp[i].cnt = 0;
         temp[i].capacity = 100;
@@ -32,21 +33,39 @@ BIGRAM_INDEX *CreateIndexArray(void)
     return temp;
 }
 
-void DestroyIndexArray(BIGRAM_INDEX *index) {
-    for (int i = 0; i < MAX_FILE_NUM; i++)
+void DestroyIndexArray(BIGRAM_INDEX *index)
+{
+    for (int i = 0; i < MAX_2GRAM_INDEX + MAX_1GRAM_INDEX; i++)
         free(index[i].array);
 
     free(index);
 }
 
-void DestroyWords(char **words, int *words_cnt) {
+void DestroyWords(char **words, int *words_cnt)
+{
     for (int i = 0; i < *words_cnt; i++)
         free(words[i]);
 
     free(words);
 }
 
-void BigramIndexing(FILE *fp, char ***words, int *words_cnt, int *words_capacity, BIGRAM_INDEX *index) {
+void CheckCapacity(BIGRAM_INDEX *index, int idx)
+{
+    if (index[idx].cnt == index[idx].capacity)
+    {
+        index[idx].capacity += 100;
+        index[idx].array = (int *)realloc(index[idx].array, sizeof(int) * index[idx].capacity);
+
+        if (index[idx].array == NULL)
+        {
+            printf("No available memory!\n");
+            assert(100);
+        }
+    }
+}
+
+void BigramIndexing(FILE *fp, char ***words, int *words_cnt, int *words_capacity, BIGRAM_INDEX *index)
+{
     char buffer[100] = "";
 
     while (fgets(buffer, sizeof(buffer), fp))
@@ -64,25 +83,16 @@ void BigramIndexing(FILE *fp, char ***words, int *words_cnt, int *words_capacity
         }
         (*words)[*words_cnt] = strdup(buffer);
 
-        if (strlen(buffer) == 2) {
-            if (index[MAX_FILE_NUM - 1].cnt == index[MAX_FILE_NUM - 1].capacity)
-            {
-                index[MAX_FILE_NUM - 1].capacity += 100;
-                index[MAX_FILE_NUM - 1].array = (int *)realloc(index[MAX_FILE_NUM - 1].array, sizeof(int) * index[MAX_FILE_NUM - 1].capacity);
+        if (strlen(buffer) == 2)
+        {
+            CheckCapacity(index, MAX_2GRAM_INDEX + *buffer - 'a');
 
-                if (index[MAX_FILE_NUM - 1].array == NULL)
-                {
-                    printf("No available memory!\n");
-                    assert(100);
-                }
-            }
-
-            index[MAX_FILE_NUM - 1].array[index[MAX_FILE_NUM - 1].cnt++] = (*words_cnt)++;
+            index[MAX_2GRAM_INDEX + *buffer - 'a'].array[index[MAX_2GRAM_INDEX + *buffer - 'a'].cnt++] = (*words_cnt)++;
 
             continue;
         }
 
-        int check[MAX_FILE_NUM] = {0};
+        int check[MAX_2GRAM_INDEX] = {0};
         for (int i = 0; i < strlen(buffer) - 2; i++)
         {
             int j = (buffer[i] - 'a') * 26 + (buffer[i + 1] - 'a');
@@ -90,18 +100,20 @@ void BigramIndexing(FILE *fp, char ***words, int *words_cnt, int *words_capacity
                 continue;
             check[j] = 1;
 
-            if (index[j].cnt == index[j].capacity)
+            if (strlen(buffer) == 3)
             {
-                index[j].capacity += 100;
-                index[j].array = (int *)realloc(index[j].array, sizeof(int) * index[j].capacity);
+                int first_alphabet_idx = MAX_2GRAM_INDEX + *buffer - 'a', second_alphabet_idx = MAX_2GRAM_INDEX + *(buffer + 1) - 'a';
 
-                if (index[j].array == NULL)
-                {
-                    printf("No available memory!\n");
-                    assert(100);
+                CheckCapacity(index, first_alphabet_idx);
+                index[first_alphabet_idx].array[index[first_alphabet_idx].cnt++] = (*words_cnt);
+
+                if (first_alphabet_idx != second_alphabet_idx) {
+                    CheckCapacity(index, second_alphabet_idx);
+                    index[second_alphabet_idx].array[index[second_alphabet_idx].cnt++] = (*words_cnt);
                 }
             }
 
+            CheckCapacity(index, j);
             index[j].array[index[j].cnt++] = (*words_cnt);
         }
 
@@ -109,15 +121,17 @@ void BigramIndexing(FILE *fp, char ***words, int *words_cnt, int *words_capacity
     }
 }
 
-void WriteFile(char **words, BIGRAM_INDEX *index) {
-    for (int i = 0; i < MAX_FILE_NUM; i++) {
+void WriteFile(char **words, BIGRAM_INDEX *index)
+{
+    for (int i = 0; i < MAX_2GRAM_INDEX + MAX_1GRAM_INDEX; i++)
+    {
         char filename[20] = "";
 
-        if (i != MAX_FILE_NUM - 1)
+        if (i < MAX_2GRAM_INDEX)
             sprintf(filename, "./index/%c%c.txt", i / 26 + 'a', i % 26 + 'a');
 
         else
-            sprintf(filename, "./index/a_z.txt");
+            sprintf(filename, "./index/%c.txt", i - MAX_2GRAM_INDEX + 'a');
 
         FILE *fp = fopen(filename, "w");
 

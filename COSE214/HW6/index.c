@@ -4,6 +4,8 @@
 #include <assert.h>
 #include <sys/stat.h>
 
+#define MAX_FILE_NUM 677
+
 typedef struct
 {
     int *array;
@@ -11,16 +13,16 @@ typedef struct
     int capacity;
 } BIGRAM_INDEX;
 
-BIGRAM_INDEX *create_index_array()
+BIGRAM_INDEX *CreateIndexArray(void)
 {
-    BIGRAM_INDEX *temp = (BIGRAM_INDEX *)malloc(sizeof(BIGRAM_INDEX) * 676);
+    BIGRAM_INDEX *temp = (BIGRAM_INDEX *)malloc(sizeof(BIGRAM_INDEX) * MAX_FILE_NUM);
     if (temp == NULL)
     {
         printf("No available memory!\n");
         assert(100);
     }
 
-    for (int i = 0; i < 676; i++)
+    for (int i = 0; i < MAX_FILE_NUM; i++)
     {
         temp[i].cnt = 0;
         temp[i].capacity = 100;
@@ -30,28 +32,25 @@ BIGRAM_INDEX *create_index_array()
     return temp;
 }
 
-void destroy_index_array(BIGRAM_INDEX *index) {
-    for (int i = 0; i < 676; i++)
+void DestroyIndexArray(BIGRAM_INDEX *index) {
+    for (int i = 0; i < MAX_FILE_NUM; i++)
         free(index[i].array);
 
     free(index);
 }
 
-void destroy_words(char **words, int *words_cnt) {
+void DestroyWords(char **words, int *words_cnt) {
     for (int i = 0; i < *words_cnt; i++)
         free(words[i]);
 
     free(words);
 }
 
-void bigram_indexing(FILE *fp, char ***words, int *words_cnt, int *words_capacity, BIGRAM_INDEX *index) {
+void BigramIndexing(FILE *fp, char ***words, int *words_cnt, int *words_capacity, BIGRAM_INDEX *index) {
     char buffer[100] = "";
 
     while (fgets(buffer, sizeof(buffer), fp))
     {
-        if (strlen(buffer) == 2)
-            continue;
-
         if (*words_cnt == *words_capacity)
         {
             (*words_capacity) += 10000;
@@ -63,8 +62,27 @@ void bigram_indexing(FILE *fp, char ***words, int *words_cnt, int *words_capacit
                 assert(100);
             }
         }
+        (*words)[*words_cnt] = strdup(buffer);
 
-        int check[676] = {0};
+        if (strlen(buffer) == 2) {
+            if (index[MAX_FILE_NUM - 1].cnt == index[MAX_FILE_NUM - 1].capacity)
+            {
+                index[MAX_FILE_NUM - 1].capacity += 100;
+                index[MAX_FILE_NUM - 1].array = (int *)realloc(index[MAX_FILE_NUM - 1].array, sizeof(int) * index[MAX_FILE_NUM - 1].capacity);
+
+                if (index[MAX_FILE_NUM - 1].array == NULL)
+                {
+                    printf("No available memory!\n");
+                    assert(100);
+                }
+            }
+
+            index[MAX_FILE_NUM - 1].array[index[MAX_FILE_NUM - 1].cnt++] = (*words_cnt)++;
+
+            continue;
+        }
+
+        int check[MAX_FILE_NUM] = {0};
         for (int i = 0; i < strlen(buffer) - 2; i++)
         {
             int j = (buffer[i] - 'a') * 26 + (buffer[i + 1] - 'a');
@@ -87,14 +105,19 @@ void bigram_indexing(FILE *fp, char ***words, int *words_cnt, int *words_capacit
             index[j].array[index[j].cnt++] = (*words_cnt);
         }
 
-        (*words)[(*words_cnt)++] = strdup(buffer);
+        (*words_cnt)++;
     }
 }
 
-void write_file(char **words, BIGRAM_INDEX *index) {
-    for (int i = 0; i < 676; i++) {
+void WriteFile(char **words, BIGRAM_INDEX *index) {
+    for (int i = 0; i < MAX_FILE_NUM; i++) {
         char filename[20] = "";
-        sprintf(filename, "./index/%c%c.txt", i / 26 + 'a', i % 26 + 'a');
+
+        if (i != MAX_FILE_NUM - 1)
+            sprintf(filename, "./index/%c%c.txt", i / 26 + 'a', i % 26 + 'a');
+
+        else
+            sprintf(filename, "./index/a_z.txt");
 
         FILE *fp = fopen(filename, "w");
 
@@ -131,16 +154,16 @@ int main(int argc, char **argv)
         assert(100);
     }
 
-    BIGRAM_INDEX *index = create_index_array();
+    BIGRAM_INDEX *index = CreateIndexArray();
 
-    bigram_indexing(fp, &words, &words_cnt, &words_capacity, index);
+    BigramIndexing(fp, &words, &words_cnt, &words_capacity, index);
 
     fclose(fp);
 
-    write_file(words, index);
+    WriteFile(words, index);
 
-    destroy_index_array(index);
-    destroy_words(words, &words_cnt);
+    DestroyIndexArray(index);
+    DestroyWords(words, &words_cnt);
 
     return 0;
 }

@@ -281,14 +281,16 @@ int BigramIndexing(TRIE *trie, HEAP *heap, char *query)
 {
     int len = strlen(query), check[MAX_FILE_NUM] = {0};
 
-    if (strlen(query) == 1)
-    {
-        if ((*query < 'a' || *query > 'z'))
+    for (char *temp = query; *temp != '\0'; temp++) {
+        if ((*temp < 'a' || *temp > 'z'))
         {
             printf("Word should contain only small alphabet!\n");
             return 0;
         }
+    }
 
+    if (strlen(query) == 1)
+    {
         char filename[20] = "";
         sprintf(filename, "./index/%c.txt", *query);
 
@@ -298,12 +300,6 @@ int BigramIndexing(TRIE *trie, HEAP *heap, char *query)
 
     for (int i = 0; i < len - 1; i++)
     {
-        if ((query[i] < 'a' || query[i] > 'z') || (query[i + 1] < 'a' || query[i] + 1 > 'z'))
-        {
-            printf("Word should contain only small alphabet!\n");
-            return 0;
-        }
-
         int numIndex = (query[i] - 'a') * 26 + (query[i + 1] - 'a');
         if (check[numIndex])
             continue;

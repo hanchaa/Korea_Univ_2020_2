@@ -25,7 +25,6 @@ typedef struct
 typedef struct
 {
     int last;
-    int capacity;
     WORD **array;
 } HEAP;
 
@@ -63,13 +62,14 @@ int TraverseTrie(TRIE *root, char *query)
     return TraverseTrie(root->subtree[index], query + 1);
 }
 
-void DestroyTrie(TRIE *root) {
+void DestroyTrie(TRIE *root)
+{
     if (root == NULL)
         return;
 
-    for (int i = 0 ; i < 26; i++)
+    for (int i = 0; i < 26; i++)
         DestroyTrie(root->subtree[i]);
-    
+
     free(root);
 }
 
@@ -99,14 +99,57 @@ HEAP *CreateHeap(void)
     }
 
     temp->last = -1;
-    temp->capacity = 100;
-    temp->array = (WORD **)malloc(sizeof(WORD *) * temp->capacity);
+    temp->array = (WORD **)malloc(sizeof(WORD *) * 11);
 
     if (temp->array == NULL)
     {
         printf("No available memory!\n");
         assert(100);
     }
+
+    return temp;
+}
+
+void ReHeapDown(HEAP *heap)
+{
+    int index = 0;
+
+    while (index * 2 + 1 <= heap->last)
+    {
+        WORD *left = heap->array[index * 2 + 1], *right = NULL;
+        int bigIndex = index * 2 + 1;
+
+        if (index * 2 + 2 <= heap->last)
+            right = heap->array[index * 2 + 2];
+
+        if (right != NULL && right->edit_dist > left->edit_dist)
+            bigIndex = index * 2 + 2;
+
+        if (heap->array[index]->edit_dist < heap->array[bigIndex]->edit_dist)
+        {
+            WORD *temp = heap->array[index];
+            heap->array[index] = heap->array[bigIndex];
+            heap->array[bigIndex] = temp;
+
+            index = bigIndex;
+        }
+
+        else
+            return;
+    }
+}
+
+WORD *DeleteHeap(HEAP *heap)
+{
+    if (heap->last == -1)
+        return NULL;
+
+    WORD *temp = heap->array[0];
+    heap->array[0] = heap->array[heap->last];
+
+    (heap->last)--;
+
+    ReHeapDown(heap);
 
     return temp;
 }
@@ -119,7 +162,7 @@ void ReHeapUp(HEAP *heap)
     {
         int parent = (index - 1) / 2;
 
-        if (heap->array[index]->edit_dist < heap->array[parent]->edit_dist)
+        if (heap->array[index]->edit_dist > heap->array[parent]->edit_dist)
         {
             WORD *temp = heap->array[index];
             heap->array[index] = heap->array[parent];
@@ -136,72 +179,32 @@ void ReHeapUp(HEAP *heap)
 void InsertHeap(HEAP *heap, WORD *word)
 {
     (heap->last)++;
-    if (heap->last == heap->capacity)
-    {
-        heap->capacity += 100;
-        heap->array = (WORD **)realloc(heap->array, sizeof(WORD *) * heap->capacity);
-
-        if (heap->array == NULL)
-        {
-            printf("No available memory!\n");
-            assert(100);
-        }
-    }
-
     heap->array[heap->last] = word;
     ReHeapUp(heap);
-}
 
-void ReHeapDown(HEAP *heap) {
-    int index = 0;
-
-    while (index * 2 + 1 <= heap->last) {
-        WORD *left = heap->array[index * 2 + 1], *right = NULL;
-        int smallIndex = index * 2 + 1;
-
-        if (index * 2 + 2 <= heap->last)
-            right = heap->array[index * 2 + 2];
-
-        if (right != NULL && right->edit_dist < left->edit_dist)
-            smallIndex = index * 2 + 2;
-
-        if (heap->array[index]->edit_dist > heap->array[smallIndex]->edit_dist) {
-            WORD *temp = heap->array[index];
-            heap->array[index] = heap->array[smallIndex];
-            heap->array[smallIndex] = temp;
-
-            index = smallIndex;
-        }
-
-        else
-            return;
-        
-    }
-}
-
-WORD *DeleteHeap(HEAP *heap) {
-    if (heap->last == -1)
-        return NULL;
-
-    WORD *temp = heap->array[0];
-    heap->array[0] = heap->array[heap->last];
-
-    (heap->last)--;
-
-    ReHeapDown(heap);
-
-    return temp;
-}
-
-void DestroyHeap(HEAP *heap) {
-    while (1) {
+    if (heap->last == 10)
+    {
         WORD *temp = DeleteHeap(heap);
-        if (temp == NULL)
-            break;
-        
         free(temp->word);
         free(temp);
     }
+}
+
+WORD *HeapTop(HEAP *heap)
+{
+    if (heap->last == -1)
+        return NULL;
+
+    return heap->array[0];
+}
+
+void DestroyHeap(HEAP *heap)
+{
+    for (int i = 0; i <= heap->last; i++) {
+        free(heap->array[i]->word);
+        free(heap->array[i]);
+    }
+
     free(heap->array);
     free(heap);
 }
@@ -258,6 +261,9 @@ int ReadIndexFile(TRIE *trie, HEAP *heap, char *filename, char *query)
     {
         buffer[strlen(buffer) - 1] = '\0';
 
+        if (heap->last == 9 && HeapTop(heap)->edit_dist <= abs(strlen(buffer) - strlen(query)))
+            continue;
+
         if (TraverseTrie(trie, buffer))
             continue;
 
@@ -275,7 +281,8 @@ int BigramIndexing(TRIE *trie, HEAP *heap, char *query)
 {
     int len = strlen(query), check[MAX_FILE_NUM] = {0};
 
-    if (strlen(query) == 1) {
+    if (strlen(query) == 1)
+    {
         if ((*query < 'a' || *query > 'z'))
         {
             printf("Word should contain only small alphabet!\n");
@@ -311,15 +318,21 @@ int BigramIndexing(TRIE *trie, HEAP *heap, char *query)
     return 1;
 }
 
-void PrintResult(HEAP *heap) {
+void PrintResult(HEAP *heap)
+{
+    WORD *word[10];
+
     printf("Did you mean?\t\t(Edit distance)\n");
 
-    for (int i = 0; i < 10; i++) {
-        WORD *word = DeleteHeap(heap);
-        printf("%-30s(%d)\n", word->word, word->edit_dist);
+    for (int i = 0; i < 10; i++)
+        word[i] = DeleteHeap(heap);
 
-        free(word->word);
-        free(word);
+    for (int i = 9; i >= 0; i--)
+    {
+        printf("%-30s(%d)\n", word[i]->word, word[i]->edit_dist);
+
+        free(word[i]->word);
+        free(word[i]);
     }
 }
 

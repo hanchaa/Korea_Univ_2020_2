@@ -261,7 +261,7 @@ int ReadIndexFile(TRIE *trie, HEAP *heap, char *filename, char *query)
     {
         buffer[strlen(buffer) - 1] = '\0';
 
-        if (heap->last == 9 && HeapTop(heap)->edit_dist <= abs(strlen(buffer) - strlen(query)))
+        if (heap->last == 9 && HeapTop(heap)->edit_dist <= abs((int)(strlen(buffer) - strlen(query))))
             continue;
 
         if (TraverseTrie(trie, buffer))
